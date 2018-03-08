@@ -1,0 +1,18 @@
+.navbar {
+    position: fixed;
+    color: white;
+    background: transparent;
+    width: 100%;
+    h1 {
+        margin: 0;
+        cursor: pointer;
+    }
+
+}
+
+.navbar__loggedOut {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+}

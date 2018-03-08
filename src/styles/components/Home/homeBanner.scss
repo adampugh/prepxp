@@ -1,0 +1,77 @@
+.homeBanner {
+    padding: $padding-l 0 $padding-m 0;
+    // text-align: center;
+    // font-size: $font-m;
+    // color: white;
+    background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center; 
+    background-size: cover; 
+    h1 {
+        // padding-bottom: 20px;
+        // text-shadow: 1px 2px 5px rgba(14, 14, 14, 0.241);
+    }
+    img {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+.homeBanner__content__textPanel {
+    background: white;
+    border-radius: 15px;
+    text-align: left;
+    padding: 30px 30px;
+    width: 70%;
+    margin: 0 auto;
+    @include boxshadow;
+    h1 {
+        @include header;
+    }
+    p {
+        margin: 0;
+        padding: 20px 0 50px 0;
+        font-size: $font-s;
+        color: rgb(157, 157, 157);
+    }
+}
+
+.btn {
+    border-radius: 55px;
+    background: white;
+    color: $off-purple;
+    padding: 15px 40px;
+    font-size: .8em;
+    font-weight: 600;
+    border: $off-purple 2px solid;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include boxshadow;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .btn {
+        -webkit-transition: background-color .5s ease-out;
+        -moz-transition: background-color .5s ease-out;
+        -o-transition: background-color .5s ease-out;
+        transition: background-color .5s ease-out;
+        &:hover {
+            background-color: $off-purple;
+            border: white solid 2px;
+            color: white;
+        }
+    }
+}
+
+
+
+
+@media (min-width: $desktop-breakpoint) {
+    .homeBanner__content {
+        // max-width: 600px;
+        // margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+    }
+}
+

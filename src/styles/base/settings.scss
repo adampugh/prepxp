@@ -1,0 +1,46 @@
+// colors 
+$off-grey: #323232;
+$off-white: #f7f7f7;
+$off-purple: #794aa2;
+$black-gradient: linear-gradient(141deg, rgba(0, 0, 0, 0.9) 0%, rgba(5, 5, 5, 0.9) 51%, rgba(0, 0, 0, 0.9) 75%);
+$purple-gradient: linear-gradient(141deg, rgba(84,90,182,0.9) 0%, rgba(84,90,182,0.9) 51%, #794aa2 75%);
+
+// sizes
+$desktop-breakpoint: 62rem;
+$font-l: 2.9rem;
+$font-m: 1.4rem;
+$font-s: 1.2rem;
+$padding-m: 4rem;
+
+$padding-xl: 12rem;
+$padding-l: 8rem;
+$padding-m: 4rem;
+$padding-s: 2rem;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Source Sans Pro', sans-serif;
+    // font-family: 'Raleway', sans-serif;
+    // font-family: 'Quattrocento Sans', sans-serif;
+    // font-family: 'Quattrocento', serif;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+  
+@media (min-width: $desktop-breakpoint) {
+    .container {
+      width: 74%;
+    }
+}
+

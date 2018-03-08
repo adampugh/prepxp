@@ -1,0 +1,13 @@
+@mixin boxshadow {
+    -webkit-box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.66);
+    -moz-box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.66);
+    box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.66);
+}
+
+@mixin header {
+    color: $off-grey;
+    font-family: 'Quattrocento', serif;
+    font-weight: 700;
+    font-size: $font-l;
+    margin: 0;
+}
