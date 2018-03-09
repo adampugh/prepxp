@@ -16,15 +16,13 @@
 }
 
 .homeBanner__content__textPanel {
-    background: white;
-    border-radius: 15px;
     text-align: left;
     padding: 30px 30px;
     width: 70%;
     margin: 0 auto;
-    @include boxshadow;
     h1 {
         @include header;
+        color: white;
     }
     p {
         margin: 0;
@@ -66,12 +64,26 @@
 
 @media (min-width: $desktop-breakpoint) {
     .homeBanner__content {
-        // max-width: 600px;
-        // margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        
-        
+    }
+
+    .homeBanner__content__textPanel {
+        margin: 0;
+        background: white;
+        border-radius: 15px;
+        @include boxshadow;
+        h1 {
+            color: $off-grey;
+        }
+    }
+
+    .homeBanner__content__picturePanel {
+        align-self: end;
+        img {
+            position: relative;
+            bottom: -15px;
+        }
     }
 }
 

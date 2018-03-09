@@ -5,9 +5,8 @@
 }
 
 @mixin header {
-    color: $off-grey;
-    font-family: 'Quattrocento', serif;
     font-weight: 700;
-    font-size: $font-l;
+    font-size: $font-xl;
     margin: 0;
+    font-family: 'Playfair Display', serif;
 }

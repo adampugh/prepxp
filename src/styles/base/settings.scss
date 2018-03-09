@@ -7,7 +7,8 @@ $purple-gradient: linear-gradient(141deg, rgba(84,90,182,0.9) 0%, rgba(84,90,182
 
 // sizes
 $desktop-breakpoint: 62rem;
-$font-l: 2.9rem;
+$font-xl: 2.9em;
+$font-l: 2em;
 $font-m: 1.4rem;
 $font-s: 1.2rem;
 $padding-m: 4rem;
@@ -23,10 +24,10 @@ body {
     padding: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Source Sans Pro', sans-serif;
-    // font-family: 'Raleway', sans-serif;
-    // font-family: 'Quattrocento Sans', sans-serif;
-    // font-family: 'Quattrocento', serif;
+    // font-family: 'Source Sans Pro', sans-serif;
+
+    font-family: 'Assistant', sans-serif;
+    color: $off-grey;
 }
 
 h1 {

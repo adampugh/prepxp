@@ -1,0 +1,37 @@
+.panels__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: $padding-m 0 $padding-m 0;
+    width: 70%;
+    margin: 0 auto;
+    // background: white;
+    // border-radius: 20px;
+    // @include boxshadow;
+    img {
+        width: 100%;
+    }
+    h2 {
+        @include header;
+        color: $off-purple;
+        font-size: $font-l;
+        // padding-top: $padding-s;
+    }
+    p {
+        font-size: $font-m;
+        margin: 0;
+        padding-top: $padding-s;
+    }
+    div {
+        padding: 20px;
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .panels__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        div {
+            padding: 0 20px;
+        }
+    }
+}
