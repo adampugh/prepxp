@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     padding: $padding-m 0 $padding-m 0;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     // background: white;
     // border-radius: 20px;
@@ -17,12 +17,13 @@
         // padding-top: $padding-s;
     }
     p {
-        font-size: $font-m;
+        font-size: $font-s;
+        color: $light-grey;
         margin: 0;
-        padding-top: $padding-s;
+        padding-top: 5px;
     }
     div {
-        padding: 20px;
+        padding: 20px 0;
     }
 }
 
@@ -31,7 +32,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
         div {
-            padding: 0 20px;
+            padding: 20px;
         }
     }
 }

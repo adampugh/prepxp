@@ -3,6 +3,7 @@ import Navbar from "../UI/navbarLoggedOut";
 import HomeBanner from "./homeBanner";
 import HomeAbout from "./homeAbout";
 import HomePanels from "./homePanels";
+import HomeCarousel from "./homeCarousel";
 
 const Home = () => (
     <div>
@@ -10,6 +11,7 @@ const Home = () => (
         <HomeBanner />
         <HomeAbout />
         <HomePanels />
+        <HomeCarousel />
     </div>
 );
 
