@@ -72,16 +72,22 @@
     .homeBanner__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 9em 0 0 0;
+        padding: 7em 0 0 0;
     }
 
     .homeBanner__content__textPanel {
         margin: 0;
-        background: white;
+        // background: white;
         border-radius: 15px;
-        @include boxshadow;
+        // @include boxshadow;
         h1 {
-            color: $off-grey;
+            color: white;
+            font-size: 6em;
+            position: absolute;
+            margin: 0;
+        }
+        p {
+            margin-top: 150px;
         }
     }
 

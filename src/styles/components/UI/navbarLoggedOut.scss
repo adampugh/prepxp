@@ -3,11 +3,11 @@
     color: white;
     background: transparent;
     width: 100%;
+    z-index: 400;
     h1 {
         margin: 0;
         cursor: pointer;
     }
-
 }
 
 .navbar__loggedOut {
@@ -16,3 +16,87 @@
     padding: 20px 0;
     width: 100%;
 }
+
+.navbar__loggedOut--white {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+.navbar__loggedOut--black {
+    opacity: 1;
+    color: $off-grey;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.navbar__white {
+    color: white;
+}
+
+
+#drawer {
+    position: fixed;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(21, 21, 21);
+    padding-top: 90px;
+    z-index: 300;
+    right: 0;
+    text-align: center;
+    -webkit-box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
+    -moz-box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
+    box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
+    transform: translateX(-100vw);
+    transition: transform 400ms ease-in;
+    h1 {
+        @include header;
+        padding: 20px 60px;
+        cursor: pointer;
+    }
+  }
+  #drawer.slideIn {
+    transform: translateX(0);
+  }
+  #drawer.slideOut {
+    transform: translateX(100vw);
+  }
+
+
+  @media (min-width: $desktop-breakpoint) {
+    #drawer {
+        width: 400px;
+        padding-top: 60px;
+        text-align: left;
+        -webkit-box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
+        -moz-box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
+        box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
+        transform: translateX(-400px);
+        transition: transform 400ms ease-in;
+        h1 {
+            @include header;
+            padding: 20px 60px;
+            cursor: pointer;
+        }
+      }
+      #drawer.slideIn {
+        transform: translateX(0);
+      }
+      #drawer.slideOut {
+        transform: translateX(400px);
+      }
+  }

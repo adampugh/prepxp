@@ -1,0 +1,59 @@
+footer {
+    text-align: left;
+    color: white;
+    background: $black-gradient, url("../assets/images/bg3.jpg") no-repeat center center;
+    background-size: cover;
+    padding: $padding-s 0;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    p {
+        color: $light-grey;
+    }
+    i, svg {
+        margin-right: 20px;
+        cursor: pointer;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.footer__grid__blogPost {
+    border: 1px solid $light-grey;
+    color: $light-grey;
+    padding: 0 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid white;
+        p {
+            color: white;
+        }
+    }
+    p {
+        margin: 10px;
+    }
+}
+
+.footer__grid__panel__link {
+    cursor: pointer;
+    &:hover {
+        color: white;
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .footer__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .footer__grid__panel {
+        margin: 0 auto;
+    }
+}

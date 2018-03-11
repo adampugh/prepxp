@@ -1,0 +1,35 @@
+.bottomBanner {
+    text-align: center;
+    background: $purple-gradient, url("../assets/images/bg3.jpg") no-repeat center center; 
+    background-size: cover; 
+    padding-bottom: $padding-m;
+    h1 {
+        color: white;
+        @include header;
+        padding: $padding-m 0 $padding-m 0;
+        width: 70%;
+        margin: 0 auto;
+    }
+    img {
+        padding-top: $padding-m;
+        width: 100%;
+    }
+    p {
+        color: white;
+        padding: 0 0 $padding-s 0;
+        font-size: $font-s;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.bottomBanner__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .bottomBanner__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

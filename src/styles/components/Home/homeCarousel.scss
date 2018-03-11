@@ -1,9 +1,13 @@
+.carousel {
+    margin-bottom: $padding-s;
+}
+
 .carousel__panel {
     display: grid;
     grid-template-columns: 1fr;
     padding: $padding-m 0;
     width: 80%;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 20px auto;
     
     img {
         width: 100%;
@@ -31,6 +35,9 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
+    .carousel {
+        margin-top: $padding-m;
+    }
     .carousel__panel {
         grid-template-columns: 1fr 1fr;
         width: 100%;

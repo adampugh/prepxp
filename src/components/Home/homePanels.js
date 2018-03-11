@@ -28,6 +28,7 @@ const homePanels = () => (
                     experience so that you feel relaxed in any interview.</p>
             </div>
         </div>
+        <hr />
     </section>
 );
 

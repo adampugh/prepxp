@@ -4,9 +4,6 @@
     padding: $padding-m 0 $padding-m 0;
     width: 80%;
     margin: 0 auto;
-    // background: white;
-    // border-radius: 20px;
-    // @include boxshadow;
     img {
         width: 100%;
     }
@@ -14,7 +11,6 @@
         @include header;
         color: $off-purple;
         font-size: $font-l;
-        // padding-top: $padding-s;
     }
     p {
         font-size: $font-s;

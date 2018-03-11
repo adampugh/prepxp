@@ -9,7 +9,7 @@ const Carousel = require("nuka-carousel");
 
 
 const homeCarousel = () => (
-    <section className="container">
+    <section className="container carousel">
         <Carousel autoplay={true} wrapAround={true} >
             <div className="carousel__panel">
                 <img src={carousel3} alt="man climbing chart" />
