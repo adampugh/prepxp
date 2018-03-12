@@ -5,8 +5,7 @@ const footer = () => (
         <div className="container">
             <div className="footer__grid">
                 <div className="footer__grid__panel">
-                    <h1>PrepXP</h1>
-                    <p>Stay connected</p>
+                    <h1 className="logo">PrepXP</h1>
                     <p>
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-facebook-f"></i>
@@ -30,6 +29,7 @@ const footer = () => (
                     </div>
                 </div>
             </div>
+            <p className="footer__tagline">© 2017 Design By <a href="https://adampugh.github.io/kokonoka/">Kokonoka Digital</a></p>
         </div>
     </footer>
 );

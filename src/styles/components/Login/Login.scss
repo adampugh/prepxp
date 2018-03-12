@@ -1,0 +1,64 @@
+.login {
+    text-align: center;
+    background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh; 
+    padding: $padding-m 10px;
+    box-sizing: border-box;
+    h1 {
+        margin: 0;
+        color: white;
+        padding-bottom: $padding-s;
+    }
+}
+
+.login__box {
+    color: $light-grey;
+    background: white;
+    padding: $padding-s;
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 20px;
+    @include boxshadow;
+    h2 {
+        padding-bottom: $padding-s;
+        font-weight: 400;
+        margin: 0;
+    }
+    .login__box__input {
+        position: relative;
+        input {
+            display: block;
+            margin: 10px auto;
+            font-size: $font-s;
+            width: 90%;
+            padding: 8px 8px 8px 40px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: $light-grey 1px solid;
+            font-weight: 400;
+            color: $off-grey;
+        }
+        input::placeholder {
+            color: rgb(194, 194, 194);
+            
+        }
+        i, svg {
+            position: absolute;
+            left: 28px;
+            top: 12px;
+            color: $off-purple;
+        }
+    }
+    
+    button {
+        margin-top: $padding-s;
+        width: 90%;
+    }
+}
+
+
+.login__bottomBox {
+    color: white;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Navbar from "../UI/navbarLoggedOut";
 import HomeBanner from "./homeBanner";
@@ -9,16 +9,24 @@ import HomeBottomBanner from "./homeBottomBanner";
 import Footer from "../UI/footer";
 
 
-const Home = () => (
-    <div>
-        <Navbar />
-        <HomeBanner />
-        <HomeAbout />
-        <HomePanels />
-        <HomeCarousel />
-        <HomeBottomBanner />
-        <Footer />
-    </div>
-);
+class Home extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+    render() {
+        return (
+            <div>
+                <Navbar />
+                <HomeBanner />
+                <HomeAbout />
+                <HomePanels />
+                <HomeCarousel />
+                <HomeBottomBanner />
+                <Footer />
+            </div>
+        );
+    }
+}
 
 export default Home;

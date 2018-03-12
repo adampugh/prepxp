@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import interviewImg from "../../assets/images/interview.png";
 
@@ -18,7 +19,7 @@ const homeAbout = () => (
                     Checkout our curated lists based on questions asked by some of the
                     largest companies in the world.
                 </p>
-                <button className="btn">Start now</button>
+                <Link to="/login"><button className="btn">Start now</button></Link>
             </div>
         </div>
     </main>

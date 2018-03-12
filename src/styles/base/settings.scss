@@ -35,10 +35,21 @@ h1 {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 hr {
     width: 25%;
     border: 1px solid $off-purple;
     margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Coiny', cursive;
+    // font-family: 'Noto Serif', serif;
+    // font-family: 'Limelight', cursive;
 }
 
 .container, .container-l {
@@ -52,7 +63,7 @@ hr {
     }
 
     .container-l {
-        width: 88%;
+        // width: 88%;
         margin: 0 auto;
     }
 }

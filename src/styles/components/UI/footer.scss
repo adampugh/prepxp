@@ -4,6 +4,9 @@ footer {
     background: $black-gradient, url("../assets/images/bg3.jpg") no-repeat center center;
     background-size: cover;
     padding: $padding-s 0;
+    .logo {
+        margin-bottom: 0;
+    }
 }
 
 .footer__grid {
@@ -44,6 +47,16 @@ footer {
     cursor: pointer;
     &:hover {
         color: white;
+    }
+}
+
+.footer__tagline {
+    text-align: center;
+    font-size: $font-s;
+    padding-top: $padding-s;
+    a {
+        text-decoration: none;
+        color: $off-purple;
     }
 }
 

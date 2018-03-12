@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import bottomBanner from "../../assets/images/bottomBanner.png";
 
@@ -9,7 +10,7 @@ const homeBottomBanner = () => (
             <p>Sign up to PrepXP today to better your career and get the job 
             you deserve! Pass the interview by gaining experience and preparing
             for success in all future job interviews.</p>
-            <button className="btn">Start now</button>
+            <Link to="/login"><button className="btn">Start now</button></Link>
             <img src={bottomBanner} alt="policeman, business man and designer" />
         </div>
     </section>

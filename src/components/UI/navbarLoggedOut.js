@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import * as mobile from "is-mobile";
 
@@ -50,12 +51,19 @@ class Navbar extends Component {
                     <h1>Home</h1>
                     <h1>About</h1>
                     <h1>Blog</h1>
-                    <h1>Login</h1>
+                    <Link to="/login"><h1>Login</h1></Link>
+                    <p>
+                    
+                        <i className="fab fa-twitter"></i>
+                        <i className="fab fa-facebook-f"></i>
+                        <i className="fab fa-youtube"></i>
+                           
+                    </p>
                 </div>
                 <div className="navbar">
                     <div className="container-l"> 
                         <div className={this.state.isOnWhite ? "navbar__loggedOut navbar__loggedOut--black" : "navbar__loggedOut"}>
-                            <h1 className={this.state.onMobile && this.state.hamburgerIconWhite ? "navbar__white" : ""}>PrepXP</h1>
+                            <h1 className={this.state.onMobile && this.state.hamburgerIconWhite ? "logo navbar__white" : "logo"}>PrepXP</h1>
                             <h1 onClick={this.openDrawer} 
                                 className={this.state.hamburgerIconWhite ? "navbar__white" : ""}>
                                 ☰

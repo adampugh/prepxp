@@ -53,8 +53,9 @@
     color: white;
     height: 100vh;
     width: 100vw;
-    background: rgb(21, 21, 21);
-    padding-top: 90px;
+    // background: rgb(21, 21, 21);
+    background: $black-gradient, url("../assets/images/bg4.jpg") no-repeat center;
+    padding-top: 150px;
     z-index: 300;
     right: 0;
     text-align: center;
@@ -65,22 +66,40 @@
     transition: transform 400ms ease-in;
     h1 {
         @include header;
+        font-size: $font-l;
         padding: 20px 60px;
         cursor: pointer;
     }
-  }
-  #drawer.slideIn {
+    p {
+        
+        top: calc(100vh - 80px);
+        position: absolute;
+        // padding-left: 30px;
+        margin: 0 auto;
+        width: 100%;
+        svg, i {
+            padding: 0 20px;
+            color: $light-grey;
+            font-size: $font-l;
+            &:hover {
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+#drawer.slideIn {
     transform: translateX(0);
-  }
-  #drawer.slideOut {
+}
+#drawer.slideOut {
     transform: translateX(100vw);
-  }
+}
 
 
   @media (min-width: $desktop-breakpoint) {
     #drawer {
         width: 400px;
-        padding-top: 60px;
+        padding-top: 100px;
         text-align: left;
         -webkit-box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
         -moz-box-shadow: -12px 2px 51px -26px rgba(0,0,0,0.72);
@@ -89,8 +108,12 @@
         transition: transform 400ms ease-in;
         h1 {
             @include header;
+            font-size: $font-l;
             padding: 20px 60px;
             cursor: pointer;
+        }
+        p {
+            padding-left: 40px;
         }
       }
       #drawer.slideIn {
