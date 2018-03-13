@@ -1,0 +1,14 @@
+.navbar__loggedIn {
+    background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center;
+    color: white;
+    h1 {
+        display: inline;
+        z-index: 400;
+        cursor: pointer;
+    }
+}
+
+.navbar__loggedIn__div {
+    display: flex;
+    justify-content: space-between;
+}

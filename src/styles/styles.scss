@@ -2,6 +2,7 @@
 @import "./base/mixins";
 
 @import "./components/UI/navbarLoggedOut";
+@import "./components/UI/navbarLoggedIn";
 @import "./components/UI/footer";
 
 @import "./components/Home/homeBanner";
@@ -9,5 +10,8 @@
 @import "./components/Home/homePanels";
 @import "./components/Home/homeCarousel";
 @import "./components/Home/homeBottomBanner";
+
+@import "./components/Dashboard/dashboardGrid";
+@import "./components/Dashboard/dashboardSidebar";
 
 @import "./components/Login/Login";

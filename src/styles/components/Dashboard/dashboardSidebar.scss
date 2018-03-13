@@ -1,0 +1,30 @@
+.sidebar {
+    display: none;
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .sidebar {
+        margin: $padding-s 0;
+        color: white;
+        background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
+        border: 2px solid $off-purple;
+        border-radius: 20px;
+        display: block;
+        @include boxshadow;
+        img {
+            width: 80%;
+            padding: 20px 20px 0 20px;
+        }
+    }
+    .sidebar__panel {
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        @include boxshadow;
+        img {
+            width: 100%;
+            display: none;
+        }
+    }
+}

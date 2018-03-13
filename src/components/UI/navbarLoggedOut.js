@@ -53,11 +53,9 @@ class Navbar extends Component {
                     <h1>Blog</h1>
                     <Link to="/login"><h1>Login</h1></Link>
                     <p>
-                    
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-facebook-f"></i>
                         <i className="fab fa-youtube"></i>
-                           
                     </p>
                 </div>
                 <div className="navbar">
