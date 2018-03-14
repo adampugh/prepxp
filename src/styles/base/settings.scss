@@ -1,6 +1,7 @@
 // colors 
 $off-grey: #323232;
 $light-grey: #9d9d9d;
+$very-light-grey: #f4f4f4;
 $off-white: #f7f7f7;
 $off-purple: #794aa2;
 $black-gradient: linear-gradient(141deg, rgba(0, 0, 0, 0.9) 0%, rgba(5, 5, 5, 0.9) 51%, rgba(0, 0, 0, 0.9) 75%);
@@ -26,7 +27,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     // font-family: 'Source Sans Pro', sans-serif;
-
+    width: 100%;
     font-family: 'Assistant', sans-serif;
     color: $off-grey;
 }

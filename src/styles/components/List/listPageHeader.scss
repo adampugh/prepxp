@@ -1,0 +1,29 @@
+.listPage__header {
+    background: $very-light-grey;
+    padding-top: $padding-m;
+    h1 {
+        @include header;
+        
+        display: inline;
+    }
+    i, svg {
+        color: $light-grey;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: $font-m;
+    }
+}
+
+
+
+@media (min-width: $desktop-breakpoint) {
+    .listPage__header__content {
+        display: flex;
+        justify-content: space-between;
+        i, svg {
+            &:hover {
+                color: $off-grey;
+            }
+        }
+    }
+}

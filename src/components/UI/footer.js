@@ -29,7 +29,7 @@ const footer = () => (
                     </div>
                 </div>
             </div>
-            <p className="footer__tagline">© 2017 Design By <a href="https://adampugh.github.io/kokonoka/">Kokonoka Digital</a></p>
+            <p className="footer__tagline">© 2017 Design By <a href="https://adampugh.github.io/kokonoka/" rel="noopener noreferrer" target="_blank">Kokonoka Digital</a></p>
         </div>
     </footer>
 );

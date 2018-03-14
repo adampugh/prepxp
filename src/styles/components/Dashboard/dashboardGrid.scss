@@ -2,9 +2,14 @@
     display: grid;
     grid-template-columns: 1fr;
     min-height: 100vh;
+    padding: $padding-m 0;
+    // background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
     h1 {
         // padding-bottom: $padding-s;
         @include header;
+    }
+    p {
+        font-size: $font-s;
     }
 }
 
@@ -24,6 +29,7 @@
 }
 
 .dashboard__grid__lists__item {
+    background: white;
     display: flex;
     justify-content: space-between;
     padding: 10px $padding-s;

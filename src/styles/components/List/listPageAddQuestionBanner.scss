@@ -1,0 +1,39 @@
+.listPage__addQuestion {
+    display: block;
+    text-align: center;
+    padding: $padding-m 0;
+    background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
+    h1 {
+        @include header;
+        color: white;
+    }
+    input {
+        margin-right: 10px;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        box-sizing: border-box;
+        width: 90%;
+        font-size: $font-s;
+    }
+    p {
+        color: $very-light-grey;
+        margin-bottom: $padding-s;
+        font-size: $font-s;
+    }
+    button {
+        margin-top: $padding-s;
+    }
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .listPage__addQuestion {
+        input {
+            width: calc(100% - 208px);
+        }
+        button {
+            margin-left: 32px;
+        }
+    }
+}
