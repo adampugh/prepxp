@@ -2,7 +2,12 @@
     display: block;
     text-align: center;
     padding: $padding-m 0;
-    background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
+    background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat top;
+    img {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
     h1 {
         @include header;
         color: white;
@@ -34,6 +39,9 @@
         }
         button {
             margin-left: 32px;
+        }
+        img {
+            display: none;
         }
     }
 }

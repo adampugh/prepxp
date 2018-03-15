@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from "react-modal";
 
 import Navbar from "../UI/navbarLoggedIn";
 import DashboardGrid from "./DashboardGrid";
@@ -31,19 +32,39 @@ class Dashboard extends Component {
                     }
                 ]
             }
-        ]
+        ],
+        modalIsOpen: false
     }
-
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
+    closeModal = () => {
+        this.setState({
+            modalIsOpen: false
+        })
+    }
+
+    openModal = () => {
+        this.setState({
+            modalIsOpen: true
+        })
+    }
+
     render() {
         return (
             <div>
+                <Modal 
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                />
                 <Navbar />
-                <DashboardGrid name={this.state.name} lists={this.state.lists}/>
+                <DashboardGrid 
+                    name={this.state.name} 
+                    lists={this.state.lists}
+                    openModal={this.openModal}
+                    closeModal={this.closeModal} />
                 <Footer />
             </div>
         );

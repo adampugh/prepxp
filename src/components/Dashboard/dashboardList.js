@@ -8,7 +8,7 @@ const dashboardList = (props) => (
         </div>
         <div>
             <h2><i className="fas fa-edit"></i></h2>
-            <h2><i className="fas fa-trash-alt"></i></h2>
+            <h2 onClick={props.openModal}><i className="fas fa-trash-alt"></i></h2>
         </div>
     </div>
 );

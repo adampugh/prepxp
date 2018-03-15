@@ -2,14 +2,23 @@
     background: $very-light-grey;
     padding: $padding-s 0;
     .question__item {
-        padding: 10px;
+        padding: 10px 20px;
         background: white;
         border-radius: 10px;
         margin: $padding-s 0;
+        display: flex;
+        justify-content: space-between;
         @include boxshadow;
         span {
             color: $off-purple;
             padding-right: 5px;
+        }
+        i, svg {
+            color: $light-grey;
+            &:hover {
+                color: $off-grey;
+                cursor: pointer;
+            }
         }
     }
 }
