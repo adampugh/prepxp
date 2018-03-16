@@ -1,0 +1,70 @@
+.ReactModalPortal > div {
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    color: $off-grey;
+    background: white;
+    border-radius: 20px;
+    z-index: 2000;
+    max-width: 80%;
+    min-width: 10rem;
+    // min-height: 18rem;
+    outline: none;
+    padding: 30px;
+    text-align: center;
+    position: absolute;
+    h3 {
+        display: inline;
+    }
+    hr {
+        width: 80%;
+        margin-bottom: 25px;
+        color: lightgrey;
+        background: lightgrey;
+        border: 1px solid lightgrey;
+        margin-top: 20px;
+    }
+    span {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        i, svg {
+            color: $light-grey;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal--delete {
+    button {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .modal {
+        span {
+            i, svg {
+                &:hover {
+                    color: $off-grey;
+                }
+            }
+        }
+    }
+}

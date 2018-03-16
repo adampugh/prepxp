@@ -1,0 +1,44 @@
+.startComplete__div {
+    background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
+    color: white;
+    padding: $padding-m 0;
+    h1 {
+        @include header;
+    }
+    p {
+        font-size: $font-s;
+    }
+    img {
+        // padding: $padding-m 0;
+        width: 100%;
+    }
+}
+
+.startComplete__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.startComplete__grid__text {
+    margin-top: $padding-m;
+}
+
+.startComplete__buttons {
+    margin: $padding-s 0 $padding-m 0;
+    button {
+        display: block;
+        // margin-top: 10px;
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .startComplete__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .startComplete__buttons {
+        button {
+            margin-right: 10px;
+        }
+    }
+}

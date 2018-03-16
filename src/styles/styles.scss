@@ -4,6 +4,7 @@
 @import "./components/UI/navbarLoggedOut";
 @import "./components/UI/navbarLoggedIn";
 @import "./components/UI/footer";
+@import "./components/UI/modal";
 
 @import "./components/Home/homeBanner";
 @import "./components/Home/homeAbout";
@@ -19,3 +20,6 @@
 @import "./components/List/listPageHeader";
 @import "./components/List/listPageAddQuestionBanner";
 @import "./components/List/listPageQuestions";
+
+@import "./components/Start/startGrid";
+@import "./components/Start/startComplete";

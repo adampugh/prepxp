@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Modal from "react-modal";
 
 import Navbar from "../UI/navbarLoggedIn";
 import DashboardGrid from "./DashboardGrid";
-
+import DashboardDeleteModal from "./dashboardDeleteModal";
 import Footer from "../UI/footer";
 
 class Dashboard extends Component {
@@ -55,9 +54,9 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <Modal 
+                <DashboardDeleteModal
                     isOpen={this.state.modalIsOpen}
-                    onRequestClose={this.closeModal}
+                    closeModal={this.closeModal}
                 />
                 <Navbar />
                 <DashboardGrid 

@@ -53,11 +53,13 @@ hr {
     // font-family: 'Limelight', cursive;
 }
 
-.container, .container-l {
+.container, .container-l, .container-s {
     width: 90%;
     margin: 0 auto;
 }
   
+
+
 @media (min-width: $desktop-breakpoint) {
     .container {
       width: 74%;
@@ -66,6 +68,11 @@ hr {
     .container-l {
         // width: 88%;
         margin: 0 auto;
+    }
+
+    .container-s {
+        width: 60%;
+        // margin: 0 auto;
     }
 }
 
