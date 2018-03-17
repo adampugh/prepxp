@@ -5,6 +5,7 @@ import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dasboard";
 import ListPage from "./components/List/ListPage";
 import StartPage from "./components/Start/StartPage";
+import BlogPage from "./components/Blog/BlogPage";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/list/edit" component={ListPage} />
         <Route path="/list/start" component={StartPage} />
+        <Route path="/blog" component={BlogPage} />
         <Redirect to="/" />
       </Switch>
     );
