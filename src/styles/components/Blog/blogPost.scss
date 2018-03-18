@@ -1,0 +1,25 @@
+.blog__post {
+    border-radius: 20px;
+    margin: 10px 10px $padding-s 10px;
+    background: white;
+    @include boxshadow;
+    img {
+        width: 100%;
+    }
+    p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    h2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 270px;
+    }
+}
+
+.blog__post__text {
+    padding: 20px;
+}

@@ -1,0 +1,14 @@
+.blog__background {
+    background-color: $very-light-grey;
+}
+
+.blog__grid {
+    display: grid;
+    padding: $padding-m 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .blog__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -6,6 +6,8 @@ import Dashboard from "./components/Dashboard/Dasboard";
 import ListPage from "./components/List/ListPage";
 import StartPage from "./components/Start/StartPage";
 import BlogPage from "./components/Blog/BlogPage";
+import SearchPage from "./components/Search/SearchPage";
+
 
 class App extends Component {
   render() {
@@ -17,6 +19,7 @@ class App extends Component {
         <Route path="/list/edit" component={ListPage} />
         <Route path="/list/start" component={StartPage} />
         <Route path="/blog" component={BlogPage} />
+        <Route path="/search" component={SearchPage} />
         <Redirect to="/" />
       </Switch>
     );
