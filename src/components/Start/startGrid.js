@@ -17,7 +17,7 @@ class startGrid extends Component {
             this.props.finishQuestions();
         } else {
             document.querySelector("textarea").value = "";
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
             this.setState({
                 currentIndex: this.state.currentIndex + 1,
                 showAnswer: false

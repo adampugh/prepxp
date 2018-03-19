@@ -1,6 +1,7 @@
 .start {
     // background: $very-light-grey;
     background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
+    background-size: cover;
     padding: $padding-m 0;
 }
 
@@ -60,6 +61,6 @@
     }
 
     .start__box {
-        padding: $padding-m;
+        padding: 10px $padding-m;
     }
 }
