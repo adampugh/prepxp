@@ -1,5 +1,7 @@
 .dashboard__wrapper {
     background: $very-light-grey;
+    // background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .dashboard__grid {
@@ -7,10 +9,11 @@
     grid-template-columns: 1fr;
     min-height: 100vh;
     padding: $padding-s 0;
-    // background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
+    
     h1 {
         // padding-bottom: $padding-s;
         @include header;
+        // color: white;
     }
     p {
         font-size: $font-s;

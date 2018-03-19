@@ -1,0 +1,37 @@
+.searchBanner__wrapper {
+    background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center; 
+    background-size: cover; 
+    text-align: center;
+    padding: $padding-m 0;
+    color: white;
+    h1 {
+        @include header;
+    }
+    input {
+        margin-right: 10px;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: $font-s;
+    }
+    p {
+        width: 70%;
+        margin: 0 auto;
+        padding: $padding-s 0;
+        font-size: $font-s;
+    }
+    button {
+        margin-top: $padding-s;
+    }
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .searchBanner__wrapper {
+        input {
+            width: 70%;
+        }
+    }
+}

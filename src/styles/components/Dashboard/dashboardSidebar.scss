@@ -10,6 +10,7 @@
         background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
         // background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center;
         border: 2px solid $off-purple;
+        background-size: cover;
         border-radius: 20px;
         display: block;
         @include boxshadow;
