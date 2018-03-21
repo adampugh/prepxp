@@ -1,0 +1,26 @@
+.searchGrid__lists {
+    background: $very-light-grey;
+    padding: $padding-s 0;
+    .searchGrid__list__item {
+        padding: 10px 20px;
+        background: white;
+        border-radius: 10px;
+        margin: $padding-s 0;
+        display: flex;
+        justify-content: space-between;
+        @include boxshadow;
+        h2 {
+            color: $off-purple;
+        }
+        i, svg {
+            color: $light-grey;
+            &:hover {
+                color: $off-grey;
+                cursor: pointer;
+            }
+        }
+    }
+    .searchGrid__list__icon {
+        align-self: center;
+    }
+}
