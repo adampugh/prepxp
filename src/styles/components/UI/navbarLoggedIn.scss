@@ -1,6 +1,8 @@
 .navbar__loggedIn {
     background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center;
     color: white;
+    // position: fixed;
+    // width: 100%;
     h1 {
         display: inline;
         cursor: pointer;
