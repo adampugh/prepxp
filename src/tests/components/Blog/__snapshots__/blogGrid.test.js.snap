@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<blogGrid /> should match snapshot 1`] = `
+<div
+  className="blog__background"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="blog__grid"
+    >
+      <blogPost
+        key="5 Tips to get things done0"
+        post={
+          Object {
+            "img": "http://via.placeholder.com/300x300",
+            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+            "title": "5 Tips to get things done",
+          }
+        }
+      />
+      <blogPost
+        key="Pass the interview with these answers1"
+        post={
+          Object {
+            "img": "http://via.placeholder.com/300x300",
+            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+            "title": "Pass the interview with these answers",
+          }
+        }
+      />
+      <blogPost
+        key="Top 10 most common questions2"
+        post={
+          Object {
+            "img": "http://via.placeholder.com/300x300",
+            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+            "title": "Top 10 most common questions",
+          }
+        }
+      />
+      <blogPost
+        key="What Google and employers are looking for3"
+        post={
+          Object {
+            "img": "http://via.placeholder.com/300x300",
+            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+            "title": "What Google and employers are looking for",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

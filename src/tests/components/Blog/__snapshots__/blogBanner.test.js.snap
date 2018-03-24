@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<blogBanner /> should match snapshot 1`] = `
+<div
+  className="blogBanner"
+>
+  <div
+    className="container blogBanner__grid"
+  >
+    <div
+      className="blogBanner__img"
+    >
+      <img
+        alt=""
+        src="blog.png"
+      />
+    </div>
+    <div
+      className="blogBanner__text"
+    >
+      <h1>
+        Latest blog posts
+      </h1>
+      <p>
+        Read articles from industry leaders on how to best prepare for interviews and put your best foot forward. Read articles from industry leaders on how to best prepare for interviews and put your best foot forward.
+      </p>
+      <p>
+        Read articles from industry leaders on how to best prepare for interviews and put your best foot forward. Read articles from industry leaders on how to best prepare for interviews and put your best foot forward.
+      </p>
+    </div>
+  </div>
+</div>
+`;
