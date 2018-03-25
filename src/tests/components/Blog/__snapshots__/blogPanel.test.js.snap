@@ -14,9 +14,7 @@ exports[`<blogPost /> should match snapshot 1`] = `
     <h2>
       5 Tips to get things done
     </h2>
-    <p>
-      sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd
-    </p>
+    <p />
   </div>
 </div>
 `;

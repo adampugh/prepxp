@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard/Dasboard";
 import ListPage from "./components/List/ListPage";
 import StartPage from "./components/Start/StartPage";
 import BlogPage from "./components/Blog/BlogPage";
+import BlogPost from "./components/BlogPost/blogPost";
 import SearchPage from "./components/Search/SearchPage";
 
 
@@ -18,7 +19,8 @@ class App extends Component {
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/list/edit" component={ListPage} />
         <Route path="/list/start" component={StartPage} />
-        <Route path="/blog" component={BlogPage} />
+        <Route path="/blog" exact component={BlogPage} />
+        <Route path="/blog/:id" component={BlogPost} />
         <Route path="/search" component={SearchPage} />
         <Redirect to="/" />
       </Switch>

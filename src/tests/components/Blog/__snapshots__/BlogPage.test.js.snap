@@ -5,30 +5,7 @@ exports[`<BlogPage /> should match snapshot 1`] = `
   <Navbar />
   <blogBanner />
   <blogGrid
-    posts={
-      Array [
-        Object {
-          "img": "http://via.placeholder.com/300x300",
-          "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
-          "title": "5 Tips to get things done",
-        },
-        Object {
-          "img": "http://via.placeholder.com/300x300",
-          "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-          "title": "Pass the interview with these answers",
-        },
-        Object {
-          "img": "http://via.placeholder.com/300x300",
-          "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-          "title": "Top 10 most common questions",
-        },
-        Object {
-          "img": "http://via.placeholder.com/300x300",
-          "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-          "title": "What Google and employers are looking for",
-        },
-      ]
-    }
+    posts={Array []}
   />
   <footer />
 </div>

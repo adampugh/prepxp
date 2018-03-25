@@ -1,0 +1,34 @@
+.blogPost__content {
+    padding: $padding-m 0;
+    background: $very-light-grey;
+    h1 {
+        @include header;
+    }
+    img {
+        padding: $padding-s 0;
+        width: 100%;
+    }
+    a {
+        color: $off-purple;
+        font-weight: bolder;
+    }
+    span {
+        font-style: italic;
+    }
+}
+
+.blogPost__content__byline {
+    color: $light-grey;
+    font-weight: 400;
+}
+
+.blogPost__content__text {
+    font-size: $font-s;
+}
+
+.blogPost__content__panel {
+    background: white;
+    box-sizing: border-box;
+    padding: $padding-m;
+    @include boxshadow;
+}

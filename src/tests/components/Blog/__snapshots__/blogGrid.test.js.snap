@@ -10,46 +10,110 @@ exports[`<blogGrid /> should match snapshot 1`] = `
     <div
       className="blog__grid"
     >
-      <blogPost
+      <Link
         key="5 Tips to get things done0"
-        post={
+        replace={false}
+        to={
           Object {
-            "img": "http://via.placeholder.com/300x300",
-            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
-            "title": "5 Tips to get things done",
+            "pathname": "/blog/5-Tips-to-get-things-done",
+            "state": Object {
+              "post": Object {
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              },
+            },
           }
         }
-      />
-      <blogPost
+      >
+        <blogPanel
+          post={
+            Object {
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+              "title": "5 Tips to get things done",
+            }
+          }
+        />
+      </Link>
+      <Link
         key="Pass the interview with these answers1"
-        post={
+        replace={false}
+        to={
           Object {
-            "img": "http://via.placeholder.com/300x300",
-            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-            "title": "Pass the interview with these answers",
+            "pathname": "/blog/Pass-the-interview-with-these-answers",
+            "state": Object {
+              "post": Object {
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Pass the interview with these answers",
+              },
+            },
           }
         }
-      />
-      <blogPost
+      >
+        <blogPanel
+          post={
+            Object {
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+              "title": "Pass the interview with these answers",
+            }
+          }
+        />
+      </Link>
+      <Link
         key="Top 10 most common questions2"
-        post={
+        replace={false}
+        to={
           Object {
-            "img": "http://via.placeholder.com/300x300",
-            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-            "title": "Top 10 most common questions",
+            "pathname": "/blog/Top-10-most-common-questions",
+            "state": Object {
+              "post": Object {
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Top 10 most common questions",
+              },
+            },
           }
         }
-      />
-      <blogPost
+      >
+        <blogPanel
+          post={
+            Object {
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+              "title": "Top 10 most common questions",
+            }
+          }
+        />
+      </Link>
+      <Link
         key="What Google and employers are looking for3"
-        post={
+        replace={false}
+        to={
           Object {
-            "img": "http://via.placeholder.com/300x300",
-            "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-            "title": "What Google and employers are looking for",
+            "pathname": "/blog/What-Google-and-employers-are-looking-for",
+            "state": Object {
+              "post": Object {
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "What Google and employers are looking for",
+              },
+            },
           }
         }
-      />
+      >
+        <blogPanel
+          post={
+            Object {
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+              "title": "What Google and employers are looking for",
+            }
+          }
+        />
+      </Link>
     </div>
   </div>
 </div>

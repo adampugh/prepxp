@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import BlogPost from "../../../components/Blog/blogPost";
+import BlogPanel from "../../../components/Blog/blogPanel";
 import posts from "../../fixtures/blogPosts";
 
 describe("<blogPost />", () => {
     test("should match snapshot", () => {
-        const wrapper = shallow(<BlogPost post={posts[0]} />);
+        const wrapper = shallow(<BlogPanel post={posts[0]} />);
         expect(wrapper).toMatchSnapshot();
     });
 });
