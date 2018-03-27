@@ -14,14 +14,20 @@ class BlogPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+        this.fetchBlogPosts();
+    }
+
+    fetchBlogPosts = () => {
         axios.get("https://prepxp-blog-api.herokuapp.com/posts")
-            .then((res) => {
-                this.setState({
-                    posts: res.data
-                });
-            }).catch((err) => {
-                console.log(err);
+        .then((res) => {
+            this.setState({
+                posts: res.data,
+                loading: false
             });
+        })
+        .catch((err) => {
+            console.log("An error occured");
+        });
     }
 
     render() {
@@ -29,7 +35,7 @@ class BlogPage extends Component {
             <div>
                 <Navbar />
                 <BlogBanner />
-                <BlogGrid posts={this.state.posts}/>
+                <BlogGrid posts={this.state.posts} loading={true} />
                 <Footer />
             </div>
         );
