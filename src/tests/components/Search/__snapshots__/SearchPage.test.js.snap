@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchPage /> should match snapshot 1`] = `
+<div>
+  <Navbar />
+  <SearchBanner />
+  <searchGrid
+    filteredLists={
+      Array [
+        Object {
+          "questions": Array [
+            1,
+            2,
+            3,
+            4,
+          ],
+          "title": "Angular Developer",
+        },
+        Object {
+          "questions": Array [
+            1,
+            2,
+            5,
+          ],
+          "title": "Node JS Developer",
+        },
+        Object {
+          "questions": Array [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+          ],
+          "title": "General Interview Questions 1",
+        },
+      ]
+    }
+  />
+  <footer />
+</div>
+`;

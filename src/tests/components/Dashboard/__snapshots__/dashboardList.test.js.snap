@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardList /> should match snapshot 1`] = `
+<div
+  className="dashboard__grid__lists__item"
+>
+  <div>
+    <h2>
+      JavaScript Developer
+    </h2>
+    <p>
+      2
+       Questions
+    </p>
+  </div>
+  <div>
+    <h2>
+      <i
+        className="fas fa-edit"
+      />
+    </h2>
+    <h2>
+      <i
+        className="fas fa-trash-alt"
+      />
+    </h2>
+  </div>
+</div>
+`;

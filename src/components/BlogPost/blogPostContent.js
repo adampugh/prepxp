@@ -3,8 +3,10 @@ import React, { Component } from "react";
 class blogPostContent extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
-        const el = document.getElementById("blogPost__content__text");
-        el.innerHTML = this.props.post.text;
+        let el = document.getElementById("blogPost__content__text");
+        if (el) {
+            el.innerHTML = this.props.post.text;
+        }
     }
 
 

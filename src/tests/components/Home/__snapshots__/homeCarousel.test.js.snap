@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeCarousel /> should match snapshot 1`] = `
+<section
+  className="container carousel"
+>
+  <Carousel
+    afterSlide={[Function]}
+    autoplay={true}
+    autoplayInterval={3000}
+    beforeSlide={[Function]}
+    cellAlign="left"
+    cellSpacing={0}
+    data={[Function]}
+    decorators={
+      Array [
+        Object {
+          "component": [Function],
+          "position": "CenterLeft",
+        },
+        Object {
+          "component": [Function],
+          "position": "CenterRight",
+        },
+        Object {
+          "component": [Function],
+          "position": "BottomCenter",
+        },
+      ]
+    }
+    dragging={true}
+    easing="easeOutCirc"
+    edgeEasing="easeOutElastic"
+    frameOverflow="hidden"
+    framePadding="0px"
+    slideIndex={0}
+    slideWidth={1}
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={500}
+    swiping={true}
+    vertical={false}
+    width="100%"
+    wrapAround={true}
+  >
+    <div
+      className="carousel__panel"
+    >
+      <img
+        alt="man climbing chart"
+        src="carousel4.jpg"
+      />
+      <div>
+        <h2>
+          Available on all devices
+        </h2>
+        <p>
+          Whether you are accessing PrepXP on a mobile, tablet or desktop rest assured that you are fully covered. PrepXP is a fully responsive web application that allows users to have full functionality on all popular browsers.
+        </p>
+        <p>
+          Sign up today to hone your skills and be prepared whatever devices you are using
+        </p>
+      </div>
+    </div>
+    <div
+      className="carousel__panel"
+    >
+      <img
+        alt="man climbing chart"
+        src="carousel1.jpg"
+      />
+      <div>
+        <h2>
+          Practise anywhere
+        </h2>
+        <p>
+          Practise anywhere you have an internet connection. PrepXP is perfect for last minute preparations before a job interview or while you're preparing to re-enter the workforce.
+        </p>
+        <p>
+          Have the freedom to travel and know that your skills are still being honed wherever you are in the world. PrepXP will be a available as an offline web application in the future.
+        </p>
+      </div>
+    </div>
+    <div
+      className="carousel__panel"
+    >
+      <img
+        alt="man climbing chart"
+        src="carousel2.jpg"
+      />
+      <div>
+        <h2>
+          Save valuable time
+        </h2>
+        <p>
+          Finding quality up to date interview questions are prepartion can be costly and difficult to find. At PrepXP we value your time and want to give the best service possible.
+        </p>
+        <p>
+          We curate lists of interview questions that are up to date and relevant to the current job market to ensure that you are well equipped to pass any interview
+        </p>
+      </div>
+    </div>
+  </Carousel>
+</section>
+`;

@@ -18,6 +18,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
             "pathname": "/blog/5-Tips-to-get-things-done",
             "state": Object {
               "post": Object {
+                "byline": "yesyesyeys",
                 "img": "http://via.placeholder.com/300x300",
                 "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
                 "title": "5 Tips to get things done",
@@ -29,6 +30,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         <blogPanel
           post={
             Object {
+              "byline": "yesyesyeys",
               "img": "http://via.placeholder.com/300x300",
               "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
               "title": "5 Tips to get things done",
@@ -44,6 +46,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
             "pathname": "/blog/Pass-the-interview-with-these-answers",
             "state": Object {
               "post": Object {
+                "byline": "yesyesyeys",
                 "img": "http://via.placeholder.com/300x300",
                 "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
                 "title": "Pass the interview with these answers",
@@ -55,6 +58,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         <blogPanel
           post={
             Object {
+              "byline": "yesyesyeys",
               "img": "http://via.placeholder.com/300x300",
               "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
               "title": "Pass the interview with these answers",
@@ -70,6 +74,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
             "pathname": "/blog/Top-10-most-common-questions",
             "state": Object {
               "post": Object {
+                "byline": "yesyesyeys",
                 "img": "http://via.placeholder.com/300x300",
                 "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
                 "title": "Top 10 most common questions",
@@ -81,6 +86,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         <blogPanel
           post={
             Object {
+              "byline": "yesyesyeys",
               "img": "http://via.placeholder.com/300x300",
               "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
               "title": "Top 10 most common questions",
@@ -96,6 +102,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
             "pathname": "/blog/What-Google-and-employers-are-looking-for",
             "state": Object {
               "post": Object {
+                "byline": "yesyesyeys",
                 "img": "http://via.placeholder.com/300x300",
                 "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
                 "title": "What Google and employers are looking for",
@@ -107,6 +114,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         <blogPanel
           post={
             Object {
+              "byline": "yesyesyeys",
               "img": "http://via.placeholder.com/300x300",
               "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
               "title": "What Google and employers are looking for",
@@ -115,6 +123,34 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         />
       </Link>
     </div>
+  </div>
+</div>
+`;
+
+exports[`<blogGrid /> should render error message if error 1`] = `
+<div
+  className="blog__background"
+>
+  <div
+    className="container"
+  >
+    <h1
+      className="blog__grid__error"
+    >
+      Sorry, an error has occured
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`<blogGrid /> should render loading while waiting for posts 1`] = `
+<div
+  className="blog__background"
+>
+  <div
+    className="container"
+  >
+    <loader />
   </div>
 </div>
 `;

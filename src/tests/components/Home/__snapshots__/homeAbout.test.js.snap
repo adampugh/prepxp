@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeAbout /> should match snapshot 1`] = `
+<main>
+  <div
+    className="about__title"
+  >
+    <h1>
+      Why use PrepXP in your job search?
+    </h1>
+  </div>
+  <div
+    className="about__grid"
+  >
+    <div>
+      <img
+        alt="arm icon"
+        className="bannerText__image"
+        src="interview.png"
+      />
+    </div>
+    <div
+      className="about__grid__text"
+    >
+      <h1>
+        Need help with upcoming interviews?
+      </h1>
+      <p>
+        PrepXP aids users in landing their dream jobs by helping them pass the interview. Checkout our curated lists based on questions asked by some of the largest companies in the world.
+      </p>
+      <Link
+        replace={false}
+        to="/login"
+      >
+        <button
+          className="btn"
+        >
+          Start now
+        </button>
+      </Link>
+    </div>
+  </div>
+</main>
+`;

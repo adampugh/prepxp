@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should match snapshots 1`] = `
+<div>
+  <Navbar />
+  <homeBanner />
+  <homeAbout />
+  <homePanels />
+  <homeCarousel />
+  <homeBottomBanner />
+  <footer />
+</div>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePanels /> should match snapshot 1`] = `
+<section
+  className="container"
+>
+  <div
+    className="panels__grid"
+  >
+    <div>
+      <img
+        alt="man climbing chart"
+        src="panel1.jpg"
+      />
+      <h2>
+        Develop skills
+      </h2>
+      <p>
+        Practise your ability to answer difficult interview questions and learn how to pass the interview.
+      </p>
+    </div>
+    <div>
+      <img
+        alt="arm icon"
+        className="bannerText__image"
+        src="panel2.jpg"
+      />
+      <h2>
+        Beat competition
+      </h2>
+      <p>
+        Gain insight to some of the most common interview questions and prepare excellent answers to help you stand out.
+      </p>
+    </div>
+    <div>
+      <img
+        alt="arm icon"
+        className="bannerText__image"
+        src="panel3.jpg"
+      />
+      <h2>
+        Feel confident
+      </h2>
+      <p>
+        Prepare fantastic answers and run through mock interviews to gain experience so that you feel relaxed in any interview.
+      </p>
+    </div>
+  </div>
+  <hr />
+</section>
+`;

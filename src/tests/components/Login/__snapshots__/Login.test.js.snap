@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> should match snapshot 1`] = `
+<div>
+  <div
+    className="login"
+  >
+    <h1
+      className="logo"
+    >
+      PrepXP
+    </h1>
+    <div
+      className="login__box"
+    >
+      <h2>
+        Log in to your account
+      </h2>
+      <div
+        className="login__box__input"
+      >
+        <input
+          placeholder="email"
+          type="email"
+        />
+        <i
+          className="fas fa-user"
+        />
+      </div>
+      <div
+        className="login__box__input"
+      >
+        <input
+          placeholder="password"
+          type="password"
+        />
+        <i
+          className="fas fa-lock"
+        />
+      </div>
+      <button
+        className="btn"
+      >
+        Log In
+      </button>
+    </div>
+    <div
+      className="login__bottomBox"
+    >
+      <p>
+        New to PrepXP? Sign up
+      </p>
+    </div>
+  </div>
+  <footer />
+</div>
+`;

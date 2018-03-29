@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StartPage /> should match snapshot 1`] = `
+<div>
+  <Navbar />
+  <startGrid
+    finishQuestions={[Function]}
+    questions={
+      Array [
+        Object {
+          "answer": "I am good with my arms and I can life six chairs with my legs.",
+          "question": "What are your best strengths?",
+        },
+        Object {
+          "answer": "hmm",
+          "question": "what?",
+        },
+      ]
+    }
+  />
+  <footer />
+</div>
+`;

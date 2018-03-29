@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeBanner /> should match snapshot 1`] = `
+<section
+  className="homeBanner"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="homeBanner__content"
+    >
+      <div
+        className="homeBanner__content__textPanel"
+      >
+        <Fade
+          duration={3000}
+          top={true}
+        >
+          <h1>
+            Prepare for success
+          </h1>
+        </Fade>
+        <Fade
+          duration={3000}
+          left={true}
+        >
+          <p>
+            Prepare for job interviews by answering pracitcal interview questions! Create and build your own lists of interview questions or import from curated lists.
+          </p>
+          <Link
+            replace={false}
+            to="/login"
+          >
+            <button
+              className="btn"
+            >
+              Get Started
+            </button>
+          </Link>
+        </Fade>
+      </div>
+      <div
+        className="homeBanner__content__picturePanel"
+      >
+        <Fade
+          duration={3000}
+          right={true}
+        >
+          <img
+            alt="man sitting at a desk"
+            className="bannerText__image"
+            src="deskimg.png"
+          />
+        </Fade>
+      </div>
+    </div>
+  </div>
+</section>
+`;

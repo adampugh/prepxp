@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StartGrid /> should match snapshot 1`] = `
+<section
+  className="start"
+>
+  <div
+    className="container-s"
+  >
+    <div
+      className="start__box"
+    >
+      <div
+        className="start__questionBox"
+      >
+        <h2>
+          <span>
+            Q1 
+          </span>
+          What is the difference between let and var?
+        </h2>
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Show answer
+        </button>
+      </div>
+      <div
+        className="start__previousAnswer"
+      >
+        <p>
+          Answer hidden
+        </p>
+      </div>
+      <div
+        className="start__answerBox"
+      >
+        <textarea />
+      </div>
+      <div
+        className="start__button__div"
+      >
+        <button
+          className="btn"
+        >
+          Save
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;

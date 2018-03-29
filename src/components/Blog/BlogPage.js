@@ -9,7 +9,8 @@ import Footer from "../UI/footer";
 class BlogPage extends Component {
     state = {
         posts: [],
-        loading: true
+        loading: true,
+        error: null
     }
 
     componentDidMount() {
@@ -22,11 +23,14 @@ class BlogPage extends Component {
         .then((res) => {
             this.setState({
                 posts: res.data,
-                loading: false
+                loading: false,
+                error: null
             });
         })
         .catch((err) => {
-            console.log("An error occured");
+            this.setState({
+                error: "Sorry, blog posts could not be retrieved"
+            })
         });
     }
 
@@ -35,7 +39,10 @@ class BlogPage extends Component {
             <div>
                 <Navbar />
                 <BlogBanner />
-                <BlogGrid posts={this.state.posts} loading={true} />
+                <BlogGrid 
+                    posts={this.state.posts} 
+                    loading={this.state.loading} 
+                    error={this.state.error} />
                 <Footer />
             </div>
         );

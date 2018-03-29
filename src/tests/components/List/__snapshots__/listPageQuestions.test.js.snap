@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListPageQuestions /> should match snapshot 1`] = `
+<div
+  className="listPage__questions"
+>
+  <div
+    className="container-s"
+  >
+    <div
+      className="question__item"
+      key="What is the difference between let and var?0"
+    >
+      <h2>
+        <span>
+          Q
+          1
+        </span>
+         
+        What is the difference between let and var?
+      </h2>
+      <h2>
+        <i
+          className="fas fa-trash-alt"
+        />
+      </h2>
+    </div>
+    <div
+      className="question__item"
+      key="Who created JavaScript?1"
+    >
+      <h2>
+        <span>
+          Q
+          2
+        </span>
+         
+        Who created JavaScript?
+      </h2>
+      <h2>
+        <i
+          className="fas fa-trash-alt"
+        />
+      </h2>
+    </div>
+  </div>
+</div>
+`;

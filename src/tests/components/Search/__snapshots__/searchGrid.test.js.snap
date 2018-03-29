@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchGrid /> should match snapshot 1`] = `
+<div
+  className="searchGrid__lists"
+>
+  <div
+    className="container-s"
+  >
+    <div
+      className="searchGrid__list__item"
+      key="Angular Developer0"
+    >
+      <div>
+        <h2>
+          Angular Developer
+        </h2>
+        <p>
+          4
+           Questions
+        </p>
+      </div>
+      <h2
+        className="searchGrid__list__icon"
+      >
+        <i
+          className="fas fa-plus"
+        />
+      </h2>
+    </div>
+    <div
+      className="searchGrid__list__item"
+      key="Node JS Developer1"
+    >
+      <div>
+        <h2>
+          Node JS Developer
+        </h2>
+        <p>
+          3
+           Questions
+        </p>
+      </div>
+      <h2
+        className="searchGrid__list__icon"
+      >
+        <i
+          className="fas fa-plus"
+        />
+      </h2>
+    </div>
+    <div
+      className="searchGrid__list__item"
+      key="General Interview Questions 12"
+    >
+      <div>
+        <h2>
+          General Interview Questions 1
+        </h2>
+        <p>
+          7
+           Questions
+        </p>
+      </div>
+      <h2
+        className="searchGrid__list__icon"
+      >
+        <i
+          className="fas fa-plus"
+        />
+      </h2>
+    </div>
+  </div>
+</div>
+`;

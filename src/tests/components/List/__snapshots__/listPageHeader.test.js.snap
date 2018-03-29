@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListPageHeader /> should match snapshot 1`] = `
+<div
+  className="listPage__header"
+>
+  <div
+    className="container-s"
+  >
+    <div
+      className="listPage__header__content"
+    >
+      <div>
+        <h1>
+           
+          <i
+            className="fas fa-edit"
+          />
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;

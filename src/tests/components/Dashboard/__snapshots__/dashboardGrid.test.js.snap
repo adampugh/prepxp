@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardGrid /> should match snapshot 1`] = `
+<div
+  className="dashboard__wrapper"
+>
+  <section
+    className="container"
+  >
+    <div
+      className="dashboard__grid"
+    >
+      <dashboardSidebar />
+      <div
+        className="dashboard__grid__lists"
+      >
+        <h1>
+          Hello, 
+          !
+        </h1>
+        <dashboardList
+          key="JavaScript Developer0"
+          list={
+            Object {
+              "questions": Array [
+                Object {
+                  "answer": "JavaScript is a language for the web.",
+                  "question": "What is the difference between let and var?",
+                },
+                Object {
+                  "answer": "Brendan Eich",
+                  "question": "Who created JavaScript?",
+                },
+              ],
+              "title": "JavaScript Developer",
+            }
+          }
+        />
+        <dashboardList
+          key="PHP Developer1"
+          list={
+            Object {
+              "questions": Array [
+                Object {
+                  "answer": "No-one really knows.",
+                  "question": "What is PHP exactly?",
+                },
+              ],
+              "title": "PHP Developer",
+            }
+          }
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

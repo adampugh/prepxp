@@ -14,7 +14,9 @@ exports[`<blogPost /> should match snapshot 1`] = `
     <h2>
       5 Tips to get things done
     </h2>
-    <p />
+    <p>
+      yesyesyeys
+    </p>
   </div>
 </div>
 `;

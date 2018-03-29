@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListPage /> should match snapshot 1`] = `
+<div>
+  <Navbar />
+  <listPageAddQuestionBanner />
+  <listPageHeader
+    title="JavaScript Developer"
+  />
+  <listPageQuestions
+    questions={
+      Array [
+        Object {
+          "answer": "You're the best",
+          "question": "What is it?",
+        },
+        Object {
+          "answer": "Only what no",
+          "question": "I'm not sure that is",
+        },
+      ]
+    }
+  />
+  <footer />
+</div>
+`;

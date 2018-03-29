@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeBottomBanner /> should match snapshot 1`] = `
+<section
+  className="bottomBanner"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Land your dream job
+    </h1>
+    <p>
+      Sign up to PrepXP today to better your career and get the job you deserve! Pass the interview by gaining experience and preparing for success in all future job interviews.
+    </p>
+    <Link
+      replace={false}
+      to="/login"
+    >
+      <button
+        className="btn"
+      >
+        Start now
+      </button>
+    </Link>
+    <img
+      alt="policeman, business man and designer"
+      src="bottomBanner.png"
+    />
+  </div>
+</section>
+`;

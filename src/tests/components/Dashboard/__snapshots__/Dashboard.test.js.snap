@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard /> should match snapshot 1`] = `
+<div>
+  <DashboardDeleteModal
+    closeModal={[Function]}
+    isOpen={false}
+  />
+  <Navbar />
+  <DashboardGrid
+    closeModal={[Function]}
+    lists={
+      Array [
+        Object {
+          "questions": Array [
+            Object {
+              "answer": "JavaScript is a language for the web.",
+              "question": "What is the difference between let and var?",
+            },
+            Object {
+              "answer": "Brendan Eich",
+              "question": "Who created JavaScript?",
+            },
+          ],
+          "title": "JavaScript Developer",
+        },
+        Object {
+          "questions": Array [
+            Object {
+              "answer": "No-one really knows.",
+              "question": "What is PHP exactly?",
+            },
+          ],
+          "title": "PHP Developer",
+        },
+      ]
+    }
+    name="Bob"
+    openModal={[Function]}
+  />
+  <footer />
+</div>
+`;

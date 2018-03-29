@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardSideBar /> should match snapshot 1`] = `
+<div
+  className="sidebar"
+>
+  <img
+    alt="man sitting at a desk"
+    src="deskimg.png"
+  />
+  <div
+    className="sidebar__panel"
+  >
+    <p>
+      Create a new list of interview questions
+    </p>
+    <button
+      className="btn"
+    >
+      Create
+    </button>
+  </div>
+  <div
+    className="sidebar__panel"
+  >
+    <img
+      alt="man sitting at a desk"
+      src="deskimg.png"
+    />
+    <p>
+      Add a list of interview questions for our seleted lists
+    </p>
+    <button
+      className="btn"
+    >
+      Lists
+    </button>
+  </div>
+  <div
+    className="sidebar__panel"
+  >
+    <img
+      alt="man sitting at a desk"
+      src="deskimg.png"
+    />
+    <p>
+      Read the latest tips and get the job you deserve
+    </p>
+    <button
+      className="btn"
+    >
+      Blog
+    </button>
+  </div>
+</div>
+`;

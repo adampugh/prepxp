@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListPageAddQuestionBanner /> should match snapshot 1`] = `
+<div
+  className="listPage__addQuestion"
+>
+  <div
+    className="container-s"
+  >
+    <img
+      alt="people being interviewed"
+      src="interview2.png"
+    />
+    <h1>
+      Add a question
+    </h1>
+    <p>
+      Add a question below and add it to your list
+    </p>
+    <input
+      placeholder="What weaknesses do you have?"
+      type="text"
+    />
+    <button
+      className="btn"
+    >
+      Add Question
+    </button>
+  </div>
+</div>
+`;
