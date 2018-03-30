@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavbarLoggedOut /> should match snap 1`] = `
+<div>
+  <div
+    className="slideOut"
+    id="drawer"
+  >
+    <h1>
+      Home
+    </h1>
+    <h1>
+      About
+    </h1>
+    <h1>
+      Blog
+    </h1>
+    <h1>
+      Login
+    </h1>
+    <p>
+      <i
+        className="fab fa-twitter"
+      />
+      <i
+        className="fab fa-facebook-f"
+      />
+      <i
+        className="fab fa-youtube"
+      />
+    </p>
+  </div>
+  <div
+    className="navbar"
+  >
+    <div
+      className="container-l"
+    >
+      <div
+        className="navbar__loggedOut"
+      >
+        <h1
+          className="logo"
+        >
+          PrepXP
+        </h1>
+        <h1
+          className=""
+          onClick={[Function]}
+        >
+          ☰
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;

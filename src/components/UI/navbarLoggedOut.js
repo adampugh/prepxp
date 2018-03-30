@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-import * as mobile from "is-mobile";
+// import * as isMobile from "is-mobile";
+import isMobile from "is-mobile";
+
 
 // add modal in ui for menu - might need loggedin / not logged in versions
 
@@ -14,12 +16,12 @@ class Navbar extends Component {
     }
     
     componentDidMount() {
-        const isMobile = mobile();
+        const onMobile = isMobile();
         this.setState({
-            onMobile: isMobile
+            onMobile: onMobile
         });
 
-        if (isMobile === false) {
+        if (onMobile === false) {
             document.addEventListener('scroll', () => {
                 const isOnWhite = window.scrollY > 1381 && window.scrollY < 2650;
                 if (isOnWhite !== this.state.isOnWhite) {
@@ -51,7 +53,7 @@ class Navbar extends Component {
                     <h1>Home</h1>
                     <h1>About</h1>
                     <h1>Blog</h1>
-                    <Link to="/login"><h1>Login</h1></Link>
+                    <h1>Login</h1>
                     <p>
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-facebook-f"></i>
