@@ -11,12 +11,12 @@ exports[`<ListPage /> should match snapshot 1`] = `
     questions={
       Array [
         Object {
-          "answer": "You're the best",
-          "question": "What is it?",
+          "answer": "JavaScript is a language for the web.",
+          "question": "What is the difference between let and var?",
         },
         Object {
-          "answer": "Only what no",
-          "question": "I'm not sure that is",
+          "answer": "Brendan Eich",
+          "question": "Who created JavaScript?",
         },
       ]
     }

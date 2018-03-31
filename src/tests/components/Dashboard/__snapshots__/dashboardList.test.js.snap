@@ -5,20 +5,70 @@ exports[`<DashboardList /> should match snapshot 1`] = `
   className="dashboard__grid__lists__item"
 >
   <div>
-    <h2>
-      JavaScript Developer
-    </h2>
+    <Link
+      replace={false}
+      to={
+        Object {
+          "pathname": "/list/start",
+          "state": Object {
+            "list": Object {
+              "id": "234",
+              "questions": Array [
+                Object {
+                  "answer": "JavaScript is a language for the web.",
+                  "question": "What is the difference between let and var?",
+                },
+                Object {
+                  "answer": "Brendan Eich",
+                  "question": "Who created JavaScript?",
+                },
+              ],
+              "title": "JavaScript Developer",
+            },
+          },
+        }
+      }
+    >
+      <h2>
+        JavaScript Developer
+      </h2>
+    </Link>
     <p>
       2
        Questions
     </p>
   </div>
   <div>
-    <h2>
-      <i
-        className="fas fa-edit"
-      />
-    </h2>
+    <Link
+      replace={false}
+      to={
+        Object {
+          "pathname": "/list/edit",
+          "state": Object {
+            "list": Object {
+              "id": "234",
+              "questions": Array [
+                Object {
+                  "answer": "JavaScript is a language for the web.",
+                  "question": "What is the difference between let and var?",
+                },
+                Object {
+                  "answer": "Brendan Eich",
+                  "question": "Who created JavaScript?",
+                },
+              ],
+              "title": "JavaScript Developer",
+            },
+          },
+        }
+      }
+    >
+      <h2>
+        <i
+          className="fas fa-edit"
+        />
+      </h2>
+    </Link>
     <h2>
       <i
         className="fas fa-trash-alt"

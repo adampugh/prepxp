@@ -14,11 +14,16 @@ exports[`<DashboardSideBar /> should match snapshot 1`] = `
     <p>
       Create a new list of interview questions
     </p>
-    <button
-      className="btn"
+    <Link
+      replace={false}
+      to="/list/edit"
     >
-      Create
-    </button>
+      <button
+        className="btn"
+      >
+        Create
+      </button>
+    </Link>
   </div>
   <div
     className="sidebar__panel"
@@ -30,11 +35,16 @@ exports[`<DashboardSideBar /> should match snapshot 1`] = `
     <p>
       Add a list of interview questions for our seleted lists
     </p>
-    <button
-      className="btn"
+    <Link
+      replace={false}
+      to="/search"
     >
-      Lists
-    </button>
+      <button
+        className="btn"
+      >
+        Lists
+      </button>
+    </Link>
   </div>
   <div
     className="sidebar__panel"
@@ -46,11 +56,16 @@ exports[`<DashboardSideBar /> should match snapshot 1`] = `
     <p>
       Read the latest tips and get the job you deserve
     </p>
-    <button
-      className="btn"
+    <Link
+      replace={false}
+      to="/blog"
     >
-      Blog
-    </button>
+      <button
+        className="btn"
+      >
+        Blog
+      </button>
+    </Link>
   </div>
 </div>
 `;

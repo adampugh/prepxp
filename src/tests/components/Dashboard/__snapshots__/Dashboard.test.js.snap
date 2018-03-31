@@ -12,6 +12,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     lists={
       Array [
         Object {
+          "id": "234",
           "questions": Array [
             Object {
               "answer": "JavaScript is a language for the web.",
@@ -25,6 +26,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
           "title": "JavaScript Developer",
         },
         Object {
+          "id": "1231",
           "questions": Array [
             Object {
               "answer": "No-one really knows.",

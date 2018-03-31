@@ -22,6 +22,7 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
           key="JavaScript Developer0"
           list={
             Object {
+              "id": "234",
               "questions": Array [
                 Object {
                   "answer": "JavaScript is a language for the web.",
@@ -40,6 +41,7 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
           key="PHP Developer1"
           list={
             Object {
+              "id": "1231",
               "questions": Array [
                 Object {
                   "answer": "No-one really knows.",

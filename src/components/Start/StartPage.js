@@ -7,16 +7,6 @@ import Footer from "../UI/footer";
 
 class StartPage extends Component {
     state = {
-        title: "Java Developer",
-        questions: [
-            {
-                question: "What are your best strengths?",
-                answer: "I am good with my arms and I can life six chairs with my legs.",
-            }, {
-                question: "what?",
-                answer: "hmm"
-            }
-        ],
         questionsComplete: false
     }
 
@@ -32,7 +22,7 @@ class StartPage extends Component {
     }
 
 
-    render() {
+    render(props) {
         return (
             <div>
                 <Navbar />
@@ -40,7 +30,7 @@ class StartPage extends Component {
                     <StartComplete /> :
                     <StartGrid 
                         finishQuestions={this.finishQuestions}
-                        questions={this.state.questions}
+                        questions={this.props.location.state.list.questions}
                     />
                 }
                 <Footer />
@@ -48,6 +38,5 @@ class StartPage extends Component {
         )
     } 
 }
-
 
 export default StartPage;

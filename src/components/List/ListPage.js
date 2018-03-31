@@ -8,17 +8,17 @@ import Footer from "../UI/footer";
 
 class ListPage extends Component {
     state = {
-        title: "JavaScript Developer",
-        questions: [
-            {
-                question: "What is it?",
-                answer: "You're the best"
-            },
-            {
-                question: "I'm not sure that is",
-                answer: "Only what no"
-            }
-        ]
+        // title: "JavaScript Developer",
+        // questions: [
+        //     {
+        //         question: "What is it?",
+        //         answer: "You're the best"
+        //     },
+        //     {
+        //         question: "I'm not sure that is",
+        //         answer: "Only what no"
+        //     }
+        // ]
     }
 
     componentDidMount() {
@@ -30,13 +30,15 @@ class ListPage extends Component {
             <div>
                 <Navbar />
                 <ListPageAddQuestionBanner />
-                <ListPageHeader title={this.state.title} />
-                <ListPageQuestions questions={this.state.questions} />
+                <ListPageHeader title={this.props.location.state.list.title} />
+                <ListPageQuestions questions={this.props.location.state.list.questions} />
                 <Footer />
             </div>
         )
     }
 }
+
+// <ListPageQuestions questions={this.state.questions} />
 
 export default ListPage;
 

@@ -2,6 +2,7 @@ const user = {
     name: "Bob",
     lists: [
         {
+            id: "234",
             title: "JavaScript Developer",
             questions: [
                 {
@@ -15,6 +16,7 @@ const user = {
             ]
         },
         {
+            id: "1231",
             title: "PHP Developer",
             questions: [
                 {

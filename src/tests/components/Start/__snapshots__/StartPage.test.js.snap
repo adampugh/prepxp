@@ -8,12 +8,12 @@ exports[`<StartPage /> should match snapshot 1`] = `
     questions={
       Array [
         Object {
-          "answer": "I am good with my arms and I can life six chairs with my legs.",
-          "question": "What are your best strengths?",
+          "answer": "JavaScript is a language for the web.",
+          "question": "What is the difference between let and var?",
         },
         Object {
-          "answer": "hmm",
-          "question": "what?",
+          "answer": "Brendan Eich",
+          "question": "Who created JavaScript?",
         },
       ]
     }

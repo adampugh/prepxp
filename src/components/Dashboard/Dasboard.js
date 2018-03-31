@@ -1,38 +1,14 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import Navbar from "../UI/navbarLoggedIn";
 import DashboardGrid from "./DashboardGrid";
 import DashboardDeleteModal from "./dashboardDeleteModal";
 import Footer from "../UI/footer";
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
     state = {
-        name: "Bob",
-        lists: [
-            {
-                title: "JavaScript Developer",
-                questions: [
-                    {
-                        question: "What is the difference between let and var?",
-                        answer: "JavaScript is a language for the web."
-                    },
-                    {
-                        question: "Who created JavaScript?",
-                        answer: "Brendan Eich"
-                    }
-                ]
-            },
-            {
-                title: "PHP Developer",
-                questions: [
-                    {
-                        question: "What is PHP exactly?",
-                        answer: "No-one really knows."
-                    }
-                ]
-            }
-        ],
-        modalIsOpen: false
+        deleteModalIsOpen: false
     }
 
     componentDidMount() {
@@ -41,13 +17,13 @@ class Dashboard extends Component {
 
     closeModal = () => {
         this.setState({
-            modalIsOpen: false
+            deleteModalIsOpen: false
         })
     }
 
     openModal = () => {
         this.setState({
-            modalIsOpen: true
+            deleteModalIsOpen: true
         })
     }
 
@@ -55,13 +31,13 @@ class Dashboard extends Component {
         return (
             <div>
                 <DashboardDeleteModal
-                    isOpen={this.state.modalIsOpen}
+                    isOpen={this.state.deleteModalIsOpen}
                     closeModal={this.closeModal}
                 />
                 <Navbar />
                 <DashboardGrid 
-                    name={this.state.name} 
-                    lists={this.state.lists}
+                    name={this.props.name} 
+                    lists={this.props.lists}
                     openModal={this.openModal}
                     closeModal={this.closeModal} />
                 <Footer />
@@ -70,4 +46,11 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+const mapStateToProps = state => {
+    return {
+        name: state.name,
+        lists: state.lists
+    }
+}
+
+export default connect(mapStateToProps)(Dashboard);

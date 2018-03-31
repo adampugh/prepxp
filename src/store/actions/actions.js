@@ -1,6 +1,12 @@
-export const ADD_LIST = "ADD_LIST";
-export const DELETE_LIST = "DELETE_LIST";
+import * as actionTypes from "./actionTypes";
 
+// 1. dashboard
+// ADD_LIST
+export const addList = (list) => ({
+    type: actionTypes.ADD_LIST,
+    list
+});
+// DELETE_LIST
 
 // 2. start
 // SAVE_ANSWER
@@ -9,6 +15,7 @@ export const DELETE_LIST = "DELETE_LIST";
 // ADD_QUESTION
 // DELETE_QUESTION
 // EDIT_LIST_TITLE
+
 
 
 // 4. login

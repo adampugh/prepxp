@@ -10,7 +10,7 @@ class SearchBanner extends Component {
                     Click the + symbol to add to your own lists and practise on your 
                     dashboard.</p>
                     <input type="text" placeholder="Back-End Developer"/>
-                    <button className="btn">Add Question</button>
+                    <button className="btn">Search</button>
                 </div>
             </div>
         )
