@@ -6,9 +6,14 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     closeModal={[Function]}
     isOpen={false}
   />
+  <DashboardCreateModal
+    closeModal={[Function]}
+    isOpen={false}
+  />
   <Navbar />
   <DashboardGrid
-    closeModal={[Function]}
+    closeCreateModal={[Function]}
+    closeDeleteModal={[Function]}
     lists={
       Array [
         Object {
@@ -38,7 +43,8 @@ exports[`<Dashboard /> should match snapshot 1`] = `
       ]
     }
     name="Bob"
-    openModal={[Function]}
+    openCreateModal={[Function]}
+    openDeleteModal={[Function]}
   />
   <footer />
 </div>

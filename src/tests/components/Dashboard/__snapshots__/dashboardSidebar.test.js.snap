@@ -14,16 +14,11 @@ exports[`<DashboardSideBar /> should match snapshot 1`] = `
     <p>
       Create a new list of interview questions
     </p>
-    <Link
-      replace={false}
-      to="/list/edit"
+    <button
+      className="btn"
     >
-      <button
-        className="btn"
-      >
-        Create
-      </button>
-    </Link>
+      Create
+    </button>
   </div>
   <div
     className="sidebar__panel"

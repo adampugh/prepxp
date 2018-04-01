@@ -29,7 +29,15 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    return state;
+    switch(action.type) {
+        case actionTypes.ADD_LIST:
+            return {
+                ...state,
+                lists: [...state.lists, action.list]
+            }
+        default:
+            return state;
+    }
 };
 
 export default reducer;

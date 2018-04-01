@@ -15,9 +15,6 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
       </h1>
     </Link>
     <h1>
-      Create
-    </h1>
-    <h1>
       Lists
     </h1>
     <h1>

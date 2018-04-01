@@ -1,29 +1,45 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+
+import * as actions from "../../store/actions/actions";
 import Navbar from "../UI/navbarLoggedIn";
 import DashboardGrid from "./DashboardGrid";
 import DashboardDeleteModal from "./dashboardDeleteModal";
+import DashboardCreateModal from "./dashboardCreateModal";
 import Footer from "../UI/footer";
 
 export class Dashboard extends Component {
     state = {
-        deleteModalIsOpen: false
+        deleteModalIsOpen: false,
+        createModalIsOpen: false
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
-    closeModal = () => {
+    closeDeleteModal = () => {
         this.setState({
             deleteModalIsOpen: false
         })
     }
 
-    openModal = () => {
+    openDeleteModal = () => {
         this.setState({
             deleteModalIsOpen: true
+        })
+    }
+
+    closeCreateModal = () => {
+        this.setState({
+            createModalIsOpen: false
+        })
+    }
+
+    openCreateModal = () => {
+        this.setState({
+            createModalIsOpen: true
         })
     }
 
@@ -32,14 +48,21 @@ export class Dashboard extends Component {
             <div>
                 <DashboardDeleteModal
                     isOpen={this.state.deleteModalIsOpen}
-                    closeModal={this.closeModal}
+                    closeModal={this.closeDeleteModal}
+                />
+                <DashboardCreateModal
+                    isOpen={this.state.createModalIsOpen}
+                    closeModal={this.closeCreateModal}
+                    startAddList={this.props.startAddList}
                 />
                 <Navbar />
                 <DashboardGrid 
                     name={this.props.name} 
                     lists={this.props.lists}
-                    openModal={this.openModal}
-                    closeModal={this.closeModal} />
+                    openDeleteModal={this.openDeleteModal}
+                    closeDeleteModal={this.closeDeleteModal} 
+                    openCreateModal={this.openCreateModal}
+                    closeCreateModal={this.closeCreateModal} />
                 <Footer />
             </div>
         );
@@ -53,4 +76,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(Dashboard);
+const mapDispatchToProps = dispatch => {
+    return {
+        startAddList: (list) => dispatch(actions.addList(list))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

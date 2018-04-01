@@ -15,7 +15,6 @@ class Navbar extends Component {
         this.setState({
             drawerOpen: !this.state.drawerOpen,
         });
-        
     }
 
     render() {
@@ -23,7 +22,6 @@ class Navbar extends Component {
             <div>
                 <div id="drawer" className={this.state.drawerOpen ? 'slideIn' : 'slideOut'}>
                     <Link to="/dashboard"><h1>Dashboard</h1></Link>
-                    <h1>Create</h1>
                     <h1>Lists</h1>
                     <h1>Blog</h1>
                     <h1>Logout</h1>

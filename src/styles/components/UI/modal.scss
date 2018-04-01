@@ -49,6 +49,20 @@
             cursor: pointer;
         }
     }
+    input {
+        display: block;
+        width: 80%;
+        margin: $padding-s auto;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $light-grey;
+    }
+}
+
+.modal__error {
+    color: lightcoral;
+    padding: 0;
+    margin: 0;
 }
 
 .modal--delete {
