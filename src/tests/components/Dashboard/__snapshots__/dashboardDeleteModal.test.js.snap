@@ -37,6 +37,7 @@ exports[`<DashboardDeleteModal /> should match snapshot 1`] = `
     <hr />
     <button
       className="btn"
+      onClick={[Function]}
     >
       Yes
     </button>

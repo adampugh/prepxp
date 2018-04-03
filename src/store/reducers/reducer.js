@@ -1,31 +1,8 @@
 import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
-    name: "Bob",
-    lists: [
-        {
-            title: "JavaScript Developer",
-            questions: [
-                {
-                    question: "What is the difference between let and var?",
-                    answer: "JavaScript is a language for the web."
-                },
-                {
-                    question: "Who created JavaScript?",
-                    answer: "Brendan Eich"
-                }
-            ]
-        },
-        {
-            title: "PHP Developer",
-            questions: [
-                {
-                    question: "What is PHP exactly?",
-                    answer: "No-one really knows."
-                }
-            ]
-        }
-    ]
+    name: "you",
+    lists: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -34,6 +11,28 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 lists: [...state.lists, action.list]
+            }
+        case actionTypes.DELETE_LIST:
+            return {
+                ...state,
+                lists: state.lists.filter(list => list.id !== action.id)
+            }
+        case actionTypes.ADD_QUESTION:
+            return {
+                ...state,
+                lists: state.lists.map((list, index) => {
+                    if (list.id === action.id) {
+                        return {
+                            ...list,
+                            questions: [
+                                ...list.questions,
+                                action.question
+                            ]
+                        }
+                    } else {
+                        return {...list}
+                    }
+                })
             }
         default:
             return state;

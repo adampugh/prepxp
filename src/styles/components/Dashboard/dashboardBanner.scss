@@ -1,0 +1,16 @@
+.dashboard__banner {
+    background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
+    // text-align: center;
+    color: white;
+    padding: $padding-s;
+    p {
+        font-size: $font-m;
+    }
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .dashboard__banner {
+        display: none;
+    }
+}

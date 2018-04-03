@@ -17,8 +17,32 @@ describe("list actions", () => {
     });
 
     // DELETE LIST
+    it("should return DELETE_LIST action object", () => {
+        const id = "123";
+        const action = actions.deleteList(id);
+        expect(action).toEqual({
+            type: actionTypes.DELETE_LIST,
+            id
+        });
+    });
 
     // EDIT_LIST_TITLE
+
+
+    // ADD_QUESTION
+    it("should return ADD_QUESTION action object", () => {
+        const id = "123";
+        const question = {
+            question: "What do you think about JS?",
+            answer: ""
+        }
+        const action = actions.addQuestion(id, question);
+        expect(action).toEqual({
+            type: actionTypes.ADD_QUESTION,
+            id, 
+            question
+        })
+    });
 })
 
 
@@ -32,7 +56,7 @@ describe("list actions", () => {
 // ADD_QUESTION
 // DELETE_QUESTION
 // EDIT_LIST_TITLE
-// ADD_LIST
+
 
 // 4. login
 // START_LOGIN

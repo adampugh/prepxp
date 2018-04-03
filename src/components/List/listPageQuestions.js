@@ -8,7 +8,7 @@ const listPageQuestions = (props) => (
                     <h2><span>Q{index + 1}</span> {question.question}</h2>
                     <h2><i className="fas fa-trash-alt"></i></h2>
                 </div>
-            )) : <h2> Add some questions to this list</h2>}
+            )) : <h2 className="listPage__questions__empty"> Add some questions to this list</h2>}
             
         </div>
     </div>

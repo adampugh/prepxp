@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ListPage from "../../../components/List/ListPage";
+import { ListPage } from "../../../components/List/ListPage";
 import user from "../../fixtures/userLists";
 
 describe("<ListPage />", () => {

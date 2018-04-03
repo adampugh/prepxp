@@ -5,12 +5,16 @@ exports[`<Dashboard /> should match snapshot 1`] = `
   <DashboardDeleteModal
     closeModal={[Function]}
     isOpen={false}
+    selectedListId=""
   />
   <DashboardCreateModal
     closeModal={[Function]}
     isOpen={false}
   />
   <Navbar />
+  <dashboardBanner
+    openCreateModal={[Function]}
+  />
   <DashboardGrid
     closeCreateModal={[Function]}
     closeDeleteModal={[Function]}
@@ -45,6 +49,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     name="Bob"
     openCreateModal={[Function]}
     openDeleteModal={[Function]}
+    selectList={[Function]}
   />
   <footer />
 </div>

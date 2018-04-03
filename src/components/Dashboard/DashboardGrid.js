@@ -18,9 +18,12 @@ class DashboardGrid extends Component {
                             {this.props.lists.length > 0 ? 
                                 this.props.lists.map((list, index) => <DashboardList 
                                     key={`${list.title + index}`} 
+                                    id={list.id}
+                                    listIndex={index}
                                     list={list}
                                     openModal={this.props.openDeleteModal}
-                                    closeModal={this.props.closeDeleteModal} />)
+                                    closeModal={this.props.closeDeleteModal} 
+                                    selectList={this.props.selectList} />)
                                 : 
                                 <div className="dashboard__empty">
                                     <h2>You don't have any lists yet, add or create some!</h2>

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardBanner /> should match snapshot 1`] = `
+<section
+  className="dashboard__banner"
+>
+  <div
+    className="container"
+  >
+    <p>
+      Create a new list of interview questions
+    </p>
+    <button
+      className="btn"
+    >
+      Create
+    </button>
+  </div>
+</section>
+`;

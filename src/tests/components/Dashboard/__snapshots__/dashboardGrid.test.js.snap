@@ -19,6 +19,7 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
           !
         </h1>
         <dashboardList
+          id="234"
           key="JavaScript Developer0"
           list={
             Object {
@@ -38,6 +39,7 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
           }
         />
         <dashboardList
+          id="1231"
           key="PHP Developer1"
           list={
             Object {

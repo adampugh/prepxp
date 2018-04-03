@@ -24,7 +24,14 @@ class DashboardDeleteModal extends Component {
                     <span onClick={this.props.closeModal}><i className="fas fa-times"></i></span>
                     <h2>Delete interview questions?</h2>
                     <hr />
-                    <button className="btn">Yes</button>
+                    <button 
+                        className="btn" 
+                        onClick={() => {
+                            this.props.startDeleteList(this.props.selectedListId);
+                            this.props.closeModal();
+                        }}>
+                        Yes
+                    </button>
                     <button className="btn" onClick={this.props.closeModal}>No</button>
                 </div>
             </Modal>

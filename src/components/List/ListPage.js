@@ -1,25 +1,14 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
+import * as actions from "../../store/actions/actions";
 import Navbar from "../UI/navbarLoggedIn";
 import ListPageHeader from "./listPageHeader";
 import ListPageAddQuestionBanner from "./listPageAddQuestionBanner";
 import ListPageQuestions from "./listPageQuestions";
 import Footer from "../UI/footer";
 
-class ListPage extends Component {
-    state = {
-        // title: "JavaScript Developer",
-        // questions: [
-        //     {
-        //         question: "What is it?",
-        //         answer: "You're the best"
-        //     },
-        //     {
-        //         question: "I'm not sure that is",
-        //         answer: "Only what no"
-        //     }
-        // ]
-    }
+export class ListPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -29,16 +18,36 @@ class ListPage extends Component {
         return (
             <div>
                 <Navbar />
-                <ListPageAddQuestionBanner />
-                <ListPageHeader title={this.props.location.state.list.title} />
-                <ListPageQuestions questions={this.props.location.state.list.questions} />
+                <ListPageAddQuestionBanner 
+                    startAddQuestion={this.props.startAddQuestion}
+                    id={this.props.location.state.list.id}
+                />
+                <ListPageHeader 
+                    title={this.props.lists[this.props.location.state.listIndex].title} />
+                <ListPageQuestions 
+                    questions={this.props.lists[this.props.location.state.listIndex].questions} />
                 <Footer />
             </div>
         )
     }
 }
 
+
+
+
 // <ListPageQuestions questions={this.state.questions} />
 
-export default ListPage;
+const mapStateToProps = state => {
+    return {
+        lists: state.lists
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        startAddQuestion: (id, question) => dispatch(actions.addQuestion(id, question))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListPage);
 

@@ -7,6 +7,17 @@ export const addList = (list) => ({
     list
 });
 // DELETE_LIST
+export const deleteList = (id) => ({
+    type: actionTypes.DELETE_LIST,
+    id
+});
+
+// ADD_QUESTION
+export const addQuestion = (id, question) => ({
+    type: actionTypes.ADD_QUESTION,
+    id,
+    question
+});
 
 // 2. start
 // SAVE_ANSWER

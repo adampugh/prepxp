@@ -15,6 +15,12 @@ class DashboardCreateModal extends Component {
         error: false
     }
 
+    handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            this.handleStartAddList();
+        }
+    }
+
     updateTitle = (e) => {
         let hasError = e.target.value.length < 0
         this.setState({
@@ -26,7 +32,9 @@ class DashboardCreateModal extends Component {
     handleStartAddList = () => {
         let list = {
             title: this.state.listTitle,
-            questions: []
+            questions: [],
+            // remove this once firebase generates ids
+            id: Math.random().toString()
         }
         this.state.listTitle.length > 0 
             ? this.props.startAddList(list)
@@ -54,7 +62,10 @@ class DashboardCreateModal extends Component {
                         ? <p className="modal__error">Please enter a list title</p>
                         : null
                     }
-                    <input type="text" onChange={(e) => this.updateTitle(e)} />
+                    <input 
+                        type="text" 
+                        onChange={(e) => this.updateTitle(e)} 
+                        onKeyDown={(e) => this.handleKeyDown(e)} />
                     <button className="btn" onClick={this.handleStartAddList}>Start</button>
                     <button className="btn" onClick={this.props.closeModal}>Cancel</button>
                 </div>
