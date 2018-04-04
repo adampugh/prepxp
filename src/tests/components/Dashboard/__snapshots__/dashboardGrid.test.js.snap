@@ -37,6 +37,7 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
               "title": "JavaScript Developer",
             }
           }
+          listIndex={0}
         />
         <dashboardList
           id="1231"
@@ -53,6 +54,7 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
               "title": "PHP Developer",
             }
           }
+          listIndex={1}
         />
       </div>
     </div>

@@ -18,11 +18,15 @@ exports[`<ListPageAddQuestionBanner /> should match snapshot 1`] = `
       Add a question below and add it to your list
     </p>
     <input
+      id="questionInput"
+      onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="What weaknesses do you have?"
       type="text"
     />
     <button
       className="btn"
+      onClick={[Function]}
     >
       Add Question
     </button>

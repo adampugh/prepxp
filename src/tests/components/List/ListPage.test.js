@@ -8,10 +8,11 @@ describe("<ListPage />", () => {
     it("should match snapshot", () => {
         const locationObj = {
             state: {
-                list: user.lists[0]
+                list: user.lists[0],
+                listIndex: 0
             }
         }
-        const wrapper = shallow(<ListPage location={locationObj} />);
+        const wrapper = shallow(<ListPage lists={user.lists} location={locationObj} />);
         expect(wrapper).toMatchSnapshot();
     });
 });

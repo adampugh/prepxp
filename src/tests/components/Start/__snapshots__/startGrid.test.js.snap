@@ -36,13 +36,17 @@ exports[`<StartGrid /> should match snapshot 1`] = `
       <div
         className="start__answerBox"
       >
-        <textarea />
+        <textarea
+          id="answer__textarea"
+          onChange={[Function]}
+        />
       </div>
       <div
         className="start__button__div"
       >
         <button
           className="btn"
+          onClick={[Function]}
         >
           Save
         </button>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import DashboardSidebar from "./DashboardSidebar";
 import DashboardList from "./dashboardList";
@@ -26,8 +27,13 @@ class DashboardGrid extends Component {
                                     selectList={this.props.selectList} />)
                                 : 
                                 <div className="dashboard__empty">
-                                    <h2>You don't have any lists yet, add or create some!</h2>
-                                    <button className="btn">Lists</button>
+                                    <h2>You don't have any lists yet, search and add or create a list!</h2>
+                                    <button 
+                                        className="btn"
+                                        onClick={this.props.openCreateModal} >Create</button>
+                                    <Link to="/search">
+                                        <button className="btn">Search</button>
+                                    </Link>
                                 </div> 
                             }
                         </div>

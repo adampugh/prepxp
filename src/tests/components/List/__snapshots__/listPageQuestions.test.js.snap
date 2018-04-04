@@ -19,7 +19,9 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
          
         What is the difference between let and var?
       </h2>
-      <h2>
+      <h2
+        onClick={[Function]}
+      >
         <i
           className="fas fa-trash-alt"
         />
@@ -37,7 +39,9 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
          
         Who created JavaScript?
       </h2>
-      <h2>
+      <h2
+        onClick={[Function]}
+      >
         <i
           className="fas fa-trash-alt"
         />

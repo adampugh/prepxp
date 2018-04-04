@@ -3,7 +3,16 @@ import React, { Component } from "react";
 class startGrid extends Component {
     state = {
         currentIndex: 0,
-        showAnswer: false
+        showAnswer: false,
+        answer: ""
+    }
+
+    updateAnswer = (e) => {
+        if (e.target.value.length > 0) {
+            this.setState({
+                answer: e.target.value
+            })
+        }
     }
 
     showAnswer = () => {
@@ -25,6 +34,14 @@ class startGrid extends Component {
         }
     }
 
+    handleStartSaveAnswer = () => {
+        if (this.state.answer.length > 0) {
+            this.props.startSaveAnswer(this.props.id, this.state.currentIndex, this.state.answer);
+        }
+        document.getElementById("answer__textarea").value = "";
+        this.setState({answer: ""});
+    }
+
     render() {
         return (
             <section className="start">
@@ -41,16 +58,25 @@ class startGrid extends Component {
                         </div>
                         <div className="start__previousAnswer">
                             {
-                                this.state.showAnswer ? <p>{this.props.questions[this.state.currentIndex].answer}</p> :
-                                <p>Answer hidden</p>
+                                this.state.showAnswer 
+                                    ? this.props.questions[this.state.currentIndex].answer === "" 
+                                        ? <p>You haven't added an answer yet</p>
+                                        : <p>{this.props.questions[this.state.currentIndex].answer}</p> 
+                                    : <p>Answer hidden</p>
                             }
                         </div>
                         <div className="start__answerBox">
-                            <textarea />
+                            <textarea 
+                                id="answer__textarea"
+                                onChange={(e) => this.updateAnswer(e)}/>
                         </div>
                         <div className="start__button__div">
-                            <button className="btn">Save</button>
-                            <button className="btn" onClick={this.nextQuestion}>Next</button>
+                            <button 
+                                className="btn"
+                                onClick={this.handleStartSaveAnswer} >Save</button>
+                            <button 
+                                className="btn" 
+                                onClick={this.nextQuestion}>Next</button>
                         </div>
                     </div>
                 </div>

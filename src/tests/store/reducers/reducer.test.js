@@ -47,7 +47,7 @@ describe("reducer", () => {
         }
         const state = reducer(listState, action);
         expect(state).toEqual({
-            ...state,
+            ...listState,
             lists: [
                 {
                     ...listState.lists[0],
@@ -62,8 +62,26 @@ describe("reducer", () => {
     });
 
     it("should delete question from list", () => {
-
+        const action = {
+            type: actionTypes.DELETE_QUESTION,
+            id: listState.lists[0].id,
+            index: 1
+        }
+        const state = reducer(listState, action);
+        expect(state.lists[0].questions.length).toBe(1);
     });
+
+    it("should save list answer", () => {
+        const action = {
+            type: actionTypes.SAVE_ANSWER,
+            id: listState.lists[0].id,
+            index: 0,
+            answer: "This is the answer"
+        }
+        const state = reducer(listState, action);
+        expect(state.lists[0].questions[0].answer).toBe(action.answer);
+    });
+
 
     it("should edit list title", () => {
 

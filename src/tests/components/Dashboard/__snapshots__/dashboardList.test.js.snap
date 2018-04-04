@@ -59,6 +59,7 @@ exports[`<DashboardList /> should match snapshot 1`] = `
               ],
               "title": "JavaScript Developer",
             },
+            "listIndex": undefined,
           },
         }
       }

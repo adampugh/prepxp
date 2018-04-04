@@ -3,11 +3,14 @@
 exports[`<ListPage /> should match snapshot 1`] = `
 <div>
   <Navbar />
-  <listPageAddQuestionBanner />
+  <listPageAddQuestionBanner
+    id="234"
+  />
   <listPageHeader
     title="JavaScript Developer"
   />
   <listPageQuestions
+    id="234"
     questions={
       Array [
         Object {

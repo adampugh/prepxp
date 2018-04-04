@@ -5,6 +5,7 @@ exports[`<StartPage /> should match snapshot 1`] = `
   <Navbar />
   <startGrid
     finishQuestions={[Function]}
+    id="234"
     questions={
       Array [
         Object {

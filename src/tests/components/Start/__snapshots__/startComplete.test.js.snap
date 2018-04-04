@@ -22,11 +22,16 @@ exports[`<StartComplete /> should match snapshot 1`] = `
         <div
           className="startComplete__buttons"
         >
-          <button
-            className="btn"
+          <Link
+            replace={false}
+            to="/dashboard"
           >
-            Dashboard
-          </button>
+            <button
+              className="btn"
+            >
+              Dashboard
+            </button>
+          </Link>
         </div>
       </div>
       <img

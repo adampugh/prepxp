@@ -34,6 +34,45 @@ const reducer = (state = initialState, action) => {
                     }
                 })
             }
+        case actionTypes.DELETE_QUESTION:
+            return {
+                ...state,
+                lists: state.lists.map(list => {
+                    if (list.id === action.id) {
+                        return {
+                            ...list,
+                            questions: list.questions.filter((questions, index) => index !== action.index)
+                        }
+                    } else {
+                        return {...list}
+                    }
+                })
+            }
+        case actionTypes.SAVE_ANSWER:
+            return {
+                ...state,
+                lists: state.lists.map(list => {
+                    if (list.id === action.id) {
+                        return {
+                            ...list,
+                            questions: list.questions.map((question, index) => {
+                                if (index === action.index) {
+                                    return {
+                                        ...question,
+                                        answer: action.answer
+                                    }
+                                } else {
+                                    return {
+                                        ...question
+                                    }
+                                }
+                            })
+                        }
+                    } else {
+                        return {...list}
+                    }
+                })
+            }
         default:
             return state;
     }

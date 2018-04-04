@@ -29,9 +29,11 @@
         padding-top: $padding-s;
         color: $light-grey;
         font-weight: 400;
+        font-size: $font-m;
     }
     button {
         margin-top: $padding-s;
+        display: block;
     }
 }
 

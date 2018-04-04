@@ -43,6 +43,20 @@ describe("list actions", () => {
             question
         })
     });
+
+    // SAVE_ANSWER
+    it("should return SAVE_ANSWER action object", () => {
+        const id = "123";
+        const answer = "This is the answer";
+        const index = 2;
+        const action = actions.saveAnswer(id, index, answer);
+        expect(action).toEqual({
+            type: actionTypes.SAVE_ANSWER,
+            id, 
+            index, 
+            answer
+        });
+    });
 })
 
 

@@ -14,7 +14,7 @@ const dashboardSidebar = (props) => (
             <img src={desk} alt="man sitting at a desk" />
             <p>Add a list of interview questions for our seleted lists</p>
             <Link to="/search">
-                <button className="btn">Lists</button>
+                <button className="btn">Search</button>
             </Link>
         </div>
         <div className="sidebar__panel">

@@ -19,12 +19,26 @@ export const addQuestion = (id, question) => ({
     question
 });
 
+// DELETE_QUESTION
+export const deleteQuestion = (id, index) => ({
+    type: actionTypes.DELETE_QUESTION,
+    id, 
+    index
+});
+
+// SAVE_ANSWER
+export const saveAnswer = (id, index, answer) => ({
+    type: actionTypes.SAVE_ANSWER,
+    id,
+    index,
+    answer
+});
+
+
 // 2. start
 // SAVE_ANSWER
 
 // 3. list
-// ADD_QUESTION
-// DELETE_QUESTION
 // EDIT_LIST_TITLE
 
 
@@ -34,6 +48,8 @@ export const addQuestion = (id, question) => ({
 
 // 5. search
 // ADD_liST
+// FILTER_SEARCH
+
 
 // 6. ui
 // START_LOGOUT

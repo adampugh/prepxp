@@ -37,7 +37,7 @@ exports[`<DashboardSideBar /> should match snapshot 1`] = `
       <button
         className="btn"
       >
-        Lists
+        Search
       </button>
     </Link>
   </div>

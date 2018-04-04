@@ -20,12 +20,13 @@ export class ListPage extends Component {
                 <Navbar />
                 <ListPageAddQuestionBanner 
                     startAddQuestion={this.props.startAddQuestion}
-                    id={this.props.location.state.list.id}
-                />
+                    id={this.props.location.state.list.id} />
                 <ListPageHeader 
                     title={this.props.lists[this.props.location.state.listIndex].title} />
                 <ListPageQuestions 
-                    questions={this.props.lists[this.props.location.state.listIndex].questions} />
+                    questions={this.props.lists[this.props.location.state.listIndex].questions} 
+                    startDeleteQuestion={this.props.startDeleteQuestion} 
+                    id={this.props.location.state.list.id} />
                 <Footer />
             </div>
         )
@@ -45,7 +46,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        startAddQuestion: (id, question) => dispatch(actions.addQuestion(id, question))
+        startAddQuestion: (id, question) => dispatch(actions.addQuestion(id, question)),
+        startDeleteQuestion: (id, index) => dispatch(actions.deleteQuestion(id, index))
     }
 }
 

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
+ 
+import * as actions from "../../store/actions/actions";
 import Navbar from "../UI/navbarLoggedIn";
 import StartGrid from "./startGrid";
 import StartComplete from "./startComplete";
 import Footer from "../UI/footer";
 
-class StartPage extends Component {
+export class StartPage extends Component {
     state = {
         questionsComplete: false
     }
@@ -30,7 +32,9 @@ class StartPage extends Component {
                     <StartComplete /> :
                     <StartGrid 
                         finishQuestions={this.finishQuestions}
-                        questions={this.props.location.state.list.questions}
+                        questions={this.props.list.questions}
+                        id={this.props.list.id}
+                        startSaveAnswer={this.props.startSaveAnswer}
                     />
                 }
                 <Footer />
@@ -39,4 +43,20 @@ class StartPage extends Component {
     } 
 }
 
-export default StartPage;
+// questions={this.props.location.state.list.questions}
+// id={this.props.location.state.list.id}
+
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        list: state.lists.filter(list => list.id === ownProps.location.state.list.id)[0]
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        startSaveAnswer: (id, index, answer) => dispatch(actions.saveAnswer(id, index, answer))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(StartPage);

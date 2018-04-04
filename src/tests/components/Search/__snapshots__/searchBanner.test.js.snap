@@ -20,7 +20,7 @@ exports[`<SearchBanner /> should match snapshot 1`] = `
     <button
       className="btn"
     >
-      Add Question
+      Search
     </button>
   </div>
 </div>
