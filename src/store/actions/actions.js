@@ -34,6 +34,13 @@ export const saveAnswer = (id, index, answer) => ({
     answer
 });
 
+// EDIT_LIST_TITLE 
+export const editListTitle = (id, title) => ({
+    type: actionTypes.EDIT_LIST_TITLE,
+    id,
+    title
+});
+
 
 // 2. start
 // SAVE_ANSWER

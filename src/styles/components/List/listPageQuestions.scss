@@ -1,6 +1,6 @@
 .listPage__questions {
     background: $very-light-grey;
-    padding: $padding-s 0;
+    padding: $padding-s 0 $padding-l 0;
     .question__item {
         padding: 10px 20px;
         background: white;
@@ -9,9 +9,13 @@
         display: flex;
         justify-content: space-between;
         @include boxshadow;
+        h2 {
+            font-weight: 400;
+        }
         span {
             color: $off-purple;
-            padding-right: 5px;
+            // padding-right: 15px;
+            font-weight: bold;
         }
         i, svg {
             color: $light-grey;
@@ -24,5 +28,26 @@
     .listPage__questions__empty {
         color: $light-grey;
         font-weight: 400;
+    }
+    .question__item__grid {
+        display: grid;
+        grid-template-columns: 1fr 12fr;
+        width: 100%;
+        padding-right: 10px;
+        .quesiton__item__grid__question {
+            word-break: break-word;
+        }
+        .question__item__grid__questionTitle {
+            padding-right: 5px;
+            justify-self: start;
+        }
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .question__item__grid {
+        .question__item__grid__questionTitle {
+            justify-self: center;
+        }
     }
 }

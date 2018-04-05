@@ -11,14 +11,23 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
       className="question__item"
       key="What is the difference between let and var?0"
     >
-      <h2>
-        <span>
-          Q
-          1
-        </span>
-         
-        What is the difference between let and var?
-      </h2>
+      <div
+        className="question__item__grid"
+      >
+        <h2
+          className="question__item__grid__questionTitle"
+        >
+          <span>
+            Q
+            1
+          </span>
+        </h2>
+        <h2
+          className="quesiton__item__grid__question"
+        >
+          What is the difference between let and var?
+        </h2>
+      </div>
       <h2
         onClick={[Function]}
       >
@@ -31,14 +40,23 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
       className="question__item"
       key="Who created JavaScript?1"
     >
-      <h2>
-        <span>
-          Q
-          2
-        </span>
-         
-        Who created JavaScript?
-      </h2>
+      <div
+        className="question__item__grid"
+      >
+        <h2
+          className="question__item__grid__questionTitle"
+        >
+          <span>
+            Q
+            2
+          </span>
+        </h2>
+        <h2
+          className="quesiton__item__grid__question"
+        >
+          Who created JavaScript?
+        </h2>
+      </div>
       <h2
         onClick={[Function]}
       >

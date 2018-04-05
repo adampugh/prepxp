@@ -57,7 +57,9 @@ hr {
     margin: 0 auto;
 }
   
-
+.header {
+    @include header;
+}
 
 @media (min-width: $desktop-breakpoint) {
     .container {

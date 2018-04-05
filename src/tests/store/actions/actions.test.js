@@ -27,7 +27,16 @@ describe("list actions", () => {
     });
 
     // EDIT_LIST_TITLE
-
+    it("should return EDIT_LIST_TITLE action object", () => {
+        const id = "123";
+        const newTitle = "New Title";
+        const action = actions.editListTitle(id, newTitle);
+        expect(action).toEqual({
+            type: actionTypes.EDIT_LIST_TITLE,
+            id,
+            title: newTitle
+        });
+    });
 
     // ADD_QUESTION
     it("should return ADD_QUESTION action object", () => {

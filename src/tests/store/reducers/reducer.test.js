@@ -84,6 +84,12 @@ describe("reducer", () => {
 
 
     it("should edit list title", () => {
-
+        const action = {
+            type: actionTypes.EDIT_LIST_TITLE,
+            id: listState.lists[0].id,
+            title: "Hello"
+        }
+        const state = reducer(listState, action);
+        expect(state.lists[0].title).toBe(action.title);
     });
 })

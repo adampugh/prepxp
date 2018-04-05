@@ -20,13 +20,15 @@ export class ListPage extends Component {
                 <Navbar />
                 <ListPageAddQuestionBanner 
                     startAddQuestion={this.props.startAddQuestion}
-                    id={this.props.location.state.list.id} />
+                    id={this.props.list.id} />
                 <ListPageHeader 
-                    title={this.props.lists[this.props.location.state.listIndex].title} />
+                    title={this.props.list.title} 
+                    startEditListTitle={this.props.startEditListTitle}
+                    id={this.props.list.id} />
                 <ListPageQuestions 
-                    questions={this.props.lists[this.props.location.state.listIndex].questions} 
+                    questions={this.props.list.questions} 
                     startDeleteQuestion={this.props.startDeleteQuestion} 
-                    id={this.props.location.state.list.id} />
+                    id={this.props.list.id} />
                 <Footer />
             </div>
         )
@@ -38,18 +40,18 @@ export class ListPage extends Component {
 
 // <ListPageQuestions questions={this.state.questions} />
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        lists: state.lists
+        list: state.lists.filter(list => list.id === ownProps.location.state.list.id)[0]
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         startAddQuestion: (id, question) => dispatch(actions.addQuestion(id, question)),
-        startDeleteQuestion: (id, index) => dispatch(actions.deleteQuestion(id, index))
+        startDeleteQuestion: (id, index) => dispatch(actions.deleteQuestion(id, index)),
+        startEditListTitle: (id, title) => dispatch(actions.editListTitle(id, title))
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListPage);
-

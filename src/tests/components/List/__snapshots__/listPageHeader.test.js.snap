@@ -10,13 +10,29 @@ exports[`<ListPageHeader /> should match snapshot 1`] = `
     <div
       className="listPage__header__content"
     >
-      <div>
-        <h1>
-           
+      <div
+        className="listPage__header__content__grid"
+      >
+        <div>
+          <textarea
+            className="listPage__input--disabled"
+            disabled={true}
+            id="listPage__input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            rows="1"
+            type="text"
+          />
+          <hr />
+        </div>
+        <div
+          className="listPage__edit"
+          onClick={[Function]}
+        >
           <i
             className="fas fa-edit"
           />
-        </h1>
+        </div>
       </div>
     </div>
   </div>

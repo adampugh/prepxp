@@ -2,7 +2,33 @@ import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
     name: "you",
-    lists: []
+    lists: [
+        {
+            id: "123",
+            title: "PHP Developer",
+            questions: [
+                {
+                    question: "What do you like to do?",
+                    answer: "I would like to avoid this hell"
+                }, {
+                    question: "What you up to and do you like to party with more or less than the other thing that goes on and if you do what is it?",
+                    answer: ""
+                }, {
+                    question: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    answer: ""
+                }
+            ]
+        }, {
+            id: "44444",
+            title: "React JS Developer",
+            questions: [
+                {
+                    question: "What do you like to do?",
+                    answer: "Yes ok"
+                }
+            ]
+        }
+    ]
 }
 
 const reducer = (state = initialState, action) => {
@@ -67,6 +93,20 @@ const reducer = (state = initialState, action) => {
                                     }
                                 }
                             })
+                        }
+                    } else {
+                        return {...list}
+                    }
+                })
+            }
+        case actionTypes.EDIT_LIST_TITLE:
+            return {
+                ...state,
+                lists: state.lists.map(list => {
+                    if (list.id === action.id) {
+                        return {
+                            ...list,
+                            title: action.title
                         }
                     } else {
                         return {...list}

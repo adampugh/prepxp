@@ -5,7 +5,10 @@ const listPageQuestions = (props) => (
         <div className="container-s">
             {props.questions.length > 0 ? props.questions.map((question, index) => (
                 <div className="question__item" key={`${question.question + index}`}>
-                    <h2><span>Q{index + 1}</span> {question.question}</h2>
+                    <div className="question__item__grid">
+                        <h2 className="question__item__grid__questionTitle"><span>Q{index + 1}</span></h2>
+                        <h2 className="quesiton__item__grid__question">{question.question}</h2>
+                    </div>
                     <h2 onClick={() => props.startDeleteQuestion(props.id, index)}>
                         <i className="fas fa-trash-alt"></i>
                     </h2>
