@@ -20,7 +20,9 @@ exports[`<ListPageHeader /> should match snapshot 1`] = `
             id="listPage__input"
             onBlur={[Function]}
             onChange={[Function]}
+            onKeyDown={[Function]}
             rows="1"
+            spellCheck={false}
             type="text"
           />
           <hr />

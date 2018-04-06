@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import * as actions from "../../store/actions/actions";
@@ -17,19 +18,26 @@ export class ListPage extends Component {
     render() {
         return (
             <div>
-                <Navbar />
-                <ListPageAddQuestionBanner 
-                    startAddQuestion={this.props.startAddQuestion}
-                    id={this.props.list.id} />
-                <ListPageHeader 
-                    title={this.props.list.title} 
-                    startEditListTitle={this.props.startEditListTitle}
-                    id={this.props.list.id} />
-                <ListPageQuestions 
-                    questions={this.props.list.questions} 
-                    startDeleteQuestion={this.props.startDeleteQuestion} 
-                    id={this.props.list.id} />
-                <Footer />
+            {
+                this.props.list !== null 
+                    ? <div> 
+                        <Navbar />
+                        <ListPageAddQuestionBanner 
+                            startAddQuestion={this.props.startAddQuestion}
+                            id={this.props.list.id} />
+                        <ListPageHeader 
+                            title={this.props.list.title} 
+                            startEditListTitle={this.props.startEditListTitle}
+                            id={this.props.list.id} />
+                        <ListPageQuestions 
+                            questions={this.props.list.questions} 
+                            startDeleteQuestion={this.props.startDeleteQuestion} 
+                            id={this.props.list.id} />
+                        <Footer />
+                        </div>
+                    : <Redirect to="/dashboard" />
+            }
+                
             </div>
         )
     }
@@ -42,7 +50,7 @@ export class ListPage extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        list: state.lists.filter(list => list.id === ownProps.location.state.list.id)[0]
+        list: ownProps.location.state ? state.lists.filter(list => list.id === ownProps.location.state.list.id)[0] : null
     }
 }
 

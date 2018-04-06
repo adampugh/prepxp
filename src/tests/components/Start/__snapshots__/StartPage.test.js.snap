@@ -2,23 +2,31 @@
 
 exports[`<StartPage /> should match snapshot 1`] = `
 <div>
-  <Navbar />
-  <startGrid
-    finishQuestions={[Function]}
-    id="234"
-    questions={
-      Array [
-        Object {
-          "answer": "JavaScript is a language for the web.",
-          "question": "What is the difference between let and var?",
-        },
-        Object {
-          "answer": "Brendan Eich",
-          "question": "Who created JavaScript?",
-        },
-      ]
-    }
-  />
-  <footer />
+  <div>
+    <startSavedModal
+      closeModal={[Function]}
+      isOpen={false}
+    />
+    <Navbar />
+    <startGrid
+      closeModal={[Function]}
+      finishQuestions={[Function]}
+      id="234"
+      openModal={[Function]}
+      questions={
+        Array [
+          Object {
+            "answer": "JavaScript is a language for the web.",
+            "question": "What is the difference between let and var?",
+          },
+          Object {
+            "answer": "Brendan Eich",
+            "question": "Who created JavaScript?",
+          },
+        ]
+      }
+    />
+    <footer />
+  </div>
 </div>
 `;

@@ -17,8 +17,15 @@ class listPageHeader extends Component {
         this.autosize();
         this.setState({
             currentTitle: e.target.value
-        })
+        });
     }
+
+    handleOnKeyDown = (e) => {
+        if (e.key === "Enter") {
+            this.startEditTitle();
+        }
+    }
+
 
     autosize = () => {
         const textarea = document.querySelector('textarea');
@@ -36,7 +43,6 @@ class listPageHeader extends Component {
 
     startEditTitle = () => {
         this.editTitle();
-        // dispatch edit list title action
         this.props.startEditListTitle(this.props.id, this.state.currentTitle);
     }
 
@@ -55,6 +61,8 @@ class listPageHeader extends Component {
                                     type="text"
                                     onBlur={this.startEditTitle}
                                     onChange={(e) => this.updateTitle(e)}
+                                    onKeyDown={(e) => this.handleOnKeyDown(e)}
+                                    spellCheck={false}
                                     value={this.state.currentTitle} />
                                     <hr />
                             </div>

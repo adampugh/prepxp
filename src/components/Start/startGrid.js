@@ -40,6 +40,14 @@ class startGrid extends Component {
         }
         document.getElementById("answer__textarea").value = "";
         this.setState({answer: ""});
+        this.showSavedModal();
+    }
+
+    showSavedModal = () => {
+        this.props.openModal();
+        setTimeout(() => {
+            this.props.closeModal();
+        }, 1000);
     }
 
     render() {
@@ -56,7 +64,9 @@ class startGrid extends Component {
                                 {this.state.showAnswer ? "Hide answer" : "Show answer"}
                             </button>
                         </div>
-                        <div className="start__previousAnswer">
+                        <div className={this.state.showAnswer 
+                                ? "start__previousAnswer start__previousAnswer--purple"
+                                : "start__previousAnswer start__previousAnswer--black" }>
                             {
                                 this.state.showAnswer 
                                     ? this.props.questions[this.state.currentIndex].answer === "" 

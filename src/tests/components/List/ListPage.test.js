@@ -12,7 +12,7 @@ describe("<ListPage />", () => {
                 listIndex: 0
             }
         }
-        const wrapper = shallow(<ListPage lists={user.lists} location={locationObj} />);
+        const wrapper = shallow(<ListPage list={user.lists[0]} location={locationObj} />);
         expect(wrapper).toMatchSnapshot();
     });
 });

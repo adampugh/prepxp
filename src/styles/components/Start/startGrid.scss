@@ -7,21 +7,30 @@
 
 .start__questionBox {
     border-radius: 20px;
+    word-break: break-word;
     span {
         color: $off-purple;
     }
 }
 
 .start__previousAnswer {
-    background: $purple-gradient;
+    // background: $purple-gradient;
     color: white;
     padding: $padding-s;
     border-radius: 20px;
     margin: $padding-s 0;
     font-size: $font-s;
+    word-break: break-word;
     p {
         margin: 0;
     }
+}
+
+.start__previousAnswer--black {
+    background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center center;
+}
+.start__previousAnswer--purple {
+    background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
 }
 
 .start__answerBox {

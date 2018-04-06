@@ -42,13 +42,6 @@ export const editListTitle = (id, title) => ({
 });
 
 
-// 2. start
-// SAVE_ANSWER
-
-// 3. list
-// EDIT_LIST_TITLE
-
-
 
 // 4. login
 // START_LOGIN

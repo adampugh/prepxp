@@ -27,7 +27,7 @@ exports[`<StartGrid /> should match snapshot 1`] = `
         </button>
       </div>
       <div
-        className="start__previousAnswer"
+        className="start__previousAnswer start__previousAnswer--black"
       >
         <p>
           Answer hidden

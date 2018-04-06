@@ -2,28 +2,31 @@
 
 exports[`<ListPage /> should match snapshot 1`] = `
 <div>
-  <Navbar />
-  <listPageAddQuestionBanner
-    id="234"
-  />
-  <listPageHeader
-    title="JavaScript Developer"
-  />
-  <listPageQuestions
-    id="234"
-    questions={
-      Array [
-        Object {
-          "answer": "JavaScript is a language for the web.",
-          "question": "What is the difference between let and var?",
-        },
-        Object {
-          "answer": "Brendan Eich",
-          "question": "Who created JavaScript?",
-        },
-      ]
-    }
-  />
-  <footer />
+  <div>
+    <Navbar />
+    <listPageAddQuestionBanner
+      id="234"
+    />
+    <listPageHeader
+      id="234"
+      title="JavaScript Developer"
+    />
+    <listPageQuestions
+      id="234"
+      questions={
+        Array [
+          Object {
+            "answer": "JavaScript is a language for the web.",
+            "question": "What is the difference between let and var?",
+          },
+          Object {
+            "answer": "Brendan Eich",
+            "question": "Who created JavaScript?",
+          },
+        ]
+      }
+    />
+    <footer />
+  </div>
 </div>
 `;
