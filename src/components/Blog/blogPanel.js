@@ -5,6 +5,7 @@ const blogPanel = (props) => (
         <img src={props.post.img} alt="blog post" />
         <div className="blog__post__text">
             <h2>{props.post.title}</h2>
+            <hr />
             <p>{props.post.byline}</p>
         </div>
     </div>

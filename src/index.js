@@ -6,6 +6,7 @@ import { createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import "normalize.css";
 import "./styles/styles.scss";
+import "./firebase/firebase";
 
 import App from './App';
 import reducer from "./store/reducers/reducer";
