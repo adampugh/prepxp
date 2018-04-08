@@ -33,8 +33,6 @@ class DashboardCreateModal extends Component {
         let list = {
             title: this.state.listTitle,
             questions: [],
-            // remove this once firebase generates ids
-            id: Math.random().toString()
         }
         this.state.listTitle.length > 0 
             ? this.props.startAddList(list)

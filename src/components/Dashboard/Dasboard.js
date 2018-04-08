@@ -93,7 +93,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        startAddList: (list) => dispatch(actions.addList(list)),
+        startAddList: (list) => dispatch(actions.startAddList(list)),
         startDeleteList: (id) => dispatch(actions.deleteList(id))
     }
 }

@@ -1,5 +1,11 @@
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
+
 import * as actionTypes from "../../../store/actions/actionTypes";
 import * as actions from "../../../store/actions/actions";
+import database from "../../../firebase/firebase";
+
+const createMockStore = configureMockStore([thunk]);
 
 describe("list actions", () => {
     // ADD LIST
@@ -13,6 +19,30 @@ describe("list actions", () => {
         expect(action).toEqual({
             type: actionTypes.ADD_LIST,
             list
+        });
+    });
+
+    it("should add list to db and store", (done) => {
+        const store = createMockStore({});
+        const list = {
+            title: "new list"
+        }
+        // checks action is dispatched
+        store.dispatch(actions.startAddList(list)).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.ADD_LIST,
+                list: {
+                    id: expect.any(String),
+                    ...list
+                }
+            });
+
+            // checks data was saved to db
+            return database.ref(`lists/${actions[0].list.id}`).once("value");
+        }).then((snapshot) => {
+            expect(snapshot.val()).toEqual(list);
+            done();
         });
     });
 

@@ -1,11 +1,34 @@
 import * as actionTypes from "./actionTypes";
+import database from "../../firebase/firebase";
+import { history } from "../../history";
 
-// 1. dashboard
 // ADD_LIST
 export const addList = (list) => ({
     type: actionTypes.ADD_LIST,
     list
 });
+
+export const startAddList = (list) => {
+    return (dispatch) => {
+        return database.ref("lists").push(list).then((ref) => {
+            dispatch(addList({
+                id: ref.key,
+                ...list
+            }));
+            history.push({
+                pathname: `/list/edit`,
+                state: {
+                    list: {
+                        id: ref.key
+                    }
+                }
+            })
+        });
+    }
+}
+
+
+
 // DELETE_LIST
 export const deleteList = (id) => ({
     type: actionTypes.DELETE_LIST,
