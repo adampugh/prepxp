@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 import database from "../../firebase/firebase";
-import { history } from "../../history";
+import history from "../../history";
 
 // ADD_LIST
 export const addList = (list) => ({
@@ -35,6 +35,14 @@ export const deleteList = (id) => ({
     id
 });
 
+export const startDeleteList = (id) => {
+    return (dispatch) => {
+        return database.ref(`/lists/${id}`).remove().then(() => {
+            dispatch(deleteList(id));
+        });
+    }
+}
+
 // ADD_QUESTION
 export const addQuestion = (id, question) => ({
     type: actionTypes.ADD_QUESTION,
@@ -63,6 +71,49 @@ export const editListTitle = (id, title) => ({
     id,
     title
 });
+
+
+// FETCH_USER
+export const fetchLists = (user) => ({
+    type: actionTypes.FETCH_LISTS,
+    name: user.name,
+    lists: user.lists
+});
+
+export const startFetchLists = () => {
+    // fetch all expense data
+    return (dispatch) => {
+
+        return database.ref().once("value").then((snapshot) => {
+            const name = snapshot.val().name;
+            return name;
+        }).then((name) => {
+            return database.ref("/lists").once("value").then((snapshot) => {
+                const lists = [];
+                snapshot.forEach((childSnapshot) => {
+                    // convert obj into array
+                    const questions = [];
+                    for (let key in childSnapshot.val().questions) {
+                        questions.push({
+                            id: key,
+                            ...childSnapshot.val().questions[key]
+                        });
+                    }
+                    lists.push({
+                        ...childSnapshot.val(),
+                        id: childSnapshot.key,
+                        questions: questions || []
+                    });
+                });
+                dispatch(fetchLists({
+                    lists,
+                    name
+                }));
+            });
+        });
+    }
+}
+
 
 
 

@@ -14,6 +14,7 @@ import App from './App';
 import reducer from "./store/reducers/reducer";
 import registerServiceWorker from './registerServiceWorker';
 import history from "./history";
+import * as actions from "./store/actions/actions";
 
 
 let composeEnhancers = process.env.NODE_ENV === "production" ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -32,7 +33,12 @@ const app = (
             <App />
         </Router>
     </Provider>
-)
+);
 
-ReactDOM.render(app, document.getElementById('root'));
+ReactDOM.render(<p>...loading</p>, document.getElementById('root'));
+
+store.dispatch(actions.startFetchLists()).then(() => {
+    ReactDOM.render(app, document.getElementById('root'));
+});
+
 registerServiceWorker();

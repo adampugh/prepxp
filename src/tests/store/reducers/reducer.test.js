@@ -92,4 +92,15 @@ describe("reducer", () => {
         const state = reducer(listState, action);
         expect(state.lists[0].title).toBe(action.title);
     });
+
+    it("should set user and lists", () => {
+        const action = {
+            type: actionTypes.FETCH_LISTS,
+            lists: listState.lists,
+            name: listState.name
+        }
+        const state = reducer(null, action);
+        expect(state.name).toBe(listState.name);
+        expect(state.lists).toEqual(listState.lists);
+    })
 })

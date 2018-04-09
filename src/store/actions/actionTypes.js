@@ -6,6 +6,10 @@ export const ADD_QUESTION = "ADD_QUESTION";
 export const DELETE_QUESTION = "DELETE_QUESTION";
 
 export const SAVE_ANSWER = "SAVE_ANSWER";
+
+// might have to rename to fetch_user
+export const FETCH_LISTS = "FETCH_LISTS";
+
 // 2. start
 // SAVE_ANSWER
 

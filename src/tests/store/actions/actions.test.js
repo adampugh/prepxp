@@ -4,8 +4,15 @@ import thunk from "redux-thunk";
 import * as actionTypes from "../../../store/actions/actionTypes";
 import * as actions from "../../../store/actions/actions";
 import database from "../../../firebase/firebase";
+import listData from "../../fixtures/listData";
+import listState from "../../fixtures/listState";
 
 const createMockStore = configureMockStore([thunk]);
+
+beforeEach((done) => {
+    database.ref().set(listData).then(() => done());
+});
+
 
 describe("list actions", () => {
     // ADD LIST
@@ -56,6 +63,23 @@ describe("list actions", () => {
         });
     });
 
+    it("should remove list from firebase", (done) => {
+        const store = createMockStore({});
+        const id = listState.lists[0].id;
+        store.dispatch(actions.startDeleteList(id)).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.DELETE_LIST,
+                id
+            });
+
+            return database.ref(`lists/${id}`).once("value");
+        }).then((snapshot) => {
+            expect(snapshot.val()).toEqual(null);
+            done();
+        });
+    });
+
     // EDIT_LIST_TITLE
     it("should return EDIT_LIST_TITLE action object", () => {
         const id = "123";
@@ -83,6 +107,19 @@ describe("list actions", () => {
         })
     });
 
+    // DELETE_QUESTION
+    it("should return DELETE_QUESTION action object", () => {
+        const id = listState.lists[0].id;
+        const index = 0;
+        const action = actions.deleteQuestion(id, index);
+        expect(action).toEqual({
+            type: actionTypes.DELETE_QUESTION,
+            id, 
+            index
+        });
+    })
+    
+
     // SAVE_ANSWER
     it("should return SAVE_ANSWER action object", () => {
         const id = "123";
@@ -96,6 +133,33 @@ describe("list actions", () => {
             answer
         });
     });
+
+
+    // FETCH_LISTS
+    it("should setup fetch list action object", () => {
+        const action = actions.fetchLists(listState);
+        expect(action).toEqual({
+            type: actionTypes.FETCH_LISTS,
+            name: listState.name,
+            lists: listState.lists
+        });
+    });
+
+    it("should fetch lists from firebase", (done) => {
+        const store = createMockStore({});
+        store.dispatch(actions.startFetchLists()).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.FETCH_LISTS,
+                name: listData.name,
+                // lists: expect.any(Array)
+                lists: listState.lists
+            });
+            done();
+        });
+
+    })
+
 })
 
 

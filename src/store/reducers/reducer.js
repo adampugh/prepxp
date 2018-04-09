@@ -1,38 +1,18 @@
 import * as actionTypes from "../actions/actionTypes";
 
+
 const initialState = {
     name: "you",
-    lists: [
-        {
-            id: "123",
-            title: "PHP Developer",
-            questions: [
-                {
-                    question: "What do you like to do?",
-                    answer: "I would like to avoid this hell"
-                }, {
-                    question: "What you up to and do you like to party with more or less than the other thing that goes on and if you do what is it?",
-                    answer: ""
-                }, {
-                    question: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                    answer: ""
-                }
-            ]
-        }, {
-            id: "44444",
-            title: "React JS Developer",
-            questions: [
-                {
-                    question: "What do you like to do?",
-                    answer: "Yes ok"
-                }
-            ]
-        }
-    ]
+    lists: []
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
+        case actionTypes.FETCH_LISTS: 
+            return {
+                lists: action.lists,
+                name: action.name
+            }
         case actionTypes.ADD_LIST:
             return {
                 ...state,
