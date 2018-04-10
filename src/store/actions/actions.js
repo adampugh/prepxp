@@ -50,12 +50,36 @@ export const addQuestion = (id, question) => ({
     question
 });
 
+export const startAddQuestion = (id, question) => {
+    return (dispatch) => {
+        return database.ref(`/lists/${id}/questions`).push(question).then((ref) => {
+            const questionUpdated = {
+                id: ref.key,
+                ...question
+            }
+            dispatch(addQuestion(id, questionUpdated));
+        });
+    }
+}
+
+
+
 // DELETE_QUESTION
 export const deleteQuestion = (id, index) => ({
     type: actionTypes.DELETE_QUESTION,
     id, 
     index
 });
+
+export const startDeleteQuestion = (id, index, questionId) => {
+    return (dispatch) => {
+        return database.ref(`lists/${id}/questions/${questionId}`).remove().then(() => {
+            dispatch(deleteQuestion(id, index));
+        });
+    }
+}
+
+
 
 // SAVE_ANSWER
 export const saveAnswer = (id, index, answer) => ({
@@ -65,6 +89,14 @@ export const saveAnswer = (id, index, answer) => ({
     answer
 });
 
+export const startSaveAnswer = (id, index, answer, questionId) => {
+    return (dispatch) => {
+        return database.ref(`/lists/${id}/questions/${questionId}/answer`).set(answer).then((ref) => {
+            dispatch(saveAnswer(id, index, answer));
+        });
+    }
+}
+
 // EDIT_LIST_TITLE 
 export const editListTitle = (id, title) => ({
     type: actionTypes.EDIT_LIST_TITLE,
@@ -72,6 +104,13 @@ export const editListTitle = (id, title) => ({
     title
 });
 
+export const startEditListTitle = (id, title) => {
+    return (dispatch) => {
+        return database.ref(`/lists/${id}/title`).set(title).then((ref) => {
+            dispatch(editListTitle(id, title));
+        });
+    }
+}
 
 // FETCH_USER
 export const fetchLists = (user) => ({

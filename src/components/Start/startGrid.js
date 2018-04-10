@@ -36,7 +36,12 @@ class startGrid extends Component {
 
     handleStartSaveAnswer = () => {
         if (this.state.answer.length > 0) {
-            this.props.startSaveAnswer(this.props.id, this.state.currentIndex, this.state.answer);
+            this.props.startSaveAnswer(
+                this.props.id, 
+                this.state.currentIndex, 
+                this.state.answer, 
+                this.props.questions[this.state.currentIndex].id
+            );
         }
         document.getElementById("answer__textarea").value = "";
         this.setState({answer: ""});

@@ -31,6 +31,7 @@ export class ListPage extends Component {
                             id={this.props.list.id} />
                         <ListPageQuestions 
                             questions={this.props.list.questions} 
+                            // questions={this.props.lists[this.props.location.state.listIndex].questions}
                             startDeleteQuestion={this.props.startDeleteQuestion} 
                             id={this.props.list.id} />
                         <Footer />
@@ -44,8 +45,6 @@ export class ListPage extends Component {
 }
 
 
-
-
 // <ListPageQuestions questions={this.state.questions} />
 
 const mapStateToProps = (state, ownProps) => {
@@ -56,10 +55,15 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        startAddQuestion: (id, question) => dispatch(actions.addQuestion(id, question)),
-        startDeleteQuestion: (id, index) => dispatch(actions.deleteQuestion(id, index)),
-        startEditListTitle: (id, title) => dispatch(actions.editListTitle(id, title))
+        startAddQuestion: (id, question) => dispatch(actions.startAddQuestion(id, question)),
+        startDeleteQuestion: (id, index, questionId) => dispatch(actions.startDeleteQuestion(id, index, questionId)),
+        startEditListTitle: (id, title) => dispatch(actions.startEditListTitle(id, title))
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListPage);
+
+
+
+
+

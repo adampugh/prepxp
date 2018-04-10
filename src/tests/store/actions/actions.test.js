@@ -92,6 +92,26 @@ describe("list actions", () => {
         });
     });
 
+    it("should edit list title in firebase", (done) => {
+        const store = createMockStore({});
+        const id = listState.lists[0].id;
+        const title = "new test title";
+        store.dispatch(actions.startEditListTitle(id, title)).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.EDIT_LIST_TITLE,
+                id,
+                title
+            });
+
+            return database.ref(`lists/${id}/title`).once("value");
+        }).then((snapshot) => {
+            expect(snapshot.val()).toEqual(title);
+            done();
+        });
+    });
+
+
     // ADD_QUESTION
     it("should return ADD_QUESTION action object", () => {
         const id = "123";
@@ -107,6 +127,37 @@ describe("list actions", () => {
         })
     });
 
+    it("should add question to db list and store", (done) => {
+        const store = createMockStore({});
+        const question = {
+            question: "test question",
+            answer: ""
+        }
+        const id = listState.lists[0].id;
+        // checks action is dispatched
+        store.dispatch(actions.startAddQuestion(id, question)).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.ADD_QUESTION,
+                id,
+                question: {
+                    id: expect.any(String),
+                    ...question
+                }
+            });
+            
+            return database.ref(`lists/${id}/questions/${actions[0].question.id}`).once("value");
+        }).then((snapshot) => {
+            // checks an obj has been added to fb
+            // const listDataKeys = Object.keys(listData);
+            // const objKeys = Object.keys(snapshot.val());
+            // expect(objKeys.length).toEqual(listDataKeys.length + 1);
+
+            expect(snapshot.val()).toEqual(question);
+            done();
+        });
+    });
+
     // DELETE_QUESTION
     it("should return DELETE_QUESTION action object", () => {
         const id = listState.lists[0].id;
@@ -116,6 +167,27 @@ describe("list actions", () => {
             type: actionTypes.DELETE_QUESTION,
             id, 
             index
+        });
+    });
+
+    it("should delete question from db and store", (done) => {
+        const store = createMockStore({});
+        const id = listState.lists[0].id;
+        const index = 0;
+        const questionId = listState.lists[0].questions[0].id;
+        // checks action is dispatched
+        store.dispatch(actions.startDeleteQuestion(id, index, questionId)).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.DELETE_QUESTION,
+                id,
+                index
+            });
+            
+            return database.ref(`lists/${id}/questions/${questionId}`).once("value");
+        }).then((snapshot) => {
+            expect(snapshot.val()).toEqual(null);
+            done();
         });
     })
     
@@ -133,6 +205,30 @@ describe("list actions", () => {
             answer
         });
     });
+
+    it("should save answer to db and store", (done) => {
+        const store = createMockStore({});
+        const id = listState.lists[0].id;
+        const index = 0;
+        const answer = "test answer";
+        const questionId = listState.lists[0].questions[0].id;
+        // checks action is dispatched
+        store.dispatch(actions.startSaveAnswer(id, index, answer, questionId)).then(() => {
+            const actions = store.getActions();
+            expect(actions[0]).toEqual({
+                type: actionTypes.SAVE_ANSWER,
+                id,
+                index,
+                answer
+            });
+            
+            return database.ref(`lists/${id}/questions/${questionId}/answer`).once("value");
+        }).then((snapshot) => {
+            expect(snapshot.val()).toEqual(answer);
+            done();
+        });
+    })
+
 
 
     // FETCH_LISTS
@@ -152,7 +248,6 @@ describe("list actions", () => {
             expect(actions[0]).toEqual({
                 type: actionTypes.FETCH_LISTS,
                 name: listData.name,
-                // lists: expect.any(Array)
                 lists: listState.lists
             });
             done();

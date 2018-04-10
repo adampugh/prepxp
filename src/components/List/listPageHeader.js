@@ -42,8 +42,10 @@ class listPageHeader extends Component {
     }
 
     startEditTitle = () => {
-        this.editTitle();
-        this.props.startEditListTitle(this.props.id, this.state.currentTitle);
+        if (this.state.currentTitle.length > 0) {
+            this.editTitle();
+            this.props.startEditListTitle(this.props.id, this.state.currentTitle);
+        }
     }
 
     render() {

@@ -9,7 +9,7 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
   >
     <div
       className="question__item"
-      key="What is the difference between let and var?0"
+      key="141r"
     >
       <div
         className="question__item__grid"
@@ -25,7 +25,7 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
         <h2
           className="quesiton__item__grid__question"
         >
-          What is the difference between let and var?
+          Why do you want to work here?
         </h2>
       </div>
       <h2
@@ -38,7 +38,7 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
     </div>
     <div
       className="question__item"
-      key="Who created JavaScript?1"
+      key="2yyyyy23g"
     >
       <div
         className="question__item__grid"
@@ -54,7 +54,7 @@ exports[`<ListPageQuestions /> should match snapshot 1`] = `
         <h2
           className="quesiton__item__grid__question"
         >
-          Who created JavaScript?
+          What is JS
         </h2>
       </div>
       <h2

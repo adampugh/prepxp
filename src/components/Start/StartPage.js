@@ -83,7 +83,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        startSaveAnswer: (id, index, answer) => dispatch(actions.saveAnswer(id, index, answer))
+        startSaveAnswer: (id, index, answer, questionId) => dispatch(actions.startSaveAnswer(id, index, answer, questionId))
     }
 }
 
