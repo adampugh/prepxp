@@ -61,4 +61,11 @@
 
 .login__bottomBox {
     color: white;
+    span {
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            color: $off-grey;
+        }
+    }
 }

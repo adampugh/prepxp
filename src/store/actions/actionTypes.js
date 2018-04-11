@@ -10,13 +10,8 @@ export const SAVE_ANSWER = "SAVE_ANSWER";
 // might have to rename to fetch_user
 export const FETCH_LISTS = "FETCH_LISTS";
 
-// 2. start
-// SAVE_ANSWER
-
-// 3. list
-// ADD_QUESTION
-// DELETE_QUESTION
-// EDIT_LIST_TITLE
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
 
 
 // 4. login

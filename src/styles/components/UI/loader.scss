@@ -2,6 +2,8 @@
     background: $very-light-grey;
     padding: $padding-l 0;
     box-sizing: border-box;
+    height: 100vh;
+    display: grid;
 }
 
 .loader,
@@ -11,6 +13,7 @@
     height: 10em;
 }
 .loader {
+    align-self: center;
     margin: 60px auto;
     font-size: 10px;
     position: relative;

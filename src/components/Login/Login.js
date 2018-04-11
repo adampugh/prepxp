@@ -1,34 +1,40 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
+import LoginBox from "./loginBox";
+import SignupBox from "./signupBox";
 import Footer from "../UI/footer";
+import * as actions from "../../store/actions/auth";
 
 class Login extends Component {
+    state = {
+        login: true
+    }
+
     componentDidMount () {
         window.scrollTo(0, 0);
     }
 
+    switchToLogin = () => {
+        this.setState({
+            login: !this.state.login
+        });
+    }
 
     render() {
         return (
             <div>
             <div className="login">
                 <h1 className="logo">PrepXP</h1>
-                <div className="login__box">
-                    <h2>Log in to your account</h2>
-                    <div className="login__box__input">
-                        <input type="email" placeholder="email"/>
-                        <i className="fas fa-user"></i>
-                    </div>
-                    <div className="login__box__input">
-                        <input type="password" placeholder="password" />
-                        <i className="fas fa-lock"></i>
-                    </div>
-                    <button className="btn">Log In</button>
-                </div>
-                <div className="login__bottomBox">
-                    <p>New to PrepXP? Sign up</p>
-                </div>
+                {this.state.login 
+                    ? <LoginBox 
+                        switchToLogin={this.switchToLogin}
+                        startLogin={this.props.startLogin} /> 
+                    : <SignupBox 
+                        switchToLogin={this.switchToLogin} 
+                        startSignUp={this.props.startSignUp} />}
             </div>
+            <h1 onClick={this.props.startLogout}>Logout</h1>
             <Footer />
         </div>
             
@@ -36,4 +42,12 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => {
+    return {
+        startSignUp: (email, password) => dispatch(actions.startSignUp(email, password)),
+        startLogin: (email, password) => dispatch(actions.startLogin(email, password)),
+        startLogout: () => dispatch(actions.startLogout())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login);
