@@ -10,6 +10,9 @@ import DashboardDeleteModal from "./dashboardDeleteModal";
 import DashboardCreateModal from "./dashboardCreateModal";
 import Footer from "../UI/footer";
 
+import * as authActions from "../../store/actions/auth";
+
+
 export class Dashboard extends Component {
     state = {
         deleteModalIsOpen: false,
@@ -70,7 +73,7 @@ export class Dashboard extends Component {
                     openCreateModal={this.openCreateModal}
                 />
                 <DashboardGrid 
-                    name={this.props.name} 
+                    name={this.props.name || this.props.location.state.name} 
                     lists={this.props.lists}
                     openDeleteModal={this.openDeleteModal}
                     closeDeleteModal={this.closeDeleteModal} 
@@ -78,6 +81,7 @@ export class Dashboard extends Component {
                     closeCreateModal={this.closeCreateModal} 
                     selectList={this.selectList} 
                 />
+                <p onClick={this.props.startLogout}>Logout</p>
                 <Footer />
             </div>
         );
@@ -86,15 +90,16 @@ export class Dashboard extends Component {
 
 const mapStateToProps = state => {
     return {
-        name: state.name,
-        lists: state.lists
+        name: state.reducer.name,
+        lists: state.reducer.lists
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         startAddList: (list) => dispatch(actions.startAddList(list)),
-        startDeleteList: (id) => dispatch(actions.startDeleteList(id))
+        startDeleteList: (id) => dispatch(actions.startDeleteList(id)),
+        startLogout: () => dispatch(authActions.startLogout())
     }
 }
 

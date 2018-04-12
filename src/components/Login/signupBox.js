@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class signupBox extends Component {
     state = {
-        error: false
+        error: false,
+        errorMessage: ""
     }
 
     handleStartSignUp = () => {
@@ -10,7 +11,12 @@ class signupBox extends Component {
         const name = this.refs.nameInput.value;
         const email = this.refs.emailInput.value;
         const password = this.refs.passwordInput.value;
-        this.props.startSignUp(email, password);
+        this.props.startSignUp(email, password, name).catch((e) => {
+            this.setState({
+                error: true,
+                errorMessage: e.message
+            })
+        })
     }
 
     render() {
@@ -18,6 +24,7 @@ class signupBox extends Component {
             <div>
                 <div className="login__box">
                     <h2>Sign up for an account</h2>
+                    <p className="error">{this.state.error ? this.state.errorMessage : null}</p>
                     <div className="login__box__input">
                         <input type="text" placeholder="name" ref="nameInput"/>
                         <i className="fas fa-user"></i>

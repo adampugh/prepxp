@@ -6,7 +6,7 @@ import SignupBox from "./signupBox";
 import Footer from "../UI/footer";
 import * as actions from "../../store/actions/auth";
 
-class Login extends Component {
+export class Login extends Component {
     state = {
         login: true
     }
@@ -44,7 +44,7 @@ class Login extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        startSignUp: (email, password) => dispatch(actions.startSignUp(email, password)),
+        startSignUp: (email, password, name) => dispatch(actions.startSignUp(email, password, name)),
         startLogin: (email, password) => dispatch(actions.startLogin(email, password)),
         startLogout: () => dispatch(actions.startLogout())
     }

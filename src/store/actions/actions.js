@@ -9,8 +9,9 @@ export const addList = (list) => ({
 });
 
 export const startAddList = (list) => {
-    return (dispatch) => {
-        return database.ref("lists").push(list).then((ref) => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists`).push(list).then((ref) => {
             dispatch(addList({
                 id: ref.key,
                 ...list
@@ -36,8 +37,9 @@ export const deleteList = (id) => ({
 });
 
 export const startDeleteList = (id) => {
-    return (dispatch) => {
-        return database.ref(`/lists/${id}`).remove().then(() => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists/${id}`).remove().then(() => {
             dispatch(deleteList(id));
         });
     }
@@ -51,8 +53,9 @@ export const addQuestion = (id, question) => ({
 });
 
 export const startAddQuestion = (id, question) => {
-    return (dispatch) => {
-        return database.ref(`/lists/${id}/questions`).push(question).then((ref) => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists/${id}/questions`).push(question).then((ref) => {
             const questionUpdated = {
                 id: ref.key,
                 ...question
@@ -72,8 +75,9 @@ export const deleteQuestion = (id, index) => ({
 });
 
 export const startDeleteQuestion = (id, index, questionId) => {
-    return (dispatch) => {
-        return database.ref(`lists/${id}/questions/${questionId}`).remove().then(() => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists/${id}/questions/${questionId}`).remove().then(() => {
             dispatch(deleteQuestion(id, index));
         });
     }
@@ -90,8 +94,9 @@ export const saveAnswer = (id, index, answer) => ({
 });
 
 export const startSaveAnswer = (id, index, answer, questionId) => {
-    return (dispatch) => {
-        return database.ref(`/lists/${id}/questions/${questionId}/answer`).set(answer).then((ref) => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists/${id}/questions/${questionId}/answer`).set(answer).then((ref) => {
             dispatch(saveAnswer(id, index, answer));
         });
     }
@@ -105,8 +110,9 @@ export const editListTitle = (id, title) => ({
 });
 
 export const startEditListTitle = (id, title) => {
-    return (dispatch) => {
-        return database.ref(`/lists/${id}/title`).set(title).then((ref) => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists/${id}/title`).set(title).then((ref) => {
             dispatch(editListTitle(id, title));
         });
     }
@@ -119,15 +125,16 @@ export const fetchLists = (user) => ({
     lists: user.lists
 });
 
-export const startFetchLists = () => {
+export const startFetchLists = (displayName) => {
     // fetch all expense data
-    return (dispatch) => {
-
-        return database.ref().once("value").then((snapshot) => {
-            const name = snapshot.val().name;
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/name`).once("value").then((snapshot) => {
+            const name = snapshot.val() || displayName;
+            // const name = displayName;
             return name;
         }).then((name) => {
-            return database.ref("/lists").once("value").then((snapshot) => {
+            return database.ref(`users/${uid}/lists`).once("value").then((snapshot) => {
                 const lists = [];
                 snapshot.forEach((childSnapshot) => {
                     // convert obj into array

@@ -61,6 +61,12 @@ hr {
     @include header;
 }
 
+.error {
+    color: lightcoral;
+    padding: 0;
+    margin: 0;
+}
+
 @media (min-width: $desktop-breakpoint) {
     .container {
       width: 74%;

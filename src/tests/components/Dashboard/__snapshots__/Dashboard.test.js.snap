@@ -51,6 +51,9 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     openDeleteModal={[Function]}
     selectList={[Function]}
   />
+  <p>
+    Logout
+  </p>
   <footer />
 </div>
 `;

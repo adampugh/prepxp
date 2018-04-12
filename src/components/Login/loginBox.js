@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class loginBox extends Component {
     state = {
-        error: false
+        error: false, 
+        errorMessage: ""
     }
 
     handleLogin = () => {
@@ -11,7 +12,8 @@ class loginBox extends Component {
         this.props.startLogin(email, password)
             .catch((e) => {
                 this.setState({
-                    error: true
+                    error: true,
+                    errorMessage: e.message
                 })
             })
     }
@@ -21,7 +23,7 @@ class loginBox extends Component {
             <div>
                 <div className="login__box">
                     <h2>Log in to your account</h2>
-                    <p>{this.state.error ? "Sorry there was an error" : null}</p>
+                    <p className="error">{this.state.error ? this.state.errorMessage : null}</p>
                     <div className="login__box__input">
                         <input type="email" placeholder="email" ref="emailLogin"/>
                         <i className="fas fa-envelope"></i>

@@ -7,10 +7,11 @@ import database from "../../../firebase/firebase";
 import listData from "../../fixtures/listData";
 import listState from "../../fixtures/listState";
 
+const uid = "testuid";
 const createMockStore = configureMockStore([thunk]);
 
 beforeEach((done) => {
-    database.ref().set(listData).then(() => done());
+    database.ref(`users/${uid}`).set(listData).then(() => done());
 });
 
 
@@ -30,7 +31,7 @@ describe("list actions", () => {
     });
 
     it("should add list to db and store", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         const list = {
             title: "new list"
         }
@@ -46,7 +47,7 @@ describe("list actions", () => {
             });
 
             // checks data was saved to db
-            return database.ref(`lists/${actions[0].list.id}`).once("value");
+            return database.ref(`users/${uid}/lists/${actions[0].list.id}`).once("value");
         }).then((snapshot) => {
             expect(snapshot.val()).toEqual(list);
             done();
@@ -64,7 +65,7 @@ describe("list actions", () => {
     });
 
     it("should remove list from firebase", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         const id = listState.lists[0].id;
         store.dispatch(actions.startDeleteList(id)).then(() => {
             const actions = store.getActions();
@@ -73,7 +74,7 @@ describe("list actions", () => {
                 id
             });
 
-            return database.ref(`lists/${id}`).once("value");
+            return database.ref(`users/${uid}/lists/${id}`).once("value");
         }).then((snapshot) => {
             expect(snapshot.val()).toEqual(null);
             done();
@@ -93,7 +94,7 @@ describe("list actions", () => {
     });
 
     it("should edit list title in firebase", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         const id = listState.lists[0].id;
         const title = "new test title";
         store.dispatch(actions.startEditListTitle(id, title)).then(() => {
@@ -104,7 +105,7 @@ describe("list actions", () => {
                 title
             });
 
-            return database.ref(`lists/${id}/title`).once("value");
+            return database.ref(`users/${uid}/lists/${id}/title`).once("value");
         }).then((snapshot) => {
             expect(snapshot.val()).toEqual(title);
             done();
@@ -128,7 +129,7 @@ describe("list actions", () => {
     });
 
     it("should add question to db list and store", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         const question = {
             question: "test question",
             answer: ""
@@ -146,7 +147,7 @@ describe("list actions", () => {
                 }
             });
             
-            return database.ref(`lists/${id}/questions/${actions[0].question.id}`).once("value");
+            return database.ref(`users/${uid}/lists/${id}/questions/${actions[0].question.id}`).once("value");
         }).then((snapshot) => {
             // checks an obj has been added to fb
             // const listDataKeys = Object.keys(listData);
@@ -171,7 +172,7 @@ describe("list actions", () => {
     });
 
     it("should delete question from db and store", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         const id = listState.lists[0].id;
         const index = 0;
         const questionId = listState.lists[0].questions[0].id;
@@ -184,7 +185,7 @@ describe("list actions", () => {
                 index
             });
             
-            return database.ref(`lists/${id}/questions/${questionId}`).once("value");
+            return database.ref(`users/${uid}/lists/${id}/questions/${questionId}`).once("value");
         }).then((snapshot) => {
             expect(snapshot.val()).toEqual(null);
             done();
@@ -207,7 +208,7 @@ describe("list actions", () => {
     });
 
     it("should save answer to db and store", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         const id = listState.lists[0].id;
         const index = 0;
         const answer = "test answer";
@@ -222,7 +223,7 @@ describe("list actions", () => {
                 answer
             });
             
-            return database.ref(`lists/${id}/questions/${questionId}/answer`).once("value");
+            return database.ref(`users/${uid}/lists/${id}/questions/${questionId}/answer`).once("value");
         }).then((snapshot) => {
             expect(snapshot.val()).toEqual(answer);
             done();
@@ -242,7 +243,7 @@ describe("list actions", () => {
     });
 
     it("should fetch lists from firebase", (done) => {
-        const store = createMockStore({});
+        const store = createMockStore({ authReducer: { uid } });
         store.dispatch(actions.startFetchLists()).then(() => {
             const actions = store.getActions();
             expect(actions[0]).toEqual({
@@ -254,7 +255,6 @@ describe("list actions", () => {
         });
 
     })
-
 })
 
 

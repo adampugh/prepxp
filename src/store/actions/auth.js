@@ -1,12 +1,37 @@
 import * as actionTypes from "./actionTypes";
 import { firebase } from "../../firebase/firebase";
+import database from "../../firebase/firebase";
+
+import history from "../../history";
 
 // SIGN UP
-export const startSignUp = (email, password) => {
-    return () => {
-        return firebase.auth().createUserWithEmailAndPassword(email, password);
+export const startSignUp = (email, password, name) => {
+    return (dispatch) => {
+        return firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
+            dispatch(startSetUsername(name, user.uid));
+            user.updateProfile({
+                displayName: name
+            }).then(() => {
+                history.push({
+                    pathname: "/dashboard",
+                    state: {
+                        name
+                    }
+                })
+            })
+        })
     }
 }
+
+// START SET USERNAME
+export const startSetUsername = (name, uid) => {
+    return (dispatch) => {
+        return database.ref(`users/${uid}/name`).set(name)
+    }
+}
+
+
+
 
 // START LOGIN
 export const startLogin = (email, password) => {
@@ -16,7 +41,10 @@ export const startLogin = (email, password) => {
 }
 
 // LOGIN
-
+export const login = (uid) => ({
+    type: actionTypes.LOGIN,
+    uid
+});
 
 // START LOGOUT
 export const startLogout = () => {
@@ -26,3 +54,6 @@ export const startLogout = () => {
 };
 
 // LOGOUT
+export const logout = () => ({
+    type: actionTypes.LOGOUT
+});

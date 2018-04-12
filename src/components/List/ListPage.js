@@ -49,7 +49,7 @@ export class ListPage extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        list: ownProps.location.state ? state.lists.filter(list => list.id === ownProps.location.state.list.id)[0] : null
+        list: ownProps.location.state ? state.reducer.lists.filter(list => list.id === ownProps.location.state.list.id)[0] : null
     }
 }
 
