@@ -12,6 +12,7 @@ exports[`<Login /> should match snapshot 1`] = `
     </h1>
     <loginBox
       switchToLogin={[Function]}
+      validateEmail={[Function]}
     />
   </div>
   <h1>

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginBox /> should match snapshot 1`] = `
+<div>
+  <div
+    className="login__box"
+  >
+    <h2>
+      Sign up for an account
+    </h2>
+    <p
+      className="error"
+    />
+    <div
+      className="login__box__input"
+    >
+      <input
+        placeholder="name"
+        type="text"
+      />
+      <i
+        className="fas fa-user"
+      />
+    </div>
+    <div
+      className="login__box__input"
+    >
+      <input
+        placeholder="email"
+        type="email"
+      />
+      <i
+        className="fas fa-envelope"
+      />
+    </div>
+    <div
+      className="login__box__input"
+    >
+      <input
+        placeholder="password"
+        type="password"
+      />
+      <i
+        className="fas fa-lock"
+      />
+    </div>
+    <button
+      className="btn"
+      onClick={[Function]}
+    >
+      Sign Up
+    </button>
+  </div>
+  <div
+    className="login__bottomBox"
+  >
+    <p>
+      Already have an account? 
+      <span>
+        Log in
+      </span>
+    </p>
+  </div>
+</div>
+`;

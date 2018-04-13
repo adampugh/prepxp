@@ -7,16 +7,34 @@ class signupBox extends Component {
     }
 
     handleStartSignUp = () => {
-        // validate data here
         const name = this.refs.nameInput.value;
         const email = this.refs.emailInput.value;
         const password = this.refs.passwordInput.value;
-        this.props.startSignUp(email, password, name).catch((e) => {
+
+        // validate user input
+        if (name.length < 1) {
             this.setState({
                 error: true,
-                errorMessage: e.message
+                errorMessage: "Please enter a name"
+            });
+        } else if (!this.props.validateEmail(email)) {
+            this.setState({
+                error: true,
+                errorMessage: "Please enter a valid email address"
             })
-        })
+        } else if (password.length < 6) {
+            this.setState({
+                error: true,
+                errorMessage: "Please enter a password with more than 6 characters"
+            })
+        } else {
+            this.props.startSignUp(email, password, name).catch((e) => {
+                this.setState({
+                    error: true,
+                    errorMessage: e.message
+                })
+            })
+        }        
     }
 
     render() {

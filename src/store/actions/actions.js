@@ -125,13 +125,12 @@ export const fetchLists = (user) => ({
     lists: user.lists
 });
 
-export const startFetchLists = (displayName) => {
+export const startFetchLists = () => {
     // fetch all expense data
     return (dispatch, getState) => {
         const uid = getState().authReducer.uid;
         return database.ref(`users/${uid}/name`).once("value").then((snapshot) => {
-            const name = snapshot.val() || displayName;
-            // const name = displayName;
+            const name = snapshot.val() || "user";
             return name;
         }).then((name) => {
             return database.ref(`users/${uid}/lists`).once("value").then((snapshot) => {

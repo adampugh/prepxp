@@ -8,10 +8,7 @@ import history from "../../history";
 export const startSignUp = (email, password, name) => {
     return (dispatch) => {
         return firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
-            dispatch(startSetUsername(name, user.uid));
-            user.updateProfile({
-                displayName: name
-            }).then(() => {
+            return dispatch(startSetUsername(name, user.uid)).then(() => {
                 history.push({
                     pathname: "/dashboard",
                     state: {
@@ -19,6 +16,17 @@ export const startSignUp = (email, password, name) => {
                     }
                 })
             })
+            // user.updateProfile({
+            //     displayName: name
+            // })
+            // .then(() => {
+            //     history.push({
+            //         pathname: "/dashboard",
+            //         state: {
+            //             name
+            //         }
+            //     })
+            // })
         })
     }
 }

@@ -52,6 +52,7 @@ class startGrid extends Component {
         this.props.openModal();
         setTimeout(() => {
             this.props.closeModal();
+            this.nextQuestion();
         }, 1000);
     }
 

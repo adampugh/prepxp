@@ -9,13 +9,27 @@ class loginBox extends Component {
     handleLogin = () => {
         const email = this.refs.emailLogin.value;
         const password = this.refs.passwordLogin.value;
-        this.props.startLogin(email, password)
+
+        // validate user input
+        if (!this.props.validateEmail(email)) {
+            this.setState({
+                error: true,
+                errorMessage: "Please enter a valid email address"
+            })
+        } else if (password.length < 6) {
+            this.setState({
+                error: true,
+                errorMessage: "Please enter a password with more than 6 characters"
+            })
+        } else {
+            this.props.startLogin(email, password)
             .catch((e) => {
                 this.setState({
                     error: true,
                     errorMessage: e.message
                 })
             })
+        } 
     }
 
     render() {

@@ -8,20 +8,21 @@ import StartPage from "./components/Start/StartPage";
 import BlogPage from "./components/Blog/BlogPage";
 import BlogPost from "./components/BlogPost/blogPost";
 import SearchPage from "./components/Search/SearchPage";
-
+import PrivateRoute from "./routers/privateRoute";
+import PublicRoute from "./routers/publicRoute";
 
 class App extends Component {
   render() {
     return (
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/list/edit" component={ListPage} />
-        <Route path="/list/start" component={StartPage} />
-        <Route path="/blog" exact component={BlogPage} />
-        <Route path="/blog/:id" component={BlogPost} />
-        <Route path="/search" component={SearchPage} />
+        <PublicRoute path="/login" exact component={Login} />
+        <PrivateRoute path="/dashboard" exact component={Dashboard} />
+        <PrivateRoute path="/list/edit" component={ListPage} />
+        <PrivateRoute path="/list/start" component={StartPage} />
+        <PrivateRoute path="/blog" exact component={BlogPage} />
+        <PrivateRoute path="/blog/:id" component={BlogPost} />
+        <PrivateRoute path="/search" component={SearchPage} />
         <Redirect to="/" />
       </Switch>
     );

@@ -21,6 +21,11 @@ export class Login extends Component {
         });
     }
 
+    validateEmail = (email) => {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
     render() {
         return (
             <div>
@@ -29,10 +34,12 @@ export class Login extends Component {
                 {this.state.login 
                     ? <LoginBox 
                         switchToLogin={this.switchToLogin}
-                        startLogin={this.props.startLogin} /> 
+                        startLogin={this.props.startLogin} 
+                        validateEmail={this.validateEmail} /> 
                     : <SignupBox 
                         switchToLogin={this.switchToLogin} 
-                        startSignUp={this.props.startSignUp} />}
+                        startSignUp={this.props.startSignUp} 
+                        validateEmail={this.validateEmail} />}
             </div>
             <h1 onClick={this.props.startLogout}>Logout</h1>
             <Footer />

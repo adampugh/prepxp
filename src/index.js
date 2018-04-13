@@ -65,7 +65,8 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(authActions.login(user.uid));
 
         // pass displayName
-        store.dispatch(actions.startFetchLists(user.displayName)).then(() => {
+        // store.dispatch(actions.startFetchLists(user.displayName)).then(() => {
+        store.dispatch(actions.startFetchLists()).then(() => {
             renderApp();
             // check user is not signing up as authActions will handle redirect
             if (history.location.pathname === "/login" && user.displayName !== null) {
@@ -76,7 +77,7 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log("logged out");
         store.dispatch(authActions.logout());
         renderApp();
-        history.push("/login");
+        // history.push("/login");
     }
 });
 
