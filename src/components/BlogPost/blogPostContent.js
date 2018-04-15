@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class blogPostContent extends Component {
     componentDidMount() {
@@ -13,7 +14,11 @@ class blogPostContent extends Component {
     render() {
         return (
             <div className="blogPost__content">
-                <div className="container-s">
+                
+                <div className="container-l">
+                    <div className="blogPost__backLink">
+                        <Link to="/blog"><i className="fas fa-arrow-left"></i> <p>Back to posts</p></Link>
+                    </div>
                     <div className="blogPost__content__panel">
                         <h1>{this.props.post.title}</h1>
                         <h2 className="blogPost__content__byline">{this.props.post.byline}</h2>

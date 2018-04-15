@@ -1,5 +1,5 @@
 .blogPost__content {
-    padding: $padding-m 0;
+    padding: $padding-s 0;
     background: $very-light-grey;
     h1 {
         @include header;
@@ -17,6 +17,13 @@
     }
 }
 
+.blogPost__backLink {
+    padding-bottom: $padding-s;
+    p {
+        display: inline;
+    }
+}
+
 .blogPost__content__byline {
     color: $light-grey;
     font-weight: 400;
@@ -29,6 +36,13 @@
 .blogPost__content__panel {
     background: white;
     box-sizing: border-box;
-    padding: $padding-m;
+    padding: $padding-s;
     @include boxshadow;
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .blogPost__content__panel {
+        padding: $padding-m;
+    }
 }

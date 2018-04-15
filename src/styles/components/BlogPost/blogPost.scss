@@ -1,0 +1,13 @@
+.blogPost__grid {
+    display: grid;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .blogPost__container {
+        background: $very-light-grey;
+    }
+
+    .blogPost__grid {
+        grid-template-columns: 1fr 3fr;
+    }
+}

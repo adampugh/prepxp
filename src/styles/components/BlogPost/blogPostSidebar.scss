@@ -1,0 +1,44 @@
+.blogPost__container {
+    display: none;
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+    .blogPost__sidebar__title {
+        @include header;
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 0.125rem;
+            margin: 1rem 0;
+            background: $off-purple;
+        }
+    }
+
+    .blogPost__container {
+        display: block;
+        background: $very-light-grey;
+    }
+    
+    .blogPost__sidebar {
+        // height: 100%;
+        margin: 80px 0 20px $padding-s;
+        background: white;
+        padding: 20px;
+        @include boxshadow;
+    }
+
+    .blogPost__sidebar__item {
+        // img {
+        //     width: 100%;
+        // }
+        hr {
+            border: 1px solid $very-light-grey;
+            width: 100%;
+        }
+        p {
+            color: $off-purple;
+        }
+    }
+}

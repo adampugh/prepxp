@@ -2,51 +2,93 @@
     background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
     background-size: cover;
     color: white;
+    position: relative;
+    // margin-bottom: -10vw;
+    // min-height: 634px;
+    min-height: 534px;
+    margin-bottom: -50px;
 }
+  
+  .blogBanner__whiteElipse {
+    clip-path: ellipse(73% 87% at 68% 94%);
+    background: $very-light-grey;
+    // height: 280px;
+    height: 180px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
 
 
 .blogBanner__grid {
     display: grid;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    padding: $padding-s 0;
 }
 
 
 .blogBanner__img {
     // justify-self: center;
+    
+    z-index: 100;
+    // -ms-transform: rotate(30deg); /* IE 9 */
+    // -webkit-transform: rotate(30deg); /* Safari */
+    // transform: rotate(30deg);
     img {
         width: 100%;
-        padding: $padding-s;
+        padding: 5px;
         box-sizing: border-box;
     }
 }
 
 .blogBanner__text {
-    background: white;
-    border-radius: 20px;
-    color: $off-grey;
-    align-self: center;
-    padding: $padding-s;
+    // background: white;
+    // border-radius: 20px;
+    // color: $off-grey;
+    // align-self: center;
+    // padding: $padding-s;
     margin-bottom: $padding-m;
-    @include boxshadow;
+    padding: $padding-s;
+    padding-bottom: 0;
+    color: white;
+    z-index: 100;
+    // @include boxshadow;
     h1 {
         @include header;
-        margin-bottom: $padding-s;
+        font-size: 7em;
+        // margin-bottom: $padding-s;
+    }
+    p {
+        // @include header;
+        // color: $off-grey;
+        // padding-top: $padding-s;
+        font-size: $font-m;
     }
 }
 
 @media (min-width: $desktop-breakpoint) {
     .blogBanner {
-        padding-bottom: $padding-s;
+        // padding-bottom: $padding-s;
+        // margin-bottom: -50px;
     }
 
     .blogBanner__grid {
         grid-template-columns: 1fr 1fr;
+        padding: $padding-m 0;
         img {
-            width: 90%;
-            margin: $padding-m 0;
+            width: 100%;
+            // margin-top: $padding-s;
+            padding-top: 0;
+            // margin-left: 100px;
+            // margin: $padding-m 0;
         }
     }
+
     .blogBanner__text {
         margin-bottom: 0;
+        // padding: $padding-s $padding-s 0 0;
+        // padding: 0;
+        padding-top: 0;
+        // padding-right: $padding-s;
     }
 }

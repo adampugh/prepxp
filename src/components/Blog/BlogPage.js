@@ -40,7 +40,10 @@ class BlogPage extends Component {
                 <Navbar />
                 <BlogBanner />
                 <BlogGrid 
-                    posts={this.state.posts} 
+                    mainPost={this.state.posts[0]}
+                    editorPosts={this.state.posts.filter((item, index) => index < 3 && index > 0)}
+                    posts={this.state.posts.filter((item, index) => index > 2)}
+                    allPosts={this.state.posts} 
                     loading={this.state.loading} 
                     error={this.state.error} />
                 <Footer />

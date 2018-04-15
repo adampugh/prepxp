@@ -1,7 +1,7 @@
 import React from "react";
 
 const blogPanel = (props) => (
-    <div className="blog__post">
+    <div className="blog__post blog__post--main">
         
         <div className="blog__post__text">
             <p>{props.post.date}</p>
@@ -20,5 +20,3 @@ const blogPanel = (props) => (
 );
 
 export default blogPanel;
-
-// <p>{props.post.byline}</p>

@@ -1,10 +1,12 @@
 .blog__background {
     background-color: $very-light-grey;
+    padding: $padding-m 0;
 }
 
 .blog__grid {
     display: grid;
-    padding: $padding-m 0;
+    // padding: $padding-m 0;
+    padding-bottom: $padding-m;
 }
 
 .blog__grid__error {
@@ -14,8 +16,29 @@
     text-align: center;
 }
 
+// .blog__container {
+//     hr {
+//         width: 25px;
+//     }
+// }
+
+.blog__title {
+    @include header;
+    color: $off-purple;
+    text-align: center;
+    padding: $padding-s 0;
+    &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 0.125rem;
+        margin: 1rem auto;
+        background: $off-purple;
+    }
+}
+
 @media (min-width: $desktop-breakpoint) {
     .blog__grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
