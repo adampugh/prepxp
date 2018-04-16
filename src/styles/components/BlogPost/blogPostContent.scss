@@ -18,6 +18,7 @@
 }
 
 .blogPost__backLink {
+    color: $off-purple;
     padding-bottom: $padding-s;
     p {
         display: inline;
@@ -40,9 +41,51 @@
     @include boxshadow;
 }
 
+.blogPost__content__commentBox {
+    padding: $padding-s;
+    margin: $padding-s 0;
+    background: white;
+    @include boxshadow;
+    h1 {
+        margin-bottom: $padding-s;
+    }
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        resize: none;
+        border-radius: 20px;
+        padding: 15px;
+        border: 1px solid $light-grey;
+        margin-bottom: 10px;
+    }
+    .blogPost__content__commentBox__button {
+        text-align: center;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.blogPost__content__comments {
+    padding: $padding-s;
+    margin: $padding-s 0;
+    h1 {
+        margin-bottom: $padding-s;
+    }
+}
 
 @media (min-width: $desktop-breakpoint) {
     .blogPost__content__panel {
-        padding: $padding-m;
+        // padding: $padding-m;
+    }
+
+    .blogPost__content__commentBox {
+        // padding: $padding-s $padding-m;
+        .blogPost__content__commentBox__button {
+            text-align: right;
+            button {
+                width: auto;
+            }
+        }
     }
 }

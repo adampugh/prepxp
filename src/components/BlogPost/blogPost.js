@@ -9,13 +9,13 @@ const blogPost = (props) => (
     <div>
         <Navbar />
         <div className="blogPost__container">
-        <div className="container-l">
-            <div className="blogPost__grid">
-                
-                <BlogPostSidebar posts={props.location.state.posts}/>
-                <BlogPostContent post={props.location.state.post} />
+            <div className="container-l">
+                <div className="blogPost__grid">
+                    
+                    <BlogPostSidebar posts={props.location.state.posts}/>
+                    <BlogPostContent post={props.location.state.post} />
+                </div>
             </div>
-        </div>
         </div>
         <Footer />
     </div>

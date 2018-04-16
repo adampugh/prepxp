@@ -1,4 +1,4 @@
-.blogPost__container {
+.blogPost__sidebar__container {
     display: none;
 }
 
@@ -16,7 +16,7 @@
         }
     }
 
-    .blogPost__container {
+    .blogPost__sidebar__container {
         display: block;
         background: $very-light-grey;
     }

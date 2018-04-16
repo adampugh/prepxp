@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const blogPostSidebar = (props) => (
-    <div className="blogPost__container">
-        <div className="blogPost__backLink">
-            <Link to="/blog"><i className="fas fa-arrow-left"></i> <p>Back to posts</p></Link>
-        </div>
+    <div className="blogPost__sidebar__container">
+        
         <div className="blogPost__sidebar">
             <h1 className="blogPost__sidebar__title">Latest articles</h1>
             {
