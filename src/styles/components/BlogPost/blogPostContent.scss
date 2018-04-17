@@ -35,6 +35,7 @@
 }
 
 .blogPost__content__panel {
+    // border: 1px solid $light-grey;    
     background: white;
     box-sizing: border-box;
     padding: $padding-s;
@@ -81,6 +82,7 @@
 
     .blogPost__content__commentBox {
         // padding: $padding-s $padding-m;
+        // border: 1px solid $light-grey;
         .blogPost__content__commentBox__button {
             text-align: right;
             button {

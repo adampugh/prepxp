@@ -6,8 +6,8 @@
     min-height: 280px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
-    @include boxshadow;
+    // border: 1px solid $light-grey;
+    // @include boxshadow;
     .blog__post__img {
         background-size: cover;
         background-position: center;
@@ -54,7 +54,7 @@
     text-align: right;
     i, svg {
         margin-left: 5px;
-        color: $off-purple;
+        // color: $off-purple;
     }
 }
 
@@ -62,11 +62,17 @@
     .blog__post {
         // height: 280px;
         &:hover {
-            height:300px;
-            margin-left: -10px;
-            width: 102%;
-            z-index: 10;
+            // height:300px;
+            // margin-left: -10px;
+            // width: 102%;
+            // z-index: 10;
+            // @include boxshadow;
+            // background: darken($very-light-grey, 5%);
+            // @include boxshadow-darken;
             @include boxshadow;
+            h2 {
+                color: $off-purple;
+            }
         }
         .blog__mainPost {
             h2 {

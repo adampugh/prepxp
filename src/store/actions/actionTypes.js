@@ -13,6 +13,10 @@ export const FETCH_LISTS = "FETCH_LISTS";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 
+export const FETCH_BLOG = "FETCH_BLOG";
+export const ADD_COMMENT = "ADD_COMMENT";
+export const DELETE_COMMENT = "DELETE_COMMENT";
+
 
 // 4. login
 // START_LOGIN

@@ -15,17 +15,19 @@ import App from './App';
 import Loader from "./components/UI/loader";
 import reducer from "./store/reducers/reducer";
 import authReducer from "./store/reducers/auth";
+import blogReducer from "./store/reducers/blog";
 import registerServiceWorker from './registerServiceWorker';
 import history from "./history";
 import * as actions from "./store/actions/actions";
 import * as authActions from "./store/actions/auth";
+import * as blogActions from "./store/actions/blog";
 
 
 let composeEnhancers = process.env.NODE_ENV === "production" ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 const store = createStore(
-    combineReducers({reducer, authReducer}), 
+    combineReducers({reducer, authReducer, blogReducer}), 
     composeEnhancers(applyMiddleware(thunk))
 );
 
@@ -63,15 +65,17 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log("logged in");
         
         store.dispatch(authActions.login(user.uid));
-
+        store.dispatch(blogActions.startFetchBlog());
         // pass displayName
         // store.dispatch(actions.startFetchLists(user.displayName)).then(() => {
         store.dispatch(actions.startFetchLists()).then(() => {
-            renderApp();
-            // check user is not signing up as authActions will handle redirect
-            if (history.location.pathname === "/login" && user.displayName !== null) {
-                history.push("/dashboard");
-            }
+            
+                renderApp();
+                // check user is not signing up as authActions will handle redirect
+                if (history.location.pathname === "/login" && user.displayName !== null) {
+                    history.push("/dashboard");
+                }
+            
         });
     } else {
         console.log("logged out");

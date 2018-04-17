@@ -3,16 +3,31 @@
 exports[`<BlogPost /> should match snapshot 1`] = `
 <div>
   <Navbar />
-  <blogPostContent
-    post={
-      Object {
-        "byline": "yesyesyeys",
-        "img": "http://via.placeholder.com/300x300",
-        "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
-        "title": "5 Tips to get things done",
-      }
-    }
-  />
+  <div
+    className="blogPost__container"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="blogPost__grid"
+      >
+        <blogPostSidebar />
+        <blogPostContent
+          comments={Array []}
+          fbid="134wegd"
+          post={
+            Object {
+              "byline": "yesyesyeys",
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+              "title": "5 Tips to get things done",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
   <footer />
 </div>
 `;

@@ -4,6 +4,13 @@
     box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.66);
 }
 
+@mixin boxshadow-darken {
+    -webkit-box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.93);
+    -moz-box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.93);
+    box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.93);
+}
+
+
 @mixin header {
     font-weight: 700;
     font-size: $font-xl;
