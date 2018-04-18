@@ -7,7 +7,7 @@ import posts from "../../fixtures/blogPosts";
 
 describe("<BlogPostContent />", () => {
     it("should match snapshot", () => {
-        const wrapper = shallow(<BlogPostContent post={posts[0]}/>);
+        const wrapper = shallow(<BlogPostContent post={posts[0]} comments={[]}/>);
         expect(wrapper).toMatchSnapshot();
     });
 });

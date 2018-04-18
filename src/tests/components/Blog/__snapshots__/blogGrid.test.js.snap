@@ -8,10 +8,15 @@ exports[`<blogGrid /> should match snapshot 1`] = `
     className="container"
   >
     <div
-      className="blog__grid"
+      className="blog__grid__container"
     >
+      <h1
+        className="blog__title"
+      >
+        Editor's Picks
+      </h1>
       <Link
-        key="5 Tips to get things done0"
+        key="1234"
         replace={false}
         to={
           Object {
@@ -19,18 +24,39 @@ exports[`<blogGrid /> should match snapshot 1`] = `
             "state": Object {
               "post": Object {
                 "byline": "yesyesyeys",
+                "id": "1234",
                 "img": "http://via.placeholder.com/300x300",
                 "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
                 "title": "5 Tips to get things done",
               },
+              "posts": Array [
+                Object {
+                  "byline": "yesyesyeys",
+                  "id": "1234",
+                  "img": "http://via.placeholder.com/300x300",
+                  "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                  "title": "5 Tips to get things done",
+                },
+              ],
             },
           }
         }
       >
         <blogPanel
+          comments={
+            Array [
+              Object {
+                "name": "Bob",
+                "postId": "testPostId",
+                "text": "test comment",
+                "uid": "cooluid",
+              },
+            ]
+          }
           post={
             Object {
               "byline": "yesyesyeys",
+              "id": "1234",
               "img": "http://via.placeholder.com/300x300",
               "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
               "title": "5 Tips to get things done",
@@ -38,90 +64,116 @@ exports[`<blogGrid /> should match snapshot 1`] = `
           }
         />
       </Link>
-      <Link
-        key="Pass the interview with these answers1"
-        replace={false}
-        to={
-          Object {
-            "pathname": "/blog/Pass-the-interview-with-these-answers",
-            "state": Object {
-              "post": Object {
-                "byline": "yesyesyeys",
-                "img": "http://via.placeholder.com/300x300",
-                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-                "title": "Pass the interview with these answers",
-              },
-            },
-          }
-        }
+      <div
+        className="blog__grid"
       >
-        <blogPanel
-          post={
+        <Link
+          key="5 Tips to get things done0"
+          replace={false}
+          to={
             Object {
-              "byline": "yesyesyeys",
-              "img": "http://via.placeholder.com/300x300",
-              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-              "title": "Pass the interview with these answers",
+              "pathname": "/blog/5-Tips-to-get-things-done",
+              "state": Object {
+                "post": Object {
+                  "byline": "yesyesyeys",
+                  "id": "1234",
+                  "img": "http://via.placeholder.com/300x300",
+                  "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                  "title": "5 Tips to get things done",
+                },
+                "posts": Array [
+                  Object {
+                    "byline": "yesyesyeys",
+                    "id": "1234",
+                    "img": "http://via.placeholder.com/300x300",
+                    "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                    "title": "5 Tips to get things done",
+                  },
+                ],
+              },
             }
           }
-        />
-      </Link>
-      <Link
-        key="Top 10 most common questions2"
-        replace={false}
-        to={
-          Object {
-            "pathname": "/blog/Top-10-most-common-questions",
-            "state": Object {
-              "post": Object {
+        >
+          <blogPanel
+            comments={
+              Array [
+                Object {
+                  "name": "Bob",
+                  "postId": "testPostId",
+                  "text": "test comment",
+                  "uid": "cooluid",
+                },
+              ]
+            }
+            post={
+              Object {
                 "byline": "yesyesyeys",
+                "id": "1234",
                 "img": "http://via.placeholder.com/300x300",
-                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-                "title": "Top 10 most common questions",
-              },
-            },
-          }
-        }
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              }
+            }
+          />
+        </Link>
+      </div>
+      <h1
+        className="blog__title"
       >
-        <blogPanel
-          post={
+        Latest Posts
+      </h1>
+      <div
+        className="blog__grid"
+      >
+        <Link
+          replace={false}
+          to={
             Object {
-              "byline": "yesyesyeys",
-              "img": "http://via.placeholder.com/300x300",
-              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-              "title": "Top 10 most common questions",
+              "pathname": "/blog/5-Tips-to-get-things-done",
+              "state": Object {
+                "post": Object {
+                  "byline": "yesyesyeys",
+                  "id": "1234",
+                  "img": "http://via.placeholder.com/300x300",
+                  "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                  "title": "5 Tips to get things done",
+                },
+                "posts": Array [
+                  Object {
+                    "byline": "yesyesyeys",
+                    "id": "1234",
+                    "img": "http://via.placeholder.com/300x300",
+                    "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                    "title": "5 Tips to get things done",
+                  },
+                ],
+              },
             }
           }
-        />
-      </Link>
-      <Link
-        key="What Google and employers are looking for3"
-        replace={false}
-        to={
-          Object {
-            "pathname": "/blog/What-Google-and-employers-are-looking-for",
-            "state": Object {
-              "post": Object {
-                "byline": "yesyesyeys",
-                "img": "http://via.placeholder.com/300x300",
-                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-                "title": "What Google and employers are looking for",
-              },
-            },
-          }
-        }
-      >
-        <blogPanel
-          post={
-            Object {
-              "byline": "yesyesyeys",
-              "img": "http://via.placeholder.com/300x300",
-              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
-              "title": "What Google and employers are looking for",
+        >
+          <blogPanel
+            comments={
+              Array [
+                Object {
+                  "name": "Bob",
+                  "postId": "testPostId",
+                  "text": "test comment",
+                  "uid": "cooluid",
+                },
+              ]
             }
-          }
-        />
-      </Link>
+            post={
+              Object {
+                "byline": "yesyesyeys",
+                "id": "1234",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              }
+            }
+          />
+        </Link>
+      </div>
     </div>
   </div>
 </div>

@@ -60,3 +60,16 @@ export const startAddComment = (text, fbid, name) => {
 }
 
 // DELETE COMMENT
+export const deleteComment = (fbid, postId) => ({
+    type: actionTypes.DELETE_COMMENT,
+    fbid,
+    postId
+});
+
+export const startDeleteComment = (fbid, postId) => {
+    return (dispatch) => {
+        return database.ref(`blogs/${fbid}/comments/${postId}`).remove().then(() => {
+            dispatch(deleteComment(fbid, postId));
+        });
+    }
+}

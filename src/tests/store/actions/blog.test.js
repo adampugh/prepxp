@@ -80,4 +80,15 @@ describe("blog actions", () => {
         });
     });
 
+    it("should return DELETE_COMMENT action object", () => {
+        const fbid = "123";
+        const postId = "dfdfg";
+        const action = actions.deleteComment(fbid, postId);
+        expect(action).toEqual({
+            type: actionTypes.DELETE_COMMENT,
+            fbid,
+            postId
+        });
+    });
+
 });

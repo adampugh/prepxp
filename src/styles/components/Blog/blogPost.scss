@@ -12,6 +12,9 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        p {
+            opacity: 0;
+        }
     }
     p {
         // margin: 0;
@@ -61,23 +64,67 @@
 @media (min-width: $desktop-breakpoint) {
     .blog__post {
         // height: 280px;
+        -webkit-transition: background-color .5s ease-out;
+        -moz-transition: background-color .5s ease-out;
+        -o-transition: background-color .5s ease-out;
+        transition: background-color .5s ease-out;
+        h2 {
+            -webkit-transition: color .5s ease-out;
+            -moz-transition: color .5s ease-out;
+            -o-transition: color .5s ease-out;
+            transition: color .5s ease-out;
+        }
         &:hover {
-            // height:300px;
-            // margin-left: -10px;
-            // width: 102%;
-            // z-index: 10;
             // @include boxshadow;
-            // background: darken($very-light-grey, 5%);
-            // @include boxshadow-darken;
-            @include boxshadow;
+            background: $off-purple;
+            
+            .blog__post__img {
+                p {
+                    // display: inherit;
+                    opacity: 1;
+                }
+                .blog__post__img__overlay {
+                    // display: inherit;
+                    opacity: 1;
+                }
+            }
             h2 {
-                color: $off-purple;
+                // color: $off-purple;
+                color: white;
             }
         }
         .blog__mainPost {
             h2 {
                 font-size: 2.3em;
             }
+        }
+        .blog__post__img {
+            position: relative;
+            p {
+                @include header;
+                bottom: 10px;
+                right: 10px;
+                position: absolute;
+                color: white;
+                font-size: $font-m;
+                opacity: 0;
+                -webkit-transition: opacity .5s ease-out;
+                -moz-transition: opacity .5s ease-out;
+                -o-transition: opacity .5s ease-out;
+                transition: opacity .5s ease-out;
+            }
+            .blog__post__img__overlay {
+                height: 100%;
+                width: 100%;
+                background: rgba(5, 5, 5, 0.6);
+                // display: none;
+                opacity: 0.1;
+                -webkit-transition: opacity .5s ease-out;
+                -moz-transition: opacity .5s ease-out;
+                -o-transition: opacity .5s ease-out;
+                transition: opacity .5s ease-out;
+            }
+            
         }
     }
 

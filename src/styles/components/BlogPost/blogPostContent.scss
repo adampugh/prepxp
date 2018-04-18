@@ -75,6 +75,23 @@
     }
 }
 
+.blogPost__content__comments__comment {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    p, h3 {
+        margin: 5px;
+    }
+    h3 {
+        color: $off-purple;
+    }
+}
+
+.blogPost__content__comments__comment__bottomDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (min-width: $desktop-breakpoint) {
     .blogPost__content__panel {
         // padding: $padding-m;
@@ -87,6 +104,15 @@
             text-align: right;
             button {
                 width: auto;
+            }
+        }
+    }
+
+    .blogPost__content__comments__comment {
+        span {
+            &:hover {
+                cursor: pointer;
+                color: $light-grey;
             }
         }
     }

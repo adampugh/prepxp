@@ -22,6 +22,19 @@ export default (state = {}, action) => {
                     }
                 })
             }
+            case actionTypes.DELETE_COMMENT:
+            return {
+                blog: state.blog.map(blog => {
+                    if (blog.fbid === action.fbid) {
+                        return {
+                            ...blog,
+                            comments: blog.comments.filter(comment => comment.postId !== action.postId)
+                        }
+                    } else {
+                        return {...blog}
+                    }
+                })
+            }
         default:
             return state;
     }

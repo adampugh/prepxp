@@ -15,9 +15,13 @@ class blogPostContent extends Component {
         if (text.length > 0) {
             this.props.startAddComment(text, this.props.fbid, this.props.name);
             document.querySelector("textarea").value = "";
+            this.props.openModal();
         }
     }
 
+    handleStartDeleteComment = (postId) => {
+        this.props.startDeleteComment(this.props.fbid, postId)
+    }
 
     render() {
         return (
@@ -48,12 +52,16 @@ class blogPostContent extends Component {
                             this.props.comments.length > 0 
                                 ? this.props.comments.map((comment) => (
                                     <div className="blogPost__content__comments__comment" key={comment.postId}>
-                                        <p>{comment.name}</p>
+                                        <h3>{comment.name}</h3>
+                                        <div className="blogPost__content__comments__comment__bottomDiv">
                                         <p>{comment.text}</p>
                                         {comment.uid === this.props.uid
-                                            ? <i className="fas fa-trash-alt"></i>
+                                            ? <span onClick={() => this.handleStartDeleteComment(comment.postId)}>
+                                                <i className="fas fa-trash-alt"></i>
+                                            </span>
                                             : null
                                         }
+                                        </div>
                                     </div>
                                 ))
                                 : "No comments yet"

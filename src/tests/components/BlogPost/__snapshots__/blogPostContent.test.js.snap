@@ -5,8 +5,24 @@ exports[`<BlogPostContent /> should match snapshot 1`] = `
   className="blogPost__content"
 >
   <div
-    className="container-s"
+    className="container-l"
   >
+    <div
+      className="blogPost__backLink"
+    >
+      <Link
+        replace={false}
+        to="/blog"
+      >
+        <i
+          className="fas fa-arrow-left"
+        />
+         
+        <p>
+          Back to posts
+        </p>
+      </Link>
+    </div>
     <div
       className="blogPost__content__panel"
     >
@@ -25,6 +41,35 @@ exports[`<BlogPostContent /> should match snapshot 1`] = `
       <div
         id="blogPost__content__text"
       />
+    </div>
+    <div
+      className="blogPost__content__commentBox"
+    >
+      <h1>
+        Comments Box
+      </h1>
+      <textarea
+        placeholder="Leave a comment..."
+        rows="6"
+      />
+      <div
+        className="blogPost__content__commentBox__button"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Send
+        </button>
+      </div>
+    </div>
+    <div
+      className="blogPost__content__comments"
+    >
+      <h1>
+        Comments
+      </h1>
+      No comments yet
     </div>
   </div>
 </div>

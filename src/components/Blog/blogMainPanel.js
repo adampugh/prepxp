@@ -9,12 +9,16 @@ const blogPanel = (props) => (
             <hr />
             <p className="blog__post__text__author">{props.post.author}</p>
             <div className="blog__post__text__comments">
-                <p>{props.post.comments.length}<i className="fas fa-comment"></i></p>
+                <p>{props.comments.length}<i className="fas fa-comment"></i></p>
             </div>
         </div>
         <div 
             className="blog__post__img"
-            style={{backgroundImage:`url(${props.post.img})`}}></div>
+            style={{backgroundImage:`url(${props.post.img})`}}>
+                <div className="blog__post__img__overlay">
+                <p>Read <i className="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
         
     </div>
 );

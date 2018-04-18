@@ -1,23 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<blogPost /> should match snapshot 1`] = `
+exports[`<blogPanel /> should match snapshot 1`] = `
 <div
   className="blog__post"
 >
-  <img
-    alt="blog post"
-    src="http://via.placeholder.com/300x300"
-  />
   <div
     className="blog__post__text"
   >
+    <p />
     <h2>
       5 Tips to get things done
     </h2>
     <hr />
-    <p>
-      yesyesyeys
-    </p>
+    <p
+      className="blog__post__text__author"
+    />
+    <div
+      className="blog__post__text__comments"
+    >
+      <p>
+        0
+        <i
+          className="fas fa-comment"
+        />
+      </p>
+    </div>
+  </div>
+  <div
+    className="blog__post__img"
+    style={
+      Object {
+        "backgroundImage": "url(http://via.placeholder.com/300x300)",
+      }
+    }
+  >
+    <div
+      className="blog__post__img__overlay"
+    >
+      <p>
+        Read 
+        <i
+          className="fas fa-arrow-right"
+        />
+      </p>
+    </div>
   </div>
 </div>
 `;

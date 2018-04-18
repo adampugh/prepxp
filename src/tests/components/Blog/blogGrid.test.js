@@ -4,10 +4,19 @@ import { shallow } from "enzyme";
 import BlogGrid from "../../../components/Blog/blogGrid";
 import Loader from "../../../components/UI/loader";
 import posts from "../../fixtures/blogPosts";
+import blogState from "../../fixtures/blogState";
 
 describe("<blogGrid />", () => {
+    const post = [posts[0]]
+
     test("should match snapshot", () => {
-        const wrapper = shallow(<BlogGrid posts={posts} />);
+        const wrapper = shallow(<BlogGrid 
+            posts={post} 
+            blog={blogState.blog}
+            mainPost={posts[0]}
+            editorPosts={post}
+            allPosts={post}
+            />);
         expect(wrapper).toMatchSnapshot();
     });
 

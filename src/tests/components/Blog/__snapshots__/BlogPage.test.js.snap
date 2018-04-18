@@ -5,6 +5,8 @@ exports[`<BlogPage /> should match snapshot 1`] = `
   <Navbar />
   <blogBanner />
   <blogGrid
+    allPosts={Array []}
+    editorPosts={Array []}
     error={null}
     loading={true}
     posts={Array []}

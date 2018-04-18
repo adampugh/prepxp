@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import BlogPage from "../../../components/Blog/BlogPage";
+import { BlogPage } from "../../../components/Blog/BlogPage";
 
 
 describe("<BlogPage />", () => {

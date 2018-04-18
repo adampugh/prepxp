@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { connect } from "react-redux";
 
 import Navbar from "../UI/navbarLoggedIn";
 import BlogBanner from "../Blog/blogBanner";
 import BlogGrid from "./blogGrid";
 import Footer from "../UI/footer";
 
-class BlogPage extends Component {
+export class BlogPage extends Component {
     state = {
         posts: [],
         loading: true,
@@ -45,11 +46,18 @@ class BlogPage extends Component {
                     posts={this.state.posts.filter((item, index) => index > 2)}
                     allPosts={this.state.posts} 
                     loading={this.state.loading} 
-                    error={this.state.error} />
+                    error={this.state.error} 
+                    blog={this.props.blog} />
                 <Footer />
             </div>
         );
     }
 }
 
-export default BlogPage;
+const mapStateToProps = state => {
+    return {
+        blog: state.blogReducer.blog
+    }
+}
+
+export default connect(mapStateToProps)(BlogPage);
