@@ -1,6 +1,7 @@
 .blogPost__content {
     padding: $padding-s 0;
-    background: $very-light-grey;
+    // background: $very-light-grey;
+    background: $light-purple;
     h1 {
         @include header;
     }

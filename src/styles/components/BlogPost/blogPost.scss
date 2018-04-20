@@ -3,7 +3,8 @@
 }
 
 .blogPost__container {
-    background: $very-light-grey;
+    // background: $very-light-grey;
+    background: $light-purple;
     .container-l {
         margin: 0 auto;
         width: 95%;
@@ -12,7 +13,8 @@
 
 @media (min-width: $desktop-breakpoint) {
     .blogPost__container {
-        background: $very-light-grey;
+        // background: $very-light-grey;
+        background: $light-purple;
     }
 
     .blogPost__grid {

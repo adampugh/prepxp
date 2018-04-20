@@ -11,7 +11,8 @@
   
   .blogBanner__whiteElipse {
     clip-path: ellipse(73% 87% at 68% 94%);
-    background: $very-light-grey;
+    // background: $very-light-grey;
+    background-color: $light-purple;
     // height: 280px;
     height: 180px;
     position: absolute;
