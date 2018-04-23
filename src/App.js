@@ -8,8 +8,10 @@ import StartPage from "./components/Start/StartPage";
 import BlogPage from "./components/Blog/BlogPage";
 import BlogPost from "./components/BlogPost/blogPost";
 import SearchPage from "./components/Search/SearchPage";
+import AdminPage from "./components/Admin/Admin";
 import PrivateRoute from "./routers/privateRoute";
 import PublicRoute from "./routers/publicRoute";
+import AdminRoute from "./routers/adminRoute";
 
 class App extends Component {
   render() {
@@ -23,6 +25,7 @@ class App extends Component {
         <PrivateRoute path="/blog" exact component={BlogPage} />
         <PrivateRoute path="/blog/:id" component={BlogPost} />
         <PrivateRoute path="/search" component={SearchPage} />
+        <AdminRoute path="/admin" component={AdminPage} />
         <Redirect to="/" />
       </Switch>
     );

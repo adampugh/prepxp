@@ -3,7 +3,8 @@ import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
     name: "you",
-    lists: []
+    lists: [],
+    admin: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -11,7 +12,8 @@ const reducer = (state = initialState, action) => {
         case actionTypes.FETCH_LISTS: 
             return {
                 lists: action.lists,
-                name: action.name
+                name: action.name,
+                admin: action.admin
             }
         case actionTypes.ADD_LIST:
             return {

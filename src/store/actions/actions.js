@@ -122,17 +122,26 @@ export const startEditListTitle = (id, title) => {
 export const fetchLists = (user) => ({
     type: actionTypes.FETCH_LISTS,
     name: user.name,
-    lists: user.lists
+    lists: user.lists,
+    admin: user.admin
 });
 
 export const startFetchLists = () => {
     // fetch all expense data
     return (dispatch, getState) => {
         const uid = getState().authReducer.uid;
-        return database.ref(`users/${uid}/name`).once("value").then((snapshot) => {
-            const name = snapshot.val() || "user";
-            return name;
-        }).then((name) => {
+        
+        // return database.ref(`users/${uid}/name`).once("value").then((snapshot) => {
+            // const name = snapshot.val() || "user";
+            // return name;
+
+        return database.ref(`users/${uid}`).once("value").then((snapshot) => {
+            let user = {};
+            // initially returns null
+            user.name = snapshot.val() === null ? "user" : snapshot.val().name || "user";
+            user.admin = snapshot.val() === null ? false : !!snapshot.val().admin || false;
+            return user;
+        }).then(({name, admin}) => {
             return database.ref(`users/${uid}/lists`).once("value").then((snapshot) => {
                 const lists = [];
                 snapshot.forEach((childSnapshot) => {
@@ -152,7 +161,8 @@ export const startFetchLists = () => {
                 });
                 dispatch(fetchLists({
                     lists,
-                    name
+                    name,
+                    admin
                 }));
             });
         });

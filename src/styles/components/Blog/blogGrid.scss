@@ -2,6 +2,9 @@
     // background-color: $very-light-grey;
     background-color: $light-purple;
     padding: $padding-m 0;
+    .loader__container {
+        background: $light-purple;
+    }
 }
 
 .blog__grid {
