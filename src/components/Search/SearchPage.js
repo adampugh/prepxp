@@ -59,6 +59,7 @@ class SearchPage extends Component {
                     loading={this.state.loading} />
                 <Navbar />
                 <SearchBanner />
+                
                 <SearchGrid 
                     searchLists={this.props.searchLists} 
                     handleAddSearchList={this.handleAddSearchList} />
