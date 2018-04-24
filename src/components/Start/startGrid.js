@@ -76,6 +76,7 @@ class startGrid extends Component {
                             {
                                 this.state.showAnswer 
                                     ? this.props.questions[this.state.currentIndex].answer === "" 
+                                    || this.props.questions[this.state.currentIndex].answer === undefined
                                         ? <p>You haven't added an answer yet</p>
                                         : <p>{this.props.questions[this.state.currentIndex].answer}</p> 
                                     : <p>Answer hidden</p>

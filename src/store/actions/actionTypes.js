@@ -17,6 +17,7 @@ export const FETCH_BLOG = "FETCH_BLOG";
 export const ADD_COMMENT = "ADD_COMMENT";
 export const DELETE_COMMENT = "DELETE_COMMENT";
 
+export const FETCH_SEARCH_LIST = "FETCH_SEARCH_LIST";
 
 // 4. login
 // START_LOGIN

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import uuid from "uuid/v1";
 
 import * as actions from "../../store/actions/search";
 import Navbar from "../UI/navbarLoggedIn";
@@ -9,7 +10,8 @@ class Admin extends Component {
     state = {
         title: "",
         tag: "",
-        questions: [],
+        questions: {},
+        questionsArr: []
     }
 
     handleSaveTitle = () => {
@@ -34,8 +36,15 @@ class Admin extends Component {
         // will make it easier to intergrate with fb
         // and other actions
         if (this.refs.questions.value.length > 1) {
+            const key = "a" + uuid();
             this.setState({
-                questions: [...this.state.questions, this.refs.questions.value]
+                questionsArr: [...this.state.questionsArr, this.refs.questions.value],
+                questions: {
+                    [key]: {
+                        question: this.refs.questions.value
+                    },
+                    ...this.state.questions
+                }
             });
             this.refs.questions.value = "";
         }
@@ -51,6 +60,7 @@ class Admin extends Component {
             }
         }
         this.props.startSaveSearchList(searchList);
+        alert("list saved");
         console.log(searchList);
     }
 
@@ -74,7 +84,7 @@ class Admin extends Component {
                         <div>
                             <h2>{this.state.title}</h2>
                             <p>{this.state.tag}</p>
-                            {this.state.questions.map((q => <p key={q}>{q}</p>))}
+                            {this.state.questionsArr.map((q => <p key={q}>{q}</p>))}
                         </div>
                         
                         <button onClick={this.handleStartSaveSearchList} className="btn">Save List</button>
@@ -90,5 +100,7 @@ const mapDispatchToProps = dispatch => {
         startSaveSearchList: (searchList) => dispatch(actions.startSaveSearchList(searchList))
     }
 }
+
+
 
 export default connect(null, mapDispatchToProps)(Admin);

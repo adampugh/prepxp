@@ -16,18 +16,20 @@ import Loader from "./components/UI/loader";
 import reducer from "./store/reducers/reducer";
 import authReducer from "./store/reducers/auth";
 import blogReducer from "./store/reducers/blog";
+import searchReducer from "./store/reducers/search";
 import registerServiceWorker from './registerServiceWorker';
 import history from "./history";
 import * as actions from "./store/actions/actions";
 import * as authActions from "./store/actions/auth";
 import * as blogActions from "./store/actions/blog";
+import * as searchActions from "./store/actions/search";
 
 
 let composeEnhancers = process.env.NODE_ENV === "production" ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 const store = createStore(
-    combineReducers({reducer, authReducer, blogReducer}), 
+    combineReducers({reducer, authReducer, blogReducer, searchReducer}), 
     composeEnhancers(applyMiddleware(thunk))
 );
 
@@ -66,6 +68,7 @@ firebase.auth().onAuthStateChanged((user) => {
         
         store.dispatch(authActions.login(user.uid));
         store.dispatch(blogActions.startFetchBlog());
+        store.dispatch(searchActions.startFetchSearchList());
         // pass displayName
         // store.dispatch(actions.startFetchLists(user.displayName)).then(() => {
         store.dispatch(actions.startFetchLists()).then(() => {
