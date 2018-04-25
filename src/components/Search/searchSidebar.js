@@ -2,39 +2,78 @@ import React, { Component } from "react";
 
 class SearchSidebar extends Component {
     state = {
-        general: 0,
-        tech: 0,
-        sales: 0,
-        construction: 0,
-        humanResources: 0,
-        transport: 0
+        numOfLists: {},
+        tagsArr: []
     }
 
-    // work out total fn
-    // filter each searchList item and return total - then set the state
+    componentWillMount() {
+        this.getNumOfLists();     
+    }
 
-
-    componentDidMount() {
-        this.props.searchLists.map(list => {
-            console.log(list.tag);
-            this.setState({
-                [list.tag]: this.state[list.tag] + 1
-            });
+    getNumOfLists = () => {
+        // creates object with list totals by sector
+        let numOfLists = {}
+        this.props.searchLists.forEach(list => {
+            numOfLists[list.tag] === undefined 
+                ? numOfLists[list.tag] = 1
+                : numOfLists[list.tag] += 1;
+        });
+        this.setState({
+            numOfLists
         })
+        this.getListTags(numOfLists);
+    }
+
+    getListTags = (obj) => {
+        let tagsArr = [];
+        for (let key in obj) {
+            tagsArr.push(key);
+        }
+        this.setState({
+            tagsArr
+        });
     }
 
     render() {
         return (
+            <div>
             <div className="search__sidebar">
-                <h2>{`General (${this.state.general})`}</h2>
-                <h2>{`Tech (${this.state.tech})`}</h2>
-                <h2>{`Sales (${this.state.sales})`}</h2>
-                <h2>{`Contruction (${this.state.construction})`}</h2>
-                <h2>{`Human Resources (${this.state.humanResources})`}</h2>
-                <h2>{`Transport (${this.state.transport})`}</h2>
+                <h1>Sector</h1>
+                <hr />
+                {this.state.tagsArr.map(tag => (
+                    <div key={tag} className="search__sidebar__item" onClick={() => this.props.filterByTag(tag)}>
+                        <h2>{tag}</h2><p>{`(${this.state.numOfLists[tag]})`}</p>
+                    </div>
+                ))}
+                <hr />
+                <div className="search__sidebar__item" onClick={this.props.clearFilter}>
+                    <h2>Clear filter</h2>
+                </div>
+            </div>
             </div>
         )
     }
 }
 
 export default SearchSidebar;
+
+
+
+// <div className="search__sidebar__item">
+// <h2>General</h2><p>{`(${this.state.numOfLists.general})`}</p>
+// </div>
+// <div className="search__sidebar__item">
+// <h2>Tech</h2><p>{`(${this.state.numOfLists.tech})`}</p>
+// </div>
+// <div className="search__sidebar__item">
+// <h2>Sales</h2><p>{`(${this.state.numOfLists.sales})`}</p>
+// </div>
+// <div className="search__sidebar__item">
+// <h2>Construction</h2><p>{`(${this.state.numOfLists.construction})`}</p>
+// </div>
+// <div className="search__sidebar__item">
+// <h2>Human Resources</h2><p>{`(${this.state.numOfLists.humanResources})`}</p>
+// </div>
+// <div className="search__sidebar__item">
+// <h2>Transport</h2><p>{`(${this.state.numOfLists.transport})`}</p>
+// </div>

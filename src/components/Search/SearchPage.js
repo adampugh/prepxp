@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Navbar from "../UI/navbarLoggedIn";
 import Footer from "../UI/footer";
 import SearchBanner from "./searchBanner";
-import SearchGrid from "./searchGrid";
+import SearchContent from "./searchContent";
 import SearchAddedListModal from "./searchAddedListModal";
 
 import * as searchActions from "../../store/actions/search";
@@ -13,7 +13,8 @@ import * as actions from "../../store/actions/actions";
 class SearchPage extends Component {
     state = {
         modalIsOpen: false,
-        loading: true
+        loading: true,
+        filteredList: []
     }
 
     componentDidMount() {
@@ -31,6 +32,20 @@ class SearchPage extends Component {
             modalIsOpen: false
         })
     }
+
+    filterByTag = (tag) => {
+        let filteredList = this.props.searchLists.filter(list => list.tag === tag);
+        this.setState({
+            filteredList
+        });
+    }
+
+    clearFilter = () => {
+        this.setState({
+            filteredList: []
+        });
+    }
+
 
     handleAddSearchList = (list) => {
         this.setState({
@@ -59,9 +74,11 @@ class SearchPage extends Component {
                     loading={this.state.loading} />
                 <Navbar />
                 <SearchBanner />
-                
-                <SearchGrid 
+                <SearchContent 
                     searchLists={this.props.searchLists} 
+                    filteredList={this.state.filteredList}
+                    filterByTag={this.filterByTag}
+                    clearFilter={this.clearFilter}
                     handleAddSearchList={this.handleAddSearchList} />
                 <Footer />
             </div>
