@@ -13,7 +13,8 @@ const searchContent = (props) => (
                     clearFilter={props.clearFilter} />
                 <SearchGrid 
                     // filteredList={props.filteredList.length < 1 ? props.searchLists : props.filteredList}
-                    searchLists={props.filteredList.length < 1 ? props.searchLists : props.filteredList} 
+                    // searchLists={props.filteredList.length < 1 ? props.searchLists : props.filteredList} 
+                    searchLists={props.filteredList}
                     handleAddSearchList={props.handleAddSearchList} />
             </div>
         </div>

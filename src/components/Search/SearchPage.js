@@ -10,7 +10,7 @@ import SearchAddedListModal from "./searchAddedListModal";
 import * as searchActions from "../../store/actions/search";
 import * as actions from "../../store/actions/actions";
 
-class SearchPage extends Component {
+export class SearchPage extends Component {
     state = {
         modalIsOpen: false,
         loading: true,
@@ -19,6 +19,7 @@ class SearchPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+        this.clearFilter();
     }
 
     openModal = () => {
@@ -40,9 +41,16 @@ class SearchPage extends Component {
         });
     }
 
+    filterByText = (text) => {
+        let filteredList = this.props.searchLists.filter(list => list.title.toLowerCase().includes(text));
+        this.setState({
+            filteredList
+        })
+    }
+
     clearFilter = () => {
         this.setState({
-            filteredList: []
+            filteredList: this.props.searchLists
         });
     }
 
@@ -73,7 +81,8 @@ class SearchPage extends Component {
                     closeModal={this.closeModal} 
                     loading={this.state.loading} />
                 <Navbar />
-                <SearchBanner />
+                <SearchBanner 
+                    filterByText={this.filterByText} />
                 <SearchContent 
                     searchLists={this.props.searchLists} 
                     filteredList={this.state.filteredList}

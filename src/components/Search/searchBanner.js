@@ -1,20 +1,29 @@
 import React, { Component } from "react";
 
 class SearchBanner extends Component {
+    handleOnChange = (e) => {
+        this.props.filterByText(e.target.value.toLowerCase());
+    }
+
+
     render() {
         return (
             <div className="searchBanner__wrapper">
-                <div className="container-s">
+                <div className="container-s searchBanner__content">
                     <h1>Search lists</h1>
-                    <p>Search job titles for curated lists of interview questions.
-                    Click the + symbol to add to your own lists and practise on your 
-                    dashboard.</p>
-                    <input type="text" placeholder="Back-End Developer"/>
-                    <button className="btn">Search</button>
+                    <div className="searchBanner__content__searchBar">
+                        <input type="text" placeholder="Back-End Developer" onChange={(e) => this.handleOnChange(e)}/>
+                        <button className="btn"><i className="fas fa-search"></i> Search  </button>
+                    </div>
                 </div>
+                <div className="searchBanner__whiteElipse"></div>
             </div>
         )
     }
 }
 
 export default SearchBanner;
+
+// <p>Search job titles for curated lists of interview questions.
+// Click the + symbol to add to your own lists and practise on your 
+// dashboard.</p>

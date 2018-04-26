@@ -7,7 +7,8 @@ describe("reducer", () => {
         const state = reducer(undefined, { type: "@@INIT"});
         expect(state).toEqual({
             name: "you",
-            lists: []
+            lists: [],
+            admin: false
         })
     });
 

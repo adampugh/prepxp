@@ -2,11 +2,18 @@
     display: none;
 }
 
+.search__sidebar__container {
+    display: none;
+}
+
 
 @media (min-width: $desktop-breakpoint) {
+    .search__sidebar__container {
+        display: block;
+    }
     .search__sidebar {
         display: block;
-        margin: $padding-s 20px;
+        margin: $padding-s 20px $padding-s 10px;
         background: white;
         border-radius: 20px;
         padding: $padding-s;
@@ -35,9 +42,15 @@
         p {
             color: grey;
         }
+        i, svg {
+            color: $light-grey;
+        }
         &:hover {
             color: $off-purple;
             cursor: pointer;
+            i, svg {
+                color: $off-purple;
+            }
         }
     }
 }

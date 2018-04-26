@@ -15,7 +15,7 @@ const searchGrid = (props) => (
                     <i className="fas fa-plus"></i>
                 </h2>
             </div>
-        )) : <h2> Your search did not return any results</h2>}
+        )) : <h2 className="searchGrid__empty"> Your search did not return any results</h2>}
     </div>
 );
 

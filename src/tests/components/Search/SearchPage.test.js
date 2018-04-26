@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import SearchPage from "../../../components/Search/SearchPage";
+import { SearchPage } from "../../../components/Search/SearchPage";
 
 describe("<SearchPage />", () => {
     it("should match snapshot", () => {

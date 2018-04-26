@@ -35,21 +35,31 @@ class SearchSidebar extends Component {
     }
 
     render() {
+        let icons = {
+            Tech: "fas fa-mobile-alt",
+            Sales: "fas fa-suitcase",
+            Construction: "fas fa-building",
+            Transport: "fas fa-truck",
+            HR: "fas fa-users",
+            Finance: "fas fa-dollar-sign",
+            General: "fas fa-plus"
+        }
+
         return (
-            <div>
-            <div className="search__sidebar">
-                <h1>Sector</h1>
-                <hr />
-                {this.state.tagsArr.map(tag => (
-                    <div key={tag} className="search__sidebar__item" onClick={() => this.props.filterByTag(tag)}>
-                        <h2>{tag}</h2><p>{`(${this.state.numOfLists[tag]})`}</p>
+            <div className="search__sidebar__container">
+                <div className="search__sidebar">
+                    <h1>Sector</h1>
+                    <hr />
+                    {this.state.tagsArr.map(tag => (
+                        <div key={tag} className="search__sidebar__item" onClick={() => this.props.filterByTag(tag)}>
+                            <h2><i className={icons[tag]}></i> {tag}</h2><p>{`(${this.state.numOfLists[tag]})`}</p>
+                        </div>
+                    ))}
+                    <hr />
+                    <div className="search__sidebar__item" onClick={this.props.clearFilter}>
+                        <h2><i class="fas fa-times"></i> Clear filter</h2>
                     </div>
-                ))}
-                <hr />
-                <div className="search__sidebar__item" onClick={this.props.clearFilter}>
-                    <h2>Clear filter</h2>
                 </div>
-            </div>
             </div>
         )
     }

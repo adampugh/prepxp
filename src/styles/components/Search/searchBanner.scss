@@ -4,34 +4,64 @@
     text-align: center;
     padding: $padding-m 0;
     color: white;
+    position: relative;
+    min-height: 180px;
     h1 {
         @include header;
+        margin-bottom: 10px;
     }
     input {
-        margin-right: 10px;
+        // margin-right: 10px;
         padding: 12px;
         border-radius: 10px;
         border: none;
         box-sizing: border-box;
         width: 100%;
         font-size: $font-s;
+        @include boxshadow;
     }
-    p {
-        width: 70%;
-        margin: 0 auto;
-        padding: $padding-s 0;
-        font-size: $font-s;
-    }
+    // p {
+    //     width: 70%;
+    //     margin: 0 auto;
+    //     padding: $padding-s 0;
+    //     font-size: $font-s;
+    // }
     button {
         margin-top: $padding-s;
     }
+    
+    .searchBanner__content__searchBar {
+        display: grid;
+        grid-template-columns: 1fr;
+        z-index: 100;
+        input, button {
+            z-index: 100;
+        }
+    }
+}
+
+.searchBanner__whiteElipse {
+    clip-path: ellipse(73% 87% at 68% 94%);
+    background: $very-light-grey;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 
 @media (min-width: $desktop-breakpoint) {
     .searchBanner__wrapper {
         input {
-            width: 70%;
+            width: 95%;
+        }
+        button {
+            margin-top: 0;
+        }
+        .searchBanner__content__searchBar {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
         }
     }
+    
 }

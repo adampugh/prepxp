@@ -2,42 +2,19 @@
 
 exports[`<SearchPage /> should match snapshot 1`] = `
 <div>
+  <searchAddedListModal
+    closeModal={[Function]}
+    isOpen={false}
+    loading={true}
+  />
   <Navbar />
-  <SearchBanner />
-  <searchGrid
-    filteredLists={
-      Array [
-        Object {
-          "questions": Array [
-            1,
-            2,
-            3,
-            4,
-          ],
-          "title": "Angular Developer",
-        },
-        Object {
-          "questions": Array [
-            1,
-            2,
-            5,
-          ],
-          "title": "Node JS Developer",
-        },
-        Object {
-          "questions": Array [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-          ],
-          "title": "General Interview Questions 1",
-        },
-      ]
-    }
+  <SearchBanner
+    filterByText={[Function]}
+  />
+  <searchContent
+    clearFilter={[Function]}
+    filterByTag={[Function]}
+    handleAddSearchList={[Function]}
   />
   <footer />
 </div>
