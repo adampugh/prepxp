@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 1fr;
     min-height: 90vh;
-    padding: $padding-s 0;
+    // padding: $padding-s 0;
     
     h1 {
         // padding-bottom: $padding-s;
@@ -22,6 +22,33 @@
 
 .dashboard__grid__lists {
     padding: $padding-s;
+}
+
+.dashboard__grid__panel {
+    padding: $padding-s;
+    padding-bottom: 0;
+    .dashboard__grid__panel__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        margin: 0 $padding-s;
+        background: white;
+        border-radius: 20px;
+        padding: 10px $padding-s;
+        @include boxshadow;
+        h2 {
+            color: $light-grey;
+            font-weight: 400;
+        }
+        .dashboard__grid__panel__box__mostCompleted {
+            p {
+                text-align: left;
+                padding-left: 10px;
+                margin: 10px;
+                font-size: $font-s;
+            }
+        }
+    }
 }
 
 .dashboard__empty {

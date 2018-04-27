@@ -80,6 +80,7 @@ export class Dashboard extends Component {
                     openCreateModal={this.openCreateModal}
                     closeCreateModal={this.closeCreateModal} 
                     selectList={this.selectList} 
+                    startLogout={this.props.startLogout}
                 />
                 <p onClick={this.props.startLogout}>Logout</p>
                 <Footer />
