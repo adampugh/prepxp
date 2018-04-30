@@ -27,8 +27,10 @@ class DashboardDeleteModal extends Component {
                     <button 
                         className="btn" 
                         onClick={() => {
-                            this.props.startDeleteList(this.props.selectedListId);
-                            this.props.closeModal();
+                            this.props.startDeleteList(this.props.selectedListId).then(() => {
+                                this.props.closeModal();
+                                this.props.getTotalAnsweredQuestions();
+                            });
                         }}>
                         Yes
                     </button>

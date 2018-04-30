@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 import DashboardSidebar from "./DashboardSidebar";
 import DashboardList from "./dashboardList";
+import DashboardPanel from "./dashboardPanel";
 
 class DashboardGrid extends Component {
+
     render(props) {
         return (
             <div className="dashboard__wrapper">
@@ -17,26 +19,10 @@ class DashboardGrid extends Component {
                             startLogout={this.props.startLogout}
                         />
                         <div>
-                            <div className="dashboard__grid__panel">
-                                <div className="dashboard__grid__panel__box">
-                                    <div>
-                                        <h2>Total Answered</h2>
-                                        <p>231/232</p>
-                                    </div>
-                                    <div>
-                                        <h2>Total Lists</h2>
-                                        <p>6/8</p>
-                                    </div>
-                                    <div className="dashboard__grid__panel__box__mostCompleted">
-                                        <h2>Most Completed</h2>
-                                        <p>1. PHP Developer</p>
-                                        <p>2. IT Manager</p>
-                                        <p>3. General Questions</p>
-                                    </div>
-                                </div>
-                            
-                            </div>
-
+                            <DashboardPanel 
+                                lists={this.props.lists}
+                                totalAnsweredQuestions={this.props.totalAnsweredQuestions}
+                                totalQuestions={this.props.totalQuestions} />
 
                             <div className="dashboard__grid__lists">
                                 

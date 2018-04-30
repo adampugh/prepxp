@@ -1,6 +1,7 @@
 export const ADD_LIST = "ADD_LIST";
 export const DELETE_LIST = "DELETE_LIST";
 export const EDIT_LIST_TITLE = "EDIT_LIST_TITLE";
+export const COMPLETE_LIST = "COMPLETE_LIST";
 
 export const ADD_QUESTION = "ADD_QUESTION";
 export const DELETE_QUESTION = "DELETE_QUESTION";

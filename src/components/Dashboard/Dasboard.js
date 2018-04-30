@@ -17,11 +17,31 @@ export class Dashboard extends Component {
     state = {
         deleteModalIsOpen: false,
         createModalIsOpen: false,
-        selectedListId: ""
+        selectedListId: "",
+        totalAnsweredQuestions: 0,
+        totalQuestions: 0
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
+    }
+
+    componentWillMount() {
+        this.getTotalAnsweredQuestions();
+    }
+
+    getTotalAnsweredQuestions = () => {
+        let answeredQuestions = 0;
+        let totalQuestions = 0;
+        this.props.lists.forEach(list => {
+            answeredQuestions += list.questions.filter(question => !!question.answer).length;
+            totalQuestions += list.questions.length;
+        });
+
+        this.setState({
+            totalAnsweredQuestions: answeredQuestions,
+            totalQuestions
+        })
     }
 
     selectList = (id) => {
@@ -62,6 +82,7 @@ export class Dashboard extends Component {
                     closeModal={this.closeDeleteModal}
                     startDeleteList={this.props.startDeleteList}
                     selectedListId={this.state.selectedListId}
+                    getTotalAnsweredQuestions={this.getTotalAnsweredQuestions}
                 />
                 <DashboardCreateModal
                     isOpen={this.state.createModalIsOpen}
@@ -81,6 +102,8 @@ export class Dashboard extends Component {
                     closeCreateModal={this.closeCreateModal} 
                     selectList={this.selectList} 
                     startLogout={this.props.startLogout}
+                    totalQuestions={this.state.totalQuestions}
+                    totalAnsweredQuestions={this.state.totalAnsweredQuestions}
                 />
                 <p onClick={this.props.startLogout}>Logout</p>
                 <Footer />

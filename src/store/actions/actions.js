@@ -45,6 +45,24 @@ export const startDeleteList = (id) => {
     }
 }
 
+
+// COMPLETED LIST
+export const completeList = (id, timesCompleted) => ({
+    type: actionTypes.COMPLETE_LIST,
+    id,
+    timesCompleted
+});
+
+export const startCompleteList = (id, timesCompleted) => {
+    return (dispatch, getState) => {
+        const uid = getState().authReducer.uid;
+        return database.ref(`users/${uid}/lists/${id}/timesCompleted`).set(timesCompleted).then(() => {
+            dispatch(completeList(id, timesCompleted));
+        })
+    }
+}
+
+
 // ADD_QUESTION
 export const addQuestion = (id, question) => ({
     type: actionTypes.ADD_QUESTION,

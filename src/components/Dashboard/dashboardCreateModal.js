@@ -33,6 +33,7 @@ class DashboardCreateModal extends Component {
         let list = {
             title: this.state.listTitle,
             questions: [],
+            timesCompleted: 0
         }
         this.state.listTitle.length > 0 
             ? this.props.startAddList(list)

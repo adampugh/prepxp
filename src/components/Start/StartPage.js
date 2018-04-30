@@ -39,12 +39,6 @@ export class StartPage extends Component {
     }
 
     render(props) {
-        // let content =  this.props.list === null ?  : startPage;
-        // let startPage = (
-            
-        // );
-        // let redirect = <Redirect to="/dashboard" />;
-        
         return (
             <div>
                 {
@@ -56,7 +50,10 @@ export class StartPage extends Component {
                                 closeModal={this.closeModal} />
                             <Navbar />
                             {this.state.questionsComplete ? 
-                                <StartComplete /> :
+                                <StartComplete 
+                                    list={this.props.list}
+                                    startCompleteList={this.props.startCompleteList} />
+                                    :
                                 <StartGrid 
                                     finishQuestions={this.finishQuestions}
                                     questions={this.props.list.questions}
@@ -83,7 +80,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        startSaveAnswer: (id, index, answer, questionId) => dispatch(actions.startSaveAnswer(id, index, answer, questionId))
+        startSaveAnswer: (id, index, answer, questionId) => dispatch(actions.startSaveAnswer(id, index, answer, questionId)),
+        startCompleteList: (id, timesCompleted) => dispatch(actions.startCompleteList(id, timesCompleted))
     }
 }
 

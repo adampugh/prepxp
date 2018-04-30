@@ -25,6 +25,20 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 lists: state.lists.filter(list => list.id !== action.id)
             }
+        case actionTypes.COMPLETE_LIST:
+            return {
+                ...state,
+                lists: state.lists.map(list => {
+                    if (list.id === action.id) {
+                        return {
+                            ...list,
+                            timesCompleted: action.timesCompleted
+                        }
+                    } else {
+                        return {...list}
+                    }
+                })
+            }
         case actionTypes.ADD_QUESTION:
             return {
                 ...state,

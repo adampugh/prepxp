@@ -57,7 +57,7 @@ class SearchSidebar extends Component {
                     ))}
                     <hr />
                     <div className="search__sidebar__item" onClick={this.props.clearFilter}>
-                        <h2><i class="fas fa-times"></i> Clear filter</h2>
+                        <h2><i className="fas fa-times"></i> Clear filter</h2>
                     </div>
                 </div>
             </div>
