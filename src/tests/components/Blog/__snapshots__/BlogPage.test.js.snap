@@ -2,7 +2,7 @@
 
 exports[`<BlogPage /> should match snapshot 1`] = `
 <div>
-  <Navbar />
+  <Connect(Navbar) />
   <blogBanner />
   <blogGrid
     allPosts={Array []}

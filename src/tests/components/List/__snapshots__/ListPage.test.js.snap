@@ -3,7 +3,7 @@
 exports[`<ListPage /> should match snapshot 1`] = `
 <div>
   <div>
-    <Navbar />
+    <Connect(Navbar) />
     <listPageAddQuestionBanner
       id="234"
     />

@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import NavbarLoggedIn from "../../../components/UI/navbarLoggedIn";
+import { Navbar } from "../../../components/UI/navbarLoggedIn";
 
 describe("<NavbarLoggedIn />", () => {
     it("should match snapshot", () => {
-        const wrapper = shallow(<NavbarLoggedIn />);
+        const wrapper = shallow(<Navbar />);
         expect(wrapper).toMatchSnapshot();
     });
 });

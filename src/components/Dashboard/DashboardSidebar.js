@@ -19,7 +19,7 @@ const dashboardSidebar = (props) => (
             <Link to="/search"><h2 className="sidebar__grid__link">Search</h2></Link>
             <h2><i className="fas fa-book"></i></h2>
             <Link to="/blog"><h2 className="sidebar__grid__link">Blog</h2></Link>
-            <h2><i className="fas fa-user"></i></h2>
+            <h2><i className="fas fa-sign-out-alt"></i></h2>
             <h2 onClick={props.startLogout} className="sidebar__grid__link">Logout</h2>
         </div>
         
@@ -27,25 +27,3 @@ const dashboardSidebar = (props) => (
 );
 
 export default dashboardSidebar;
-
-
-
-// <img src={desk} alt="man sitting at a desk" />
-// <div className="sidebar__panel">
-//     <p>Create a new list of interview questions</p>
-//     <button onClick={props.openCreateModal} className="btn">Create</button>
-// </div>
-// <div className="sidebar__panel">
-//     <img src={desk} alt="man sitting at a desk" />
-//     <p>Add a list of interview questions for our seleted lists</p>
-//     <Link to="/search">
-//         <button className="btn">Search</button>
-//     </Link>
-// </div>
-// <div className="sidebar__panel">
-//     <img src={desk} alt="man sitting at a desk" />
-//     <p>Read the latest tips and get the job you deserve</p>
-//     <Link to="/blog">
-//         <button className="btn">Blog</button>
-//     </Link>
-// </div>

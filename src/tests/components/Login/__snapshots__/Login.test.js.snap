@@ -15,9 +15,6 @@ exports[`<Login /> should match snapshot 1`] = `
       validateEmail={[Function]}
     />
   </div>
-  <h1>
-    Logout
-  </h1>
   <footer />
 </div>
 `;

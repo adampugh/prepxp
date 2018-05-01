@@ -105,7 +105,6 @@ export class Dashboard extends Component {
                     totalQuestions={this.state.totalQuestions}
                     totalAnsweredQuestions={this.state.totalAnsweredQuestions}
                 />
-                <p onClick={this.props.startLogout}>Logout</p>
                 <Footer />
             </div>
         );

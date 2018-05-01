@@ -2,9 +2,13 @@
     background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
     // text-align: center;
     color: white;
-    padding: $padding-s;
+    padding: 100px $padding-s $padding-s $padding-s;
     p {
         font-size: $font-m;
+    }
+    button {
+        display: block;
+        margin-top: 10px;
     }
 }
 

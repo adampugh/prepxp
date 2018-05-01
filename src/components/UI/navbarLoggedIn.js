@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-class Navbar extends Component {
+import * as authActions from "../../store/actions/auth";
+
+export class Navbar extends Component {
     state = {
         drawerOpen: false
     }
 
     openDrawer = () => {
-        if (!this.state.drawerOpen === true) {
-            document.getElementsByTagName("body")[0].setAttribute("style", "position:fixed;");
-        } else {
-            document.getElementsByTagName("body")[0].setAttribute("style", "position:absolute;");
-        }
         this.setState({
             drawerOpen: !this.state.drawerOpen,
         });
@@ -22,9 +20,9 @@ class Navbar extends Component {
             <div>
                 <div id="drawer" className={this.state.drawerOpen ? 'slideIn' : 'slideOut'}>
                     <Link to="/dashboard"><h1>Dashboard</h1></Link>
-                    <h1>Lists</h1>
-                    <h1>Blog</h1>
-                    <h1>Logout</h1>
+                    <Link to="/search"><h1>Search</h1></Link>
+                    <Link to="/blog"><h1>Blog</h1></Link>
+                    <h1 onClick={this.props.startLogout}>Logout</h1>
                     <p>
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-facebook-f"></i>
@@ -33,9 +31,20 @@ class Navbar extends Component {
                 </div>
                 <div className="navbar__loggedIn">
                     <div className="container-l"> 
-                        <div className="navbar__loggedIn__div">
+                        <div className="navbar__loggedIn__div--mobile">
                             <h1 className="logo">PrepXP</h1>
                             <h1 onClick={this.openDrawer}>☰</h1>
+                        </div>
+                        <div className="navbar__loggedIn__div--desktop">
+                            <h1 className="logo">PrepXP</h1>
+                            <ul>
+                                <Link to="/dashboard"><li>Dashboard</li></Link>
+                                <span>•</span>
+                                <Link to="/search"><li>Search</li></Link>
+                                <span>•</span>
+                                <Link to="/blog"><li>Blog</li></Link>
+                            </ul>
+                            <button onClick={this.props.startLogout} className="btn btn--black"><i className="fas fa-sign-out-alt"></i> Logout</button>
                         </div>
                     </div>
                 </div>
@@ -44,4 +53,11 @@ class Navbar extends Component {
     }
 };
 
-export default Navbar;
+const mapDispatchToProps = dispatch => {
+    return {
+        startLogout: () => dispatch(authActions.startLogout())
+    }
+}
+
+
+export default connect(null, mapDispatchToProps)(Navbar);

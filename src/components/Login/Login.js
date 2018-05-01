@@ -41,7 +41,6 @@ export class Login extends Component {
                         startSignUp={this.props.startSignUp} 
                         validateEmail={this.validateEmail} />}
             </div>
-            <h1 onClick={this.props.startLogout}>Logout</h1>
             <Footer />
         </div>
             
@@ -52,8 +51,7 @@ export class Login extends Component {
 const mapDispatchToProps = dispatch => {
     return {
         startSignUp: (email, password, name) => dispatch(actions.startSignUp(email, password, name)),
-        startLogin: (email, password) => dispatch(actions.startLogin(email, password)),
-        startLogout: () => dispatch(actions.startLogout())
+        startLogin: (email, password) => dispatch(actions.startLogin(email, password))
     }
 }
 

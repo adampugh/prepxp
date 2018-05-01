@@ -3,6 +3,7 @@
     background-size: cover;
     color: white;
     padding: $padding-m 0;
+    
     h1 {
         @include header;
     }
@@ -32,6 +33,10 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
+    .startComplete__div {
+        padding-top: 120px;
+    }
+
     .startComplete__grid {
         grid-template-columns: 1fr 1fr;
     }

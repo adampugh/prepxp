@@ -65,7 +65,6 @@ store.dispatch(actions.startFetchLists()).then(() => {
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         console.log("logged in");
-        console.log(user);
         store.dispatch(authActions.login(user.uid));
         store.dispatch(blogActions.startFetchBlog());
         store.dispatch(searchActions.startFetchSearchList());

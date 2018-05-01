@@ -4,6 +4,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
 <div>
   <DashboardDeleteModal
     closeModal={[Function]}
+    getTotalAnsweredQuestions={[Function]}
     isOpen={false}
     selectedListId=""
   />
@@ -11,7 +12,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     closeModal={[Function]}
     isOpen={false}
   />
-  <Navbar />
+  <Connect(Navbar) />
   <dashboardBanner
     openCreateModal={[Function]}
   />
@@ -50,10 +51,9 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     openCreateModal={[Function]}
     openDeleteModal={[Function]}
     selectList={[Function]}
+    totalAnsweredQuestions={3}
+    totalQuestions={3}
   />
-  <p>
-    Logout
-  </p>
   <footer />
 </div>
 `;

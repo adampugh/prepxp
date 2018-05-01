@@ -1,8 +1,9 @@
 .navbar__loggedIn {
     background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center;
     color: white;
-    // position: fixed;
-    // width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100000000;
     h1 {
         display: inline;
         cursor: pointer;
@@ -10,7 +11,37 @@
     }
 }
 
-.navbar__loggedIn__div {
+.navbar__loggedIn__div--desktop {
+    display: none;
+}
+
+.navbar__loggedIn__div--mobile {
     display: flex;
     justify-content: space-between;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .navbar__loggedIn__div--desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        ul {
+            list-style-type: none;
+            padding-top: 12px;
+        }
+        li {
+            display: inline;
+            padding: 0 22px;
+        }
+        button {
+            margin: 15px 0;
+        }
+        .btn--black {
+            background: black;
+            color: white;
+        }
+    }
+    .navbar__loggedIn__div--mobile {
+        display: none;
+    }
 }

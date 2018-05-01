@@ -4,63 +4,84 @@ exports[`<DashboardSideBar /> should match snapshot 1`] = `
 <div
   className="sidebar"
 >
-  <img
-    alt="man sitting at a desk"
-    src="deskimg.png"
-  />
   <div
-    className="sidebar__panel"
-  >
-    <p>
-      Create a new list of interview questions
-    </p>
-    <button
-      className="btn"
-    >
-      Create
-    </button>
-  </div>
-  <div
-    className="sidebar__panel"
+    className="sidebar__img"
   >
     <img
-      alt="man sitting at a desk"
-      src="deskimg.png"
+      alt="default user"
+      src="default-user-image.png"
     />
-    <p>
-      Add a list of interview questions for our seleted lists
-    </p>
+    <h1 />
+    <hr />
+  </div>
+  <div
+    className="sidebar__grid"
+  >
+    <h2>
+      <i
+        className="fas fa-tachometer-alt"
+      />
+    </h2>
+    <Link
+      replace={false}
+      to="/dashboard"
+    >
+      <h2
+        className="sidebar__grid__link"
+      >
+        Dashboard
+      </h2>
+    </Link>
+    <h2>
+      <i
+        className="fas fa-pencil-alt"
+      />
+    </h2>
+    <h2
+      className="sidebar__grid__link"
+    >
+      Create
+    </h2>
+    <h2>
+      <i
+        className="fas fa-search"
+      />
+    </h2>
     <Link
       replace={false}
       to="/search"
     >
-      <button
-        className="btn"
+      <h2
+        className="sidebar__grid__link"
       >
         Search
-      </button>
+      </h2>
     </Link>
-  </div>
-  <div
-    className="sidebar__panel"
-  >
-    <img
-      alt="man sitting at a desk"
-      src="deskimg.png"
-    />
-    <p>
-      Read the latest tips and get the job you deserve
-    </p>
+    <h2>
+      <i
+        className="fas fa-book"
+      />
+    </h2>
     <Link
       replace={false}
       to="/blog"
     >
-      <button
-        className="btn"
+      <h2
+        className="sidebar__grid__link"
       >
         Blog
-      </button>
+      </h2>
     </Link>
+    <h2>
+      <i
+        className="fas fa-sign-out-alt"
+      />
+    </h2>
+    <h2
+      className="sidebar__grid__link"
+    >
+      Logout
+    </h2>
   </div>
 </div>
 `;

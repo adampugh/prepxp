@@ -7,7 +7,7 @@ exports[`<StartPage /> should match snapshot 1`] = `
       closeModal={[Function]}
       isOpen={false}
     />
-    <Navbar />
+    <Connect(Navbar) />
     <startGrid
       closeModal={[Function]}
       finishQuestions={[Function]}

@@ -5,57 +5,85 @@ exports[`<DashboardGrid /> should match snapshot 1`] = `
   className="dashboard__wrapper"
 >
   <section
-    className="container"
+    className=""
   >
     <div
       className="dashboard__grid"
     >
       <dashboardSidebar />
-      <div
-        className="dashboard__grid__lists"
-      >
-        <h1>
-          Hello, 
-          !
-        </h1>
-        <dashboardList
-          id="234"
-          key="JavaScript Developer0"
-          list={
-            Object {
-              "id": "234",
-              "questions": Array [
-                Object {
-                  "answer": "JavaScript is a language for the web.",
-                  "question": "What is the difference between let and var?",
-                },
-                Object {
-                  "answer": "Brendan Eich",
-                  "question": "Who created JavaScript?",
-                },
-              ],
-              "title": "JavaScript Developer",
-            }
+      <div>
+        <dashboardPanel
+          lists={
+            Array [
+              Object {
+                "id": "234",
+                "questions": Array [
+                  Object {
+                    "answer": "JavaScript is a language for the web.",
+                    "question": "What is the difference between let and var?",
+                  },
+                  Object {
+                    "answer": "Brendan Eich",
+                    "question": "Who created JavaScript?",
+                  },
+                ],
+                "title": "JavaScript Developer",
+              },
+              Object {
+                "id": "1231",
+                "questions": Array [
+                  Object {
+                    "answer": "No-one really knows.",
+                    "question": "What is PHP exactly?",
+                  },
+                ],
+                "title": "PHP Developer",
+              },
+            ]
           }
-          listIndex={0}
         />
-        <dashboardList
-          id="1231"
-          key="PHP Developer1"
-          list={
-            Object {
-              "id": "1231",
-              "questions": Array [
-                Object {
-                  "answer": "No-one really knows.",
-                  "question": "What is PHP exactly?",
-                },
-              ],
-              "title": "PHP Developer",
+        <div
+          className="dashboard__grid__lists"
+        >
+          <dashboardList
+            id="234"
+            key="JavaScript Developer0"
+            list={
+              Object {
+                "id": "234",
+                "questions": Array [
+                  Object {
+                    "answer": "JavaScript is a language for the web.",
+                    "question": "What is the difference between let and var?",
+                  },
+                  Object {
+                    "answer": "Brendan Eich",
+                    "question": "Who created JavaScript?",
+                  },
+                ],
+                "title": "JavaScript Developer",
+              }
             }
-          }
-          listIndex={1}
-        />
+            listIndex={0}
+          />
+          <dashboardList
+            id="1231"
+            key="PHP Developer1"
+            list={
+              Object {
+                "id": "1231",
+                "questions": Array [
+                  Object {
+                    "answer": "No-one really knows.",
+                    "question": "What is PHP exactly?",
+                  },
+                ],
+                "title": "PHP Developer",
+              }
+            }
+            listIndex={1}
+          />
+        </div>
       </div>
     </div>
   </section>
