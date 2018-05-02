@@ -38,16 +38,21 @@ class listPageAddQuestionBanner extends Component {
                     <img src={interview} alt="people being interviewed" />
                     <h1>Add a question</h1>
                     <p>Add a question below and add it to your list</p>
-                    <input 
-                        id="questionInput"
-                        type="text" 
-                        placeholder="What weaknesses do you have?" 
-                        onChange={(e) => this.updateQuestionText(e)} 
-                        onKeyDown={(e) => this.handleKeyDown(e)} />
-                    <button 
-                        className="btn" 
-                        onClick={(e) => this.handleStartAddQuestion()}>Add Question</button>
+                    <div className="listPage__addQuestion__input">
+                        <div>
+                            <input 
+                                id="questionInput"
+                                type="text" 
+                                placeholder="What weaknesses do you have?" 
+                                onChange={(e) => this.updateQuestionText(e)} 
+                                onKeyDown={(e) => this.handleKeyDown(e)} />
+                            <button 
+                                className="btn" 
+                                onClick={(e) => this.handleStartAddQuestion()}>Add Question</button>
+                        </div>
+                    </div>
                 </div>
+                <div className="listPage__addQuestion__whiteElipse"></div>
             </div>
         );
     }

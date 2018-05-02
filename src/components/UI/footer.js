@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const footer = () => (
     <footer>
@@ -15,17 +16,17 @@ const footer = () => (
                 </div>
                 <div className="footer__grid__panel">
                     <h2>Explore</h2>
-                    <p className="footer__grid__panel__link">•  Home</p>
-                    <p className="footer__grid__panel__link">•  About</p>
-                    <p className="footer__grid__panel__link">•  Blog</p>
+                    <Link to="/dashboard"><p className="footer__grid__panel__link">•  Home</p></Link>
+                    <Link to="/"><p className="footer__grid__panel__link">•  About</p></Link>
+                    <Link to="/blog"><p className="footer__grid__panel__link">•  Blog</p></Link>
                 </div>
                 <div className="footer__grid__panel">
                     <h2>Latest Blog Posts</h2>
                     <div className="footer__grid__blogPost">
-                        <p>5 Most common interview questions</p>
+                        <Link to="/blog"><p>5 Most common interview questions</p></Link>
                     </div>
                     <div className="footer__grid__blogPost">
-                        <p>How to pass the technical interview</p>
+                        <Link to="/blog"><p>How to pass the technical interview</p></Link>
                     </div>
                 </div>
             </div>

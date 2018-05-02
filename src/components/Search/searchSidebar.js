@@ -52,12 +52,15 @@ class SearchSidebar extends Component {
                     <hr />
                     {this.state.tagsArr.map(tag => (
                         <div key={tag} className="search__sidebar__item" onClick={() => this.props.filterByTag(tag)}>
-                            <h2><i className={icons[tag]}></i> {tag}</h2><p>{`(${this.state.numOfLists[tag]})`}</p>
+                            <h2><i className={icons[tag]}></i></h2>
+                            <div>
+                                <h2>{tag}</h2><p>{`(${this.state.numOfLists[tag]})`}</p>
+                            </div>
                         </div>
                     ))}
                     <hr />
                     <div className="search__sidebar__item" onClick={this.props.clearFilter}>
-                        <h2><i className="fas fa-times"></i> Clear filter</h2>
+                        <h2><i className="fas fa-times"></i></h2><h2> Clear filter</h2>
                     </div>
                 </div>
             </div>

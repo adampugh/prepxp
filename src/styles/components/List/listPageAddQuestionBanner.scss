@@ -5,6 +5,7 @@
     background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat top;
     background-size: cover;
     padding-top: 110px;
+    position: relative;
     img {
         width: 100%;
         margin-bottom: 40px;
@@ -22,6 +23,7 @@
         box-sizing: border-box;
         width: 90%;
         font-size: $font-s;
+        @include boxshadow;
     }
     p {
         color: $very-light-grey;
@@ -31,6 +33,23 @@
     button {
         margin-top: $padding-s;
     }
+    .listPage__addQuestion__input {
+        display: grid;
+        grid-template-columns: 1fr;
+        // z-index: 100;
+        div {
+            z-index: 100;
+        }
+    }
+}
+
+.listPage__addQuestion__whiteElipse {
+    clip-path: ellipse(73% 87% at 68% 94%);
+    background: $very-light-grey;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 

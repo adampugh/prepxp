@@ -6,7 +6,17 @@ import * as authActions from "../../store/actions/auth";
 
 export class Navbar extends Component {
     state = {
-        drawerOpen: false
+        drawerOpen: false,
+        transparentBg: false
+    }
+
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            const transparentBg = window.scrollY > 81
+            if (transparentBg !== this.state.transparentBg) {
+                this.setState({ transparentBg });
+            }
+        });
     }
 
     openDrawer = () => {
@@ -14,6 +24,9 @@ export class Navbar extends Component {
             drawerOpen: !this.state.drawerOpen,
         });
     }
+
+    
+
 
     render() {
         return (
@@ -29,7 +42,7 @@ export class Navbar extends Component {
                         <i className="fab fa-youtube"></i>
                     </p>
                 </div>
-                <div className="navbar__loggedIn">
+                <div className={`navbar__loggedIn ${ this.state.transparentBg ? "navbar__loggedIn--transparent" : ""}`}>
                     <div className="container-l"> 
                         <div className="navbar__loggedIn__div--mobile">
                             <h1 className="logo">PrepXP</h1>

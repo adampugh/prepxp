@@ -1,9 +1,13 @@
 .navbar__loggedIn {
-    background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center;
+    background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center center;
     color: white;
     position: fixed;
     width: 100%;
     z-index: 100000000;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
     h1 {
         display: inline;
         cursor: pointer;
@@ -31,16 +35,53 @@
         }
         li {
             display: inline;
-            padding: 0 22px;
+            margin: 0 22px;
         }
         button {
             margin: 15px 0;
         }
         .btn--black {
-            background: black;
+            background: transparent;
             color: white;
         }
+
+
+
+        a {
+            position: relative;
+            margin: 0 1em;
+          }
+          
+          a:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            bottom: -5px;
+            left: 40%;
+            background-color: $off-purple;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+          }
+          
+          a:hover:before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
     }
+
+    $animate: all 0.2s ease-in-out;
+
+    .navbar__loggedIn--transparent {
+        // background: rgba(0,0,0,0.7);
+        opacity: 0.7;
+    }
+
+
     .navbar__loggedIn__div--mobile {
         display: none;
     }
