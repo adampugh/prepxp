@@ -4,6 +4,7 @@ const user = {
         {
             id: "234",
             title: "JavaScript Developer",
+            timesCompleted: 0,
             questions: [
                 {
                     question: "What is the difference between let and var?",
@@ -18,6 +19,7 @@ const user = {
         {
             id: "1231",
             title: "PHP Developer",
+            timesCompleted: 0,
             questions: [
                 {
                     question: "What is PHP exactly?",

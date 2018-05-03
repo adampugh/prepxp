@@ -4,7 +4,6 @@ exports[`<Dashboard /> should match snapshot 1`] = `
 <div>
   <DashboardDeleteModal
     closeModal={[Function]}
-    getTotalAnsweredQuestions={[Function]}
     isOpen={false}
     selectedListId=""
   />
@@ -33,6 +32,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
               "question": "Who created JavaScript?",
             },
           ],
+          "timesCompleted": 0,
           "title": "JavaScript Developer",
         },
         Object {
@@ -43,6 +43,7 @@ exports[`<Dashboard /> should match snapshot 1`] = `
               "question": "What is PHP exactly?",
             },
           ],
+          "timesCompleted": 0,
           "title": "PHP Developer",
         },
       ]
@@ -51,8 +52,6 @@ exports[`<Dashboard /> should match snapshot 1`] = `
     openCreateModal={[Function]}
     openDeleteModal={[Function]}
     selectList={[Function]}
-    totalAnsweredQuestions={3}
-    totalQuestions={3}
   />
   <footer />
 </div>

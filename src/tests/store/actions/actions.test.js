@@ -249,7 +249,8 @@ describe("list actions", () => {
             expect(actions[0]).toEqual({
                 type: actionTypes.FETCH_LISTS,
                 name: listData.name,
-                lists: listState.lists
+                lists: listState.lists,
+                admin: false
             });
             done();
         });

@@ -21,12 +21,8 @@
             grid-template-columns: 10fr 1fr;
             width: 100%;
         }
-
         textarea {
-            // word-break: break-word;
             max-width: 100%;
-            // min-height: 100%;
-            // overflow: hidden;
             height: auto;
             resize: none;
             padding: 10px 0;
@@ -45,14 +41,6 @@
         }
     }
 }
-
-// .listPage__input--disabled {
-//     background: transparent;
-//     border: none;
-//     color: $off-grey;
-// }
-
-
 
 .listPage__input--enabled {
     background: white;

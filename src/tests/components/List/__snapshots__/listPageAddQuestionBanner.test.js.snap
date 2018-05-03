@@ -17,19 +17,28 @@ exports[`<ListPageAddQuestionBanner /> should match snapshot 1`] = `
     <p>
       Add a question below and add it to your list
     </p>
-    <input
-      id="questionInput"
-      onChange={[Function]}
-      onKeyDown={[Function]}
-      placeholder="What weaknesses do you have?"
-      type="text"
-    />
-    <button
-      className="btn"
-      onClick={[Function]}
+    <div
+      className="listPage__addQuestion__input"
     >
-      Add Question
-    </button>
+      <div>
+        <input
+          id="questionInput"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="What weaknesses do you have?"
+          type="text"
+        />
+        <button
+          className="btn"
+          onClick={[Function]}
+        >
+          Add Question
+        </button>
+      </div>
+    </div>
   </div>
+  <div
+    className="listPage__addQuestion__whiteElipse"
+  />
 </div>
 `;

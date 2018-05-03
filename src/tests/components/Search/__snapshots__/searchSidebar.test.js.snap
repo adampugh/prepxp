@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<searchContent /> should match snapshot 1`] = `
+<div
+  className="searchContent"
+>
+  <div
+    className="container-l"
+  >
+    <div
+      className="searchContent__grid"
+    >
+      <SearchSidebar
+        clearFilter={[Function]}
+        filterByTag={[Function]}
+        searchLists={
+          Array [
+            Object {
+              "list": Object {
+                "questions": Array [
+                  1,
+                  2,
+                  3,
+                  4,
+                ],
+                "title": "Angular Developer",
+              },
+              "title": "Angular Developer",
+            },
+            Object {
+              "list": Object {
+                "questions": Array [
+                  1,
+                  2,
+                  5,
+                ],
+                "title": "Node JS Developer",
+              },
+              "title": "Node JS Developer",
+            },
+            Object {
+              "list": Object {
+                "questions": Array [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                ],
+                "title": "General Interview Questions 1",
+              },
+              "title": "General Interview Questions 1",
+            },
+          ]
+        }
+      />
+      <searchGrid />
+    </div>
+  </div>
+</div>
+`;

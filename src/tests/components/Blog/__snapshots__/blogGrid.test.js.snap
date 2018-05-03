@@ -126,6 +126,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         className="blog__grid"
       >
         <Link
+          key="1234"
           replace={false}
           to={
             Object {

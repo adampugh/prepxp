@@ -6,7 +6,7 @@ describe("reducer", () => {
     it("should setup default initial values", () => {
         const state = reducer(undefined, { type: "@@INIT"});
         expect(state).toEqual({
-            name: "you",
+            name: "User",
             lists: [],
             admin: false
         })

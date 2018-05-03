@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<dashboardPanel /> should match snapshot 1`] = `
+<div
+  className="dashboard__grid__panel"
+>
+  <div
+    className="dashboard__grid__panel__box"
+  >
+    <div>
+      <h2>
+        Questions Answered
+      </h2>
+      <t
+        background={false}
+        backgroundPadding={10}
+        classForPercentage={null}
+        className=""
+        classes={
+          Object {
+            "background": "CircularProgressbar-background",
+            "path": "CircularProgressbar-path",
+            "root": "CircularProgressbar",
+            "text": "CircularProgressbar-text",
+            "trail": "CircularProgressbar-trail",
+          }
+        }
+        counterClockwise={false}
+        initialAnimation={true}
+        percentage={100}
+        strokeWidth={8}
+        styles={
+          Object {
+            "background": Object {},
+            "path": Object {},
+            "root": Object {},
+            "text": Object {},
+            "trail": Object {},
+          }
+        }
+        textForPercentage={[Function]}
+      />
+      <p>
+        3 / 3
+      </p>
+    </div>
+    <div>
+      <h2>
+        Lists Completed
+      </h2>
+      <t
+        background={false}
+        backgroundPadding={10}
+        classForPercentage={null}
+        className=""
+        classes={
+          Object {
+            "background": "CircularProgressbar-background",
+            "path": "CircularProgressbar-path",
+            "root": "CircularProgressbar",
+            "text": "CircularProgressbar-text",
+            "trail": "CircularProgressbar-trail",
+          }
+        }
+        counterClockwise={false}
+        initialAnimation={true}
+        percentage={0}
+        strokeWidth={8}
+        styles={
+          Object {
+            "background": Object {},
+            "path": Object {},
+            "root": Object {},
+            "text": Object {},
+            "trail": Object {},
+          }
+        }
+        textForPercentage={[Function]}
+      />
+      <p>
+        0 / 2
+      </p>
+    </div>
+    <div
+      className="dashboard__grid__panel__box__mostCompleted"
+    >
+      <h2>
+        Most Completed
+      </h2>
+      <p
+        key="0JavaScript Developer"
+      >
+        1. JavaScript Developer 
+        <span>
+          0
+        </span>
+      </p>
+      <p
+        key="1PHP Developer"
+      >
+        2. PHP Developer 
+        <span>
+          0
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;

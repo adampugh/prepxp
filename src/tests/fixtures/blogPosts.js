@@ -9,17 +9,20 @@ const posts = [
         title: "Pass the interview with these answers",
         text: "sf sdfg dfasd df dg asdf sdf adsf sadf",
         img: "http://via.placeholder.com/300x300",
-        byline: "yesyesyeys"
+        byline: "yesyesyeys",
+        id: "134t"
     }, {
         title: "Top 10 most common questions",
         text: "sf sdfg dfasd df dg asdf sdf adsf sadf",
         img: "http://via.placeholder.com/300x300",
-        byline: "yesyesyeys"
+        byline: "yesyesyeys",
+        id: "fddh"
     }, {
         title: "What Google and employers are looking for",
         text: "sf sdfg dfasd df dg asdf sdf adsf sadf",
         img: "http://via.placeholder.com/300x300",
-        byline: "yesyesyeys"
+        byline: "yesyesyeys",
+        id: "ergerg"
     },
 ];
 

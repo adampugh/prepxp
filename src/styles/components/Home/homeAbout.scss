@@ -4,15 +4,12 @@ main {
     background-size: cover; 
     padding-bottom: $padding-m;
     .about__title {
-        
         color: white;
         padding: $padding-m 0;
-        // background: $off-purple;
         h1 {
             @include header;
             width: 70%;
             margin: 0 auto;
-            // text-shadow: 1px 1px 2px rgb(23, 13, 38);
         }
     }
 }
@@ -25,7 +22,6 @@ main {
     text-align: center;
     h1 {
         @include header;
-        // color: $off-purple;
         color: $off-grey;
         font-size: $font-l;
     }

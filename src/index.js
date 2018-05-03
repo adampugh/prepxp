@@ -46,7 +46,7 @@ const app = (
 
 let hasRendered = false;
 const renderApp = () => {
-    if (!hasRendered) {
+    if (!hasRendered ) {
         ReactDOM.render(app, document.getElementById('root'));
         registerServiceWorker();
         hasRendered = true;
@@ -55,11 +55,6 @@ const renderApp = () => {
 
 
 ReactDOM.render(<Loader />, document.getElementById('root'));
-
-store.dispatch(actions.startFetchLists()).then(() => {
-    
-});
-
 
 
 firebase.auth().onAuthStateChanged((user) => {
@@ -70,15 +65,20 @@ firebase.auth().onAuthStateChanged((user) => {
         store.dispatch(searchActions.startFetchSearchList());
         // pass displayName
         // store.dispatch(actions.startFetchLists(user.displayName)).then(() => {
-        store.dispatch(actions.startFetchLists()).then(() => {
-            
-                renderApp();
-                // check user is not signing up as authActions will handle redirect
-                if (history.location.pathname === "/login" && user.displayName !== null) {
-                    history.push("/dashboard");
-                }
+        
+        store.dispatch(actions.startFetchLists()).then(() => { 
+            renderApp();
+
+            // check user is not signing up as authActions will handle redirect
+            if (history.location.pathname === "/login" && user.displayName !== null) {
+                history.push("/dashboard");
+            }
             
         });
+        
+        
+        
+        
     } else {
         console.log("logged out");
         store.dispatch(authActions.logout());

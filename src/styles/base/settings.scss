@@ -21,13 +21,11 @@ $padding-l: 8rem;
 $padding-m: 4rem;
 $padding-s: 2rem;
 
-
 body {
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    // font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
     font-family: 'Assistant', sans-serif;
     color: $off-grey;
@@ -50,8 +48,7 @@ hr {
 
 .logo {
     font-family: 'Coiny', cursive;
-    // font-family: 'Noto Serif', serif;
-    // font-family: 'Limelight', cursive;
+    
 }
 
 .container, .container-l, .container-s {
@@ -76,13 +73,11 @@ hr {
     }
 
     .container-l {
-        // width: 88%;
         margin: 0 auto;
     }
 
     .container-s {
         width: 60%;
-        // margin: 0 auto;
     }
 }
 

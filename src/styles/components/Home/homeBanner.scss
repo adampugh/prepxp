@@ -1,14 +1,7 @@
 .homeBanner {
-    // text-align: center;
-    // font-size: $font-m;
-    // color: white;
     background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center; 
     background-size: cover; 
     padding: $padding-l 0 $padding-m 0;
-    h1 {
-        // padding-bottom: 20px;
-        // text-shadow: 1px 2px 5px rgba(14, 14, 14, 0.241);
-    }
     img {
         width: 100%;
         max-width: 800px;
@@ -79,9 +72,7 @@
 
     .homeBanner__content__textPanel {
         margin: 0;
-        // background: white;
         border-radius: 15px;
-        // @include boxshadow;
         h1 {
             color: white;
             font-size: 6em;

@@ -40,7 +40,7 @@ class blogGrid extends Component {
                                     <div className="blog__grid">
                                         {this.props.posts.map((post, index) => (
                                             <Link 
-                                                key={post._id} 
+                                                key={post.id} 
                                                 to={{
                                                     pathname: `/blog/${post.title.split(" ").join("-")}`, state: {post, posts: this.props.allPosts}
                                                     }}>

@@ -1,6 +1,5 @@
 .blogPost__content {
     padding: $padding-s 0;
-    // background: $very-light-grey;
     background: $light-purple;
     h1 {
         @include header;
@@ -35,8 +34,7 @@
     font-size: $font-s;
 }
 
-.blogPost__content__panel {
-    // border: 1px solid $light-grey;    
+.blogPost__content__panel {   
     background: white;
     box-sizing: border-box;
     padding: $padding-s;
@@ -94,13 +92,7 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
-    .blogPost__content__panel {
-        // padding: $padding-m;
-    }
-
     .blogPost__content__commentBox {
-        // padding: $padding-s $padding-m;
-        // border: 1px solid $light-grey;
         .blogPost__content__commentBox__button {
             text-align: right;
             button {

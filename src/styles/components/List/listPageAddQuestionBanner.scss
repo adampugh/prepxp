@@ -10,7 +10,6 @@
         width: 100%;
         margin-bottom: 40px;
     }
-    
     h1 {
         @include header;
         color: white;
@@ -36,7 +35,6 @@
     .listPage__addQuestion__input {
         display: grid;
         grid-template-columns: 1fr;
-        // z-index: 100;
         div {
             z-index: 100;
         }

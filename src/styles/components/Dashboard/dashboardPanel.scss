@@ -14,7 +14,7 @@
             color: $light-grey;
             font-weight: 400;
             font-size: $font-s;
-            padding: 0 10px;
+            min-height: 44px;
         }
         .dashboard__grid__panel__box__mostCompleted {
             display: none;
@@ -35,6 +35,9 @@
             margin: 0 $padding-s;
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 0;
+            h2 {
+                min-height: 0;
+            }
             .dashboard__grid__panel__box__mostCompleted {
                 display: block;
                 h2 {

@@ -2,7 +2,6 @@
     display: none;
 }
 
-
 @media (min-width: $desktop-breakpoint) {
     .blogPost__sidebar__title {
         @include header;
@@ -18,7 +17,6 @@
 
     .blogPost__sidebar__container {
         display: block;
-        // background: $very-light-grey;
         background: $light-purple;
     }
     

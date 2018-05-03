@@ -17,14 +17,12 @@
         background: white;
         border-radius: 20px;
         padding: $padding-s;
-        // height: 500px;
         @include boxshadow;
         hr {
             margin: 10px 0;
         }
         h1 {
             @include header;
-            // font-size: $font-m;
             padding-bottom: 10px;
         }
     }

@@ -3,7 +3,6 @@
     background-size: cover;
     color: white;
     padding: $padding-m 0;
-    
     h1 {
         @include header;
     }
@@ -28,7 +27,6 @@
     margin: $padding-s 0 $padding-m 0;
     button {
         display: block;
-        // margin-top: 10px;
     }
 }
 

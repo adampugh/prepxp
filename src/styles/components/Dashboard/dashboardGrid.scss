@@ -1,6 +1,5 @@
 .dashboard__wrapper {
     background: $very-light-grey;
-    // background: $purple-gradient, url("../assets/images/bg4.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -8,12 +7,8 @@
     display: grid;
     grid-template-columns: 1fr;
     min-height: 90vh;
-    // padding: $padding-s 0;
-    
     h1 {
-        // padding-bottom: $padding-s;
         @include header;
-        // color: white;
     }
     p {
         font-size: $font-s;
@@ -26,7 +21,6 @@
 
 .dashboard__empty {
     h2 {
-        // padding-top: $padding-s;
         color: $light-grey;
         font-weight: 400;
         font-size: $font-m;
@@ -43,7 +37,6 @@
     justify-content: space-between;
     padding: 10px $padding-s;
     word-break: break-word;
-    // border: 2px solid $light-grey;
     border-radius: 20px;
     margin: $padding-s 0;
     @include boxshadow;

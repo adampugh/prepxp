@@ -19,13 +19,8 @@ class DashboardGrid extends Component {
                             startLogout={this.props.startLogout}
                         />
                         <div>
-                            <DashboardPanel 
-                                lists={this.props.lists}
-                                totalAnsweredQuestions={this.props.totalAnsweredQuestions}
-                                totalQuestions={this.props.totalQuestions} />
-
+                            <DashboardPanel lists={this.props.lists} />
                             <div className="dashboard__grid__lists">
-                                
                                 {this.props.lists.length > 0 ? 
                                     this.props.lists.map((list, index) => <DashboardList 
                                         key={`${list.title + index}`} 

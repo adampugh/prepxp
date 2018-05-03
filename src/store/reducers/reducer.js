@@ -2,13 +2,15 @@ import * as actionTypes from "../actions/actionTypes";
 
 
 const initialState = {
-    name: "you",
+    name: "User",
     lists: [],
     admin: false
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
+        case actionTypes.LOGOUT:
+            return initialState;
         case actionTypes.FETCH_LISTS: 
             return {
                 lists: action.lists,

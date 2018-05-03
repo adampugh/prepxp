@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<blogPostSidebar /> should match snapshot 1`] = `
+<div
+  className="blogPost__sidebar__container"
+>
+  <div
+    className="blogPost__sidebar"
+  >
+    <h1
+      className="blogPost__sidebar__title"
+    >
+      Latest articles
+    </h1>
+    <Link
+      key="1234"
+      replace={false}
+      to={
+        Object {
+          "pathname": "/blog/5-Tips-to-get-things-done",
+          "state": Object {
+            "post": Object {
+              "byline": "yesyesyeys",
+              "id": "1234",
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+              "title": "5 Tips to get things done",
+            },
+            "posts": Array [
+              Object {
+                "byline": "yesyesyeys",
+                "id": "1234",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "134t",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Pass the interview with these answers",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "fddh",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Top 10 most common questions",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "ergerg",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "What Google and employers are looking for",
+              },
+            ],
+          },
+        }
+      }
+    >
+      <div
+        className="blogPost__sidebar__item"
+      >
+        <h2>
+          5 Tips to get things done
+        </h2>
+        <p />
+        <hr />
+      </div>
+    </Link>
+    <Link
+      key="134t"
+      replace={false}
+      to={
+        Object {
+          "pathname": "/blog/Pass-the-interview-with-these-answers",
+          "state": Object {
+            "post": Object {
+              "byline": "yesyesyeys",
+              "id": "134t",
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+              "title": "Pass the interview with these answers",
+            },
+            "posts": Array [
+              Object {
+                "byline": "yesyesyeys",
+                "id": "1234",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "134t",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Pass the interview with these answers",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "fddh",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Top 10 most common questions",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "ergerg",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "What Google and employers are looking for",
+              },
+            ],
+          },
+        }
+      }
+    >
+      <div
+        className="blogPost__sidebar__item"
+      >
+        <h2>
+          Pass the interview with these answers
+        </h2>
+        <p />
+        <hr />
+      </div>
+    </Link>
+    <Link
+      key="fddh"
+      replace={false}
+      to={
+        Object {
+          "pathname": "/blog/Top-10-most-common-questions",
+          "state": Object {
+            "post": Object {
+              "byline": "yesyesyeys",
+              "id": "fddh",
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+              "title": "Top 10 most common questions",
+            },
+            "posts": Array [
+              Object {
+                "byline": "yesyesyeys",
+                "id": "1234",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "134t",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Pass the interview with these answers",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "fddh",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Top 10 most common questions",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "ergerg",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "What Google and employers are looking for",
+              },
+            ],
+          },
+        }
+      }
+    >
+      <div
+        className="blogPost__sidebar__item"
+      >
+        <h2>
+          Top 10 most common questions
+        </h2>
+        <p />
+        <hr />
+      </div>
+    </Link>
+    <Link
+      key="ergerg"
+      replace={false}
+      to={
+        Object {
+          "pathname": "/blog/What-Google-and-employers-are-looking-for",
+          "state": Object {
+            "post": Object {
+              "byline": "yesyesyeys",
+              "id": "ergerg",
+              "img": "http://via.placeholder.com/300x300",
+              "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+              "title": "What Google and employers are looking for",
+            },
+            "posts": Array [
+              Object {
+                "byline": "yesyesyeys",
+                "id": "1234",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf yea oia the ruler is bakc ofi course is i sfsf aoosd sgodf sfoeg wefodfguonfls sdfsd fsd sgosfsd sdfpsdf sdgxfogfdng  sdfosf sgosf sdfosg sdosf sgosdf sdfosdg sfosdf sd",
+                "title": "5 Tips to get things done",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "134t",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Pass the interview with these answers",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "fddh",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "Top 10 most common questions",
+              },
+              Object {
+                "byline": "yesyesyeys",
+                "id": "ergerg",
+                "img": "http://via.placeholder.com/300x300",
+                "text": "sf sdfg dfasd df dg asdf sdf adsf sadf",
+                "title": "What Google and employers are looking for",
+              },
+            ],
+          },
+        }
+      }
+    >
+      <div
+        className="blogPost__sidebar__item"
+      >
+        <h2>
+          What Google and employers are looking for
+        </h2>
+        <p />
+        <hr />
+      </div>
+    </Link>
+  </div>
+</div>
+`;

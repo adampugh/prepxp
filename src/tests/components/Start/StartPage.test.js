@@ -17,10 +17,4 @@ describe("<StartPage />", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("should render startComplete if questions are complete", () => {
-        const wrapper = shallow(<StartPage location={locationObj} list={user.lists[0]}/>);
-        wrapper.setState({questionsComplete: true});
-        expect(wrapper.contains(<StartComplete />)).toBe(true);
-    });
-
 })

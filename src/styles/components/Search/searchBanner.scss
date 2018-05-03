@@ -11,7 +11,6 @@
         margin-bottom: 10px;
     }
     input {
-        // margin-right: 10px;
         padding: 12px;
         border-radius: 10px;
         border: none;
@@ -20,16 +19,9 @@
         font-size: $font-s;
         @include boxshadow;
     }
-    // p {
-    //     width: 70%;
-    //     margin: 0 auto;
-    //     padding: $padding-s 0;
-    //     font-size: $font-s;
-    // }
     button {
         margin-top: $padding-s;
     }
-    
     .searchBanner__content__searchBar {
         display: grid;
         grid-template-columns: 1fr;

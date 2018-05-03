@@ -46,7 +46,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
     </p>
   </div>
   <div
-    className="navbar__loggedIn"
+    className="navbar__loggedIn "
   >
     <div
       className="container-l"

@@ -17,31 +17,11 @@ export class Dashboard extends Component {
     state = {
         deleteModalIsOpen: false,
         createModalIsOpen: false,
-        selectedListId: "",
-        totalAnsweredQuestions: 0,
-        totalQuestions: 0
+        selectedListId: ""
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
-    }
-
-    componentWillMount() {
-        this.getTotalAnsweredQuestions();
-    }
-
-    getTotalAnsweredQuestions = () => {
-        let answeredQuestions = 0;
-        let totalQuestions = 0;
-        this.props.lists.forEach(list => {
-            answeredQuestions += list.questions.filter(question => !!question.answer).length;
-            totalQuestions += list.questions.length;
-        });
-
-        this.setState({
-            totalAnsweredQuestions: answeredQuestions,
-            totalQuestions
-        })
     }
 
     selectList = (id) => {
@@ -102,8 +82,7 @@ export class Dashboard extends Component {
                     closeCreateModal={this.closeCreateModal} 
                     selectList={this.selectList} 
                     startLogout={this.props.startLogout}
-                    totalQuestions={this.state.totalQuestions}
-                    totalAnsweredQuestions={this.state.totalAnsweredQuestions}
+                    
                 />
                 <Footer />
             </div>

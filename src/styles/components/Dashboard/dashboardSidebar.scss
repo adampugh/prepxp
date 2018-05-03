@@ -5,15 +5,8 @@
 
 @media (min-width: $desktop-breakpoint) {
     .sidebar {
-        // margin: $padding-s 0;
-        // color: white;
-        // background: $purple-gradient, url("../assets/images/bg5.jpg") no-repeat center;
-        // background: $black-gradient, url("../assets/images/bg5.jpg") no-repeat center;
         background: white;
-        // border: 2px solid $off-purple;
         background-size: cover;
-        // border-radius: 20px;
-        // height: 700px;
         display: block;
         padding: $padding-s;
         @include boxshadow;
@@ -25,23 +18,10 @@
         }
         img {
             width: 100%;
-            // margin: 0 auto;
-            // text-align: center;
-            // padding: 20px 20px 0 20px;
             -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
         }
     }
-    // .sidebar__panel {
-    //     border-radius: 20px;
-    //     padding: 20px;
-    //     text-align: center;
-    //     @include boxshadow;
-    //     img {
-    //         width: 100%;
-    //         display: none;
-    //     }
-    // }
 
     .sidebar__grid {
         display: grid;
