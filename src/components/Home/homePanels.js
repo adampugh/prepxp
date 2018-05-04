@@ -9,11 +9,9 @@ const homePanels = () => (
         <div className="panels__grid">
             <div>
                 <img src={panel1Img} alt="man climbing chart" />
-                
                 <h2>Develop skills</h2>
                 <p>Practise your ability to answer difficult interview questions and 
                     learn how to pass the interview.</p>
-                
             </div>
             <div>
                 <img className="bannerText__image" src={panel2Img} alt="arm icon" />

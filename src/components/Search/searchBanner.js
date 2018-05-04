@@ -23,7 +23,3 @@ class SearchBanner extends Component {
 }
 
 export default SearchBanner;
-
-// <p>Search job titles for curated lists of interview questions.
-// Click the + symbol to add to your own lists and practise on your 
-// dashboard.</p>

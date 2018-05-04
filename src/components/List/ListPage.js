@@ -31,7 +31,6 @@ export class ListPage extends Component {
                             id={this.props.list.id} />
                         <ListPageQuestions 
                             questions={this.props.list.questions} 
-                            // questions={this.props.lists[this.props.location.state.listIndex].questions}
                             startDeleteQuestion={this.props.startDeleteQuestion} 
                             id={this.props.list.id} />
                         <Footer />
@@ -44,8 +43,6 @@ export class ListPage extends Component {
     }
 }
 
-
-// <ListPageQuestions questions={this.state.questions} />
 
 const mapStateToProps = (state, ownProps) => {
     return {

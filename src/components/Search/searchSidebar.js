@@ -11,7 +11,7 @@ class SearchSidebar extends Component {
     }
 
     getNumOfLists = () => {
-        // creates object with list totals by sector
+        // creates object with list totals by sector e.g. {sales: 3, health: 4}
         let numOfLists = {}
         this.props.searchLists.forEach(list => {
             numOfLists[list.tag] === undefined 
@@ -25,6 +25,7 @@ class SearchSidebar extends Component {
     }
 
     getListTags = (obj) => {
+        // creates an arr of tags e.g. ["health", "sales"]
         let tagsArr = [];
         for (let key in obj) {
             tagsArr.push(key);
@@ -69,24 +70,3 @@ class SearchSidebar extends Component {
 }
 
 export default SearchSidebar;
-
-
-
-// <div className="search__sidebar__item">
-// <h2>General</h2><p>{`(${this.state.numOfLists.general})`}</p>
-// </div>
-// <div className="search__sidebar__item">
-// <h2>Tech</h2><p>{`(${this.state.numOfLists.tech})`}</p>
-// </div>
-// <div className="search__sidebar__item">
-// <h2>Sales</h2><p>{`(${this.state.numOfLists.sales})`}</p>
-// </div>
-// <div className="search__sidebar__item">
-// <h2>Construction</h2><p>{`(${this.state.numOfLists.construction})`}</p>
-// </div>
-// <div className="search__sidebar__item">
-// <h2>Human Resources</h2><p>{`(${this.state.numOfLists.humanResources})`}</p>
-// </div>
-// <div className="search__sidebar__item">
-// <h2>Transport</h2><p>{`(${this.state.numOfLists.transport})`}</p>
-// </div>

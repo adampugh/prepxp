@@ -6,13 +6,6 @@ import BlogMainPanel from "./blogMainPanel";
 import BlogPanel from "./blogPanel";
 
 class blogGrid extends Component {
-    componentDidMount() {
-        // console.log(this.props.blog);
-        // setTimeout(() =>  {
-        //     console.log(this.props.blog.filter(blog => blog.id === this.props.mainPost.id)[0].comments)
-        // }, 4000);
-    }
-
     render() {
         return (
             <div className="blog__background">
@@ -48,8 +41,7 @@ class blogGrid extends Component {
                                             </Link>
                                         ))}
                                     </div>
-                                </div>
-                                
+                                </div>  
                             )
                     }
                 </div>

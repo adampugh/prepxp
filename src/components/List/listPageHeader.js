@@ -28,6 +28,7 @@ class listPageHeader extends Component {
 
 
     autosize = () => {
+        // stop larger titles creating a scrollbar
         const textarea = document.querySelector('textarea');
         setTimeout(function(){
             textarea.style.cssText = 'height:auto; padding:0';
@@ -68,22 +69,15 @@ class listPageHeader extends Component {
                                     value={this.state.currentTitle} />
                                     <hr />
                             </div>
-                             
                             <div onClick={this.editTitle} className="listPage__edit">
                                 <i className="fas fa-edit"></i>
                             </div>
-                            
-                        
-                        
                         </div>
-                        
                     </div>
                 </div>
             </div>
         );
     }
 }
-
-// <h1>{props.title} <i className="fas fa-edit"></i></h1>
 
 export default listPageHeader;

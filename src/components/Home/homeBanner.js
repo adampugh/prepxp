@@ -30,16 +30,3 @@ const homeBanner = () => (
 );
 
 export default homeBanner;
-
-
-
-// <section className="homeBanner">
-// <div className="container">
-//     <div className="homeBanner__content">
-//         <h1>
-//             Prepare for job interviews by answering pracitcal interview questions!
-//         </h1>
-//         <button className="btn">Sign Up</button>
-//     </div>
-// </div>
-// </section>

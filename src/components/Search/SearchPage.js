@@ -56,19 +56,22 @@ export class SearchPage extends Component {
 
 
     handleAddSearchList = (list) => {
+        // show spinner to user while list is added
         this.setState({
             loading: true
         })
         this.openModal();
+        // add list to fb and return promise
         this.props.addSearchList(list).then(() => {
             return this.props.startFetchLists();
         }).then(() => {
+            // show confirmation to user when promise is returned
             this.setState({
                 loading: false
             })
             setTimeout(() => {
                 this.closeModal();
-            }, 3000);
+            }, 1000);
         });
     }
 

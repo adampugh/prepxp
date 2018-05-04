@@ -29,7 +29,6 @@ class DashboardDeleteModal extends Component {
                         onClick={() => {
                             this.props.startDeleteList(this.props.selectedListId).then(() => {
                                 this.props.closeModal();
-                                this.props.getTotalAnsweredQuestions();
                             });
                         }}>
                         Yes

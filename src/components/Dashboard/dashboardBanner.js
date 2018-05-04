@@ -6,7 +6,6 @@ const dashboardBanner = (props) => (
         <div className="container">
             <p>Create a new list of interview questions</p>
             <button className="btn" onClick={props.openCreateModal}>Create</button>
-            
         </div>
     </section>
 );

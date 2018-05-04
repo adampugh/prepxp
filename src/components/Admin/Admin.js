@@ -31,10 +31,8 @@ class Admin extends Component {
     }
 
     handleSaveQuestion = () => {
-        // instead of saving an array
-        // save an obj with unique keys for each question
-        // will make it easier to intergrate with fb
-        // and other actions
+        // save arr for ui state 
+        // save an obj to push to firebase
         if (this.refs.questions.value.length > 1) {
             const key = "a" + uuid();
             this.setState({
@@ -61,7 +59,6 @@ class Admin extends Component {
         }
         this.props.startSaveSearchList(searchList);
         alert("list saved");
-        console.log(searchList);
     }
 
     render() {

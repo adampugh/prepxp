@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-
-// import * as isMobile from "is-mobile";
+import { Link } from "react-router-dom";
 import isMobile from "is-mobile";
 
-
-// add modal in ui for menu - might need loggedin / not logged in versions
 
 class Navbar extends Component {
     state = {
@@ -48,12 +44,11 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-
                 <div id="drawer" className={this.state.drawerOpen ? 'slideIn' : 'slideOut'}>
-                    <h1>Home</h1>
-                    <h1>About</h1>
-                    <h1>Blog</h1>
-                    <h1>Login</h1>
+                    <Link to="/dashboard"><h1>Home</h1></Link>
+                    <Link to="/"><h1>About</h1></Link>
+                    <Link to="/blog"><h1>Blog</h1></Link>
+                    <Link to="/login"><h1>Login</h1></Link>
                     <p>
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-facebook-f"></i>

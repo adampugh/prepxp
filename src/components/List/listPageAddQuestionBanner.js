@@ -52,7 +52,7 @@ class listPageAddQuestionBanner extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="listPage__addQuestion__whiteElipse"></div>
+                <div className="listPage__addQuestion__whiteEllipse"></div>
             </div>
         );
     }

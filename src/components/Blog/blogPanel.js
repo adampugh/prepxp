@@ -24,5 +24,3 @@ const blogPanel = (props) => (
 );
 
 export default blogPanel;
-
-// <p>{props.post.byline}</p>

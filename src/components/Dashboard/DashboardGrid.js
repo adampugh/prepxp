@@ -6,7 +6,6 @@ import DashboardList from "./dashboardList";
 import DashboardPanel from "./dashboardPanel";
 
 class DashboardGrid extends Component {
-
     render(props) {
         return (
             <div className="dashboard__wrapper">

@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const blogPostSidebar = (props) => (
-    <div className="blogPost__sidebar__container">
-        
+    <div className="blogPost__sidebar__container"> 
         <div className="blogPost__sidebar">
             <h1 className="blogPost__sidebar__title">Latest articles</h1>
             {
@@ -22,6 +21,3 @@ const blogPostSidebar = (props) => (
 );
 
 export default blogPostSidebar;
-
-
-// <img src={post.img} alt="post" />
