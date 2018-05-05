@@ -14,7 +14,7 @@ Users can create lists of interview questions from the dashboard by clicking the
 <h2>Search</h2>
 <ul>
   <li>
-Users can search through predefined lists by clicking the Search link on the dashbaord. Users can filter through search results by searching for a specific job title or filter by sector by clicking on the sector titles on the left panel. Users can then click the plus icon to add a list to the dashboard for practise or editing.
+Users can search through predefined lists by clicking the Search link on the dashboard. Users can filter through search results by searching for a specific job title or filter by sector by clicking on the sector titles on the left panel. Users can then click the plus icon to add a list to the dashboard for practise or editing.
   </li>
 </ul>
 
