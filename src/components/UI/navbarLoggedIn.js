@@ -32,9 +32,9 @@ export class Navbar extends Component {
         return (
             <div>
                 <div id="drawer" className={this.state.drawerOpen ? 'slideIn' : 'slideOut'}>
-                    <Link to="/prexp/dashboard"><h1>Dashboard</h1></Link>
-                    <Link to="/prexp/search"><h1>Search</h1></Link>
-                    <Link to="/prexp/blog"><h1>Blog</h1></Link>
+                    <Link to="/prepxp/dashboard"><h1>Dashboard</h1></Link>
+                    <Link to="/prepxp/search"><h1>Search</h1></Link>
+                    <Link to="/prepxp/blog"><h1>Blog</h1></Link>
                     <h1 onClick={this.props.startLogout}>Logout</h1>
                     <p>
                         <i className="fab fa-twitter"></i>
@@ -51,11 +51,11 @@ export class Navbar extends Component {
                         <div className="navbar__loggedIn__div--desktop">
                             <h1 className="logo">PrepXP</h1>
                             <ul>
-                                <Link to="/prexp/dashboard"><li>Dashboard</li></Link>
+                                <Link to="/prepxp/dashboard"><li>Dashboard</li></Link>
                                 <span>•</span>
-                                <Link to="/prexp/search"><li>Search</li></Link>
+                                <Link to="/prepxp/search"><li>Search</li></Link>
                                 <span>•</span>
-                                <Link to="/prexp/blog"><li>Blog</li></Link>
+                                <Link to="/prepxp/blog"><li>Blog</li></Link>
                             </ul>
                             <button onClick={this.props.startLogout} className="btn btn--black"><i className="fas fa-sign-out-alt"></i> Logout</button>
                         </div>

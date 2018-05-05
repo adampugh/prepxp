@@ -5,7 +5,7 @@ const dashboardList = (props) => (
     <div className="dashboard__grid__lists__item">
         <div>
             {props.list.questions.length > 0 
-                ? <Link to={{pathname:"/prexp/list/start", state: {list: props.list}}}>
+                ? <Link to={{pathname:"/prepxp/list/start", state: {list: props.list}}}>
                     <h2>{props.list.title}</h2>
                 </Link>
                 : <h2>{props.list.title}</h2>
@@ -13,7 +13,7 @@ const dashboardList = (props) => (
             <p>{props.list.questions.length} Questions</p>
         </div>
         <div>
-            <Link to={{pathname:"/prexp/list/edit", state: {list: props.list, listIndex: props.listIndex}}}>
+            <Link to={{pathname:"/prepxp/list/edit", state: {list: props.list, listIndex: props.listIndex}}}>
                 <h2><i className="fas fa-edit"></i></h2>
             </Link>   
             <h2 onClick={() => {

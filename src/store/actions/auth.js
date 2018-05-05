@@ -10,7 +10,7 @@ export const startSignUp = (email, password, name) => {
         return firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
             return dispatch(startSetUsername(name, user.uid)).then(() => {
                 history.push({
-                    pathname: "/prexp/dashboard",
+                    pathname: "/prepxp/dashboard",
                     state: {
                         name
                     }

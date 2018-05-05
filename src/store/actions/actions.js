@@ -17,7 +17,7 @@ export const startAddList = (list) => {
                 ...list
             }));
             history.push({
-                pathname: `/prexp/list/edit`,
+                pathname: `/prepxp/list/edit`,
                 state: {
                     list: {
                         id: ref.key

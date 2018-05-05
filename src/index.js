@@ -68,8 +68,8 @@ firebase.auth().onAuthStateChanged((user) => {
             renderApp();
 
             // check user is not signing up as authActions will handle redirect
-            if (history.location.pathname === "/prexp/login" && user.displayName !== null) {
-                history.push("/prexp/dashboard");
+            if (history.location.pathname === "/prepxp/login" && user.displayName !== null) {
+                history.push("/prepxp/dashboard");
             }
             
         });   

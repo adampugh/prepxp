@@ -17,16 +17,16 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/prexp/" exact component={Home} />
-        <PublicRoute path="/prexp/login" exact component={Login} />
-        <PrivateRoute path="/prexp/dashboard" exact component={Dashboard} />
-        <PrivateRoute path="/prexp/list/edit" component={ListPage} />
-        <PrivateRoute path="/prexp/list/start" component={StartPage} />
-        <PrivateRoute path="/prexp/blog" exact component={BlogPage} />
-        <PrivateRoute path="/prexp/blog/:id" component={BlogPost} />
-        <PrivateRoute path="/prexp/search" component={SearchPage} />
-        <AdminRoute path="/prexp/admin" component={AdminPage} />
-        <Redirect to="/prexp/" />
+        <Route path="/prepxp/" exact component={Home} />
+        <PublicRoute path="/prepxp/login" exact component={Login} />
+        <PrivateRoute path="/prepxp/dashboard" exact component={Dashboard} />
+        <PrivateRoute path="/prepxp/list/edit" component={ListPage} />
+        <PrivateRoute path="/prepxp/list/start" component={StartPage} />
+        <PrivateRoute path="/prepxp/blog" exact component={BlogPage} />
+        <PrivateRoute path="/prepxp/blog/:id" component={BlogPost} />
+        <PrivateRoute path="/prepxp/search" component={SearchPage} />
+        <AdminRoute path="/prepxp/admin" component={AdminPage} />
+        <Redirect to="/prepxp/" />
       </Switch>
     );
   }

@@ -10,7 +10,7 @@ const homeBottomBanner = () => (
             <p>Sign up to PrepXP today to better your career and get the job 
             you deserve! Pass the interview by gaining experience and preparing
             for success in all future job interviews.</p>
-            <Link to="/prexp/login"><button className="btn">Start now</button></Link>
+            <Link to="/prepxp/login"><button className="btn">Start now</button></Link>
             <img src={bottomBanner} alt="policeman, business man and designer" />
         </div>
     </section>

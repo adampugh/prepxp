@@ -11,7 +11,7 @@ export const PrivateRoute = ({
         isAuthenticated ? (
             <Component {...props} />
         ) : (
-            <Redirect to="/prexp/login" />
+            <Redirect to="/prepxp/login" />
         )
     )} />
 );

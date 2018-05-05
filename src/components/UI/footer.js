@@ -16,17 +16,17 @@ const footer = () => (
                 </div>
                 <div className="footer__grid__panel">
                     <h2>Explore</h2>
-                    <Link to="/prexp/dashboard"><p className="footer__grid__panel__link">•  Home</p></Link>
-                    <Link to="/prexp/"><p className="footer__grid__panel__link">•  About</p></Link>
-                    <Link to="/prexp/blog"><p className="footer__grid__panel__link">•  Blog</p></Link>
+                    <Link to="/prepxp/dashboard"><p className="footer__grid__panel__link">•  Home</p></Link>
+                    <Link to="/prepxp/"><p className="footer__grid__panel__link">•  About</p></Link>
+                    <Link to="/prepxp/blog"><p className="footer__grid__panel__link">•  Blog</p></Link>
                 </div>
                 <div className="footer__grid__panel">
                     <h2>Latest Blog Posts</h2>
                     <div className="footer__grid__blogPost">
-                        <Link to="/prexp/blog"><p>5 Most common interview questions</p></Link>
+                        <Link to="/prepxp/blog"><p>5 Most common interview questions</p></Link>
                     </div>
                     <div className="footer__grid__blogPost">
-                        <Link to="/prexp/blog"><p>How to pass the technical interview</p></Link>
+                        <Link to="/prepxp/blog"><p>How to pass the technical interview</p></Link>
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ export class StartPage extends Component {
             <div>
                 {
                     this.props.list === null 
-                        ? <Redirect to="/prexp/dashboard" />
+                        ? <Redirect to="/prepxp/dashboard" />
                         : <div>
                             <StartSavedModal 
                                 isOpen={this.state.modalIsOpen}

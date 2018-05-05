@@ -15,7 +15,7 @@ const homeBanner = () => (
                     <div>
                         <p>Prepare for job interviews by answering pracitcal interview questions!
                         Create and build your own lists of interview questions or import from curated lists.</p>
-                        <Link to="/prexp/login"><button className="btn">Get Started</button></Link>
+                        <Link to="/prepxp/login"><button className="btn">Get Started</button></Link>
                     </div>
                 </div>
                 <div className="homeBanner__content__picturePanel">
