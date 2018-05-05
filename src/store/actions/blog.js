@@ -9,9 +9,8 @@ export const fetchBlog = (blog) => ({
 });
 
 export const startFetchBlog = () => {
-    // fetch all expense data
+    // fetch all blog data
     return (dispatch, getState) => {
-        // const uid = getState().authReducer.uid;
         return database.ref(`blogs`).once("value").then((snapshot) => {
             const blogs = [];
             snapshot.forEach((childSnapshot) => {

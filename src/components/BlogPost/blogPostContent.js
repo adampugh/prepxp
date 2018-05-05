@@ -29,7 +29,7 @@ class blogPostContent extends Component {
                 
                 <div className="container-l">
                     <div className="blogPost__backLink">
-                        <Link to="/blog"><i className="fas fa-arrow-left"></i> <p>Back to posts</p></Link>
+                        <Link to="/prexp/blog"><i className="fas fa-arrow-left"></i> <p>Back to posts</p></Link>
                     </div>
                     <div className="blogPost__content__panel">
                         <h1>{this.props.post.title}</h1>

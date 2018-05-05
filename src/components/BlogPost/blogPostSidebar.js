@@ -7,7 +7,7 @@ const blogPostSidebar = (props) => (
             <h1 className="blogPost__sidebar__title">Latest articles</h1>
             {
                 props.posts.map(post => (
-                    <Link key={post.id} to={{pathname: `/blog/${post.title.split(" ").join("-")}`, state:{post, posts: props.posts}}}>
+                    <Link key={post.id} to={{pathname: `/prexp/blog/${post.title.split(" ").join("-")}`, state:{post, posts: props.posts}}}>
                         <div className="blogPost__sidebar__item">
                             <h2>{post.title}</h2>
                             <p>{post.author}</p>

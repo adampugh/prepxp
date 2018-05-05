@@ -8,7 +8,8 @@
     margin-bottom: -50px;
 }
   
-  .blogBanner__whiteElipse {
+  .blogBanner__whiteEllipse {
+    -webkit-clip-path: ellipse(73% 87% at 68% 94%);
     clip-path: ellipse(73% 87% at 68% 94%);
     background-color: $light-purple;
     height: 180px;

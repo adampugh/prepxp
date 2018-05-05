@@ -32,7 +32,8 @@
     }
 }
 
-.searchBanner__whiteElipse {
+.searchBanner__whiteEllipse {
+    -webkit-clip-path: ellipse(73% 87% at 68% 94%);
     clip-path: ellipse(73% 87% at 68% 94%);
     background: $very-light-grey;
     height: 100px;

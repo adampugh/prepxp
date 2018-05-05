@@ -14,7 +14,7 @@ export const fetchSearchList = (lists) => ({
 });
 
 export const startFetchSearchList = () => {
-    // fetch all expense data
+    // fetch all search list data
     return (dispatch) => {
         return database.ref(`searchLists`).once("value").then((snapshot) => {
             const lists = [];

@@ -12,13 +12,13 @@ const dashboardSidebar = (props) => (
         </div>
         <div className="sidebar__grid">
             <h2><i className="fas fa-tachometer-alt"></i></h2>
-            <Link to="/dashboard"><h2 className="sidebar__grid__link">Dashboard</h2></Link>
+            <Link to="/prexp/dashboard"><h2 className="sidebar__grid__link">Dashboard</h2></Link>
             <h2><i className="fas fa-pencil-alt"></i></h2>
             <h2 onClick={props.openCreateModal} className="sidebar__grid__link">Create</h2>
             <h2><i className="fas fa-search"></i></h2>
-            <Link to="/search"><h2 className="sidebar__grid__link">Search</h2></Link>
+            <Link to="/prexp/search"><h2 className="sidebar__grid__link">Search</h2></Link>
             <h2><i className="fas fa-book"></i></h2>
-            <Link to="/blog"><h2 className="sidebar__grid__link">Blog</h2></Link>
+            <Link to="/prexp/blog"><h2 className="sidebar__grid__link">Blog</h2></Link>
             <h2><i className="fas fa-sign-out-alt"></i></h2>
             <h2 onClick={props.startLogout} className="sidebar__grid__link">Logout</h2>
         </div>

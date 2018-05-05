@@ -17,7 +17,7 @@ const blogBanner = () => (
             </div>
             
         </div>
-        <div className="blogBanner__whiteElipse"></div>
+        <div className="blogBanner__whiteEllipse"></div>
     </div>
 );
 

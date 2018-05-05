@@ -35,7 +35,7 @@ export class ListPage extends Component {
                             id={this.props.list.id} />
                         <Footer />
                         </div>
-                    : <Redirect to="/dashboard" />
+                    : <Redirect to="/prexp/dashboard" />
             }
                 
             </div>

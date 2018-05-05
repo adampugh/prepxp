@@ -45,10 +45,10 @@ class Navbar extends Component {
         return (
             <div>
                 <div id="drawer" className={this.state.drawerOpen ? 'slideIn' : 'slideOut'}>
-                    <Link to="/dashboard"><h1>Home</h1></Link>
-                    <Link to="/"><h1>About</h1></Link>
-                    <Link to="/blog"><h1>Blog</h1></Link>
-                    <Link to="/login"><h1>Login</h1></Link>
+                    <Link to="/prexp/dashboard"><h1>Home</h1></Link>
+                    <Link to="/prexp/"><h1>About</h1></Link>
+                    <Link to="/prexp/blog"><h1>Blog</h1></Link>
+                    <Link to="/prexp/login"><h1>Login</h1></Link>
                     <p>
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-facebook-f"></i>

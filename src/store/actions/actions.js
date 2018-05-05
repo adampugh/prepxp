@@ -17,7 +17,7 @@ export const startAddList = (list) => {
                 ...list
             }));
             history.push({
-                pathname: `/list/edit`,
+                pathname: `/prexp/list/edit`,
                 state: {
                     list: {
                         id: ref.key
@@ -145,13 +145,9 @@ export const fetchLists = (user) => ({
 });
 
 export const startFetchLists = () => {
-    // fetch all expense data
+    // fetch all user data e.g. {name: "Bob", lists: [{}], admin: true}
     return (dispatch, getState) => {
         const uid = getState().authReducer.uid;
-        
-        // return database.ref(`users/${uid}/name`).once("value").then((snapshot) => {
-            // const name = snapshot.val() || "user";
-            // return name;
 
         return database.ref(`users/${uid}`).once("value").then((snapshot) => {
             let user = {};
@@ -186,17 +182,3 @@ export const startFetchLists = () => {
         });
     }
 }
-
-
-
-
-// 4. login
-// START_LOGIN
-
-// 5. search
-// ADD_liST
-// FILTER_SEARCH
-
-
-// 6. ui
-// START_LOGOUT

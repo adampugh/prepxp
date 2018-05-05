@@ -17,14 +17,14 @@ class blogGrid extends Component {
                             : (
                                 <div className="blog__grid__container">
                                     <h1 className="blog__title">Editor's Picks</h1>
-                                    <Link key={this.props.mainPost.id} to={{pathname: `/blog/${this.props.mainPost.title.split(" ").join("-")}`, state:{post: this.props.mainPost, posts: this.props.allPosts}}}>
+                                    <Link key={this.props.mainPost.id} to={{pathname: `/prexp/blog/${this.props.mainPost.title.split(" ").join("-")}`, state:{post: this.props.mainPost, posts: this.props.allPosts}}}>
                                         <BlogMainPanel 
                                             post={this.props.mainPost} 
                                             comments={this.props.blog.filter(blog => blog.id === this.props.mainPost.id)[0].comments} />
                                     </Link>
                                     <div className="blog__grid">
                                         {this.props.editorPosts.map((post, index) => (
-                                            <Link key={post.title + index} to={{pathname: `/blog/${post.title.split(" ").join("-")}`, state:{post, posts: this.props.allPosts}}}>
+                                            <Link key={post.title + index} to={{pathname: `/prexp/blog/${post.title.split(" ").join("-")}`, state:{post, posts: this.props.allPosts}}}>
                                                 <BlogPanel post={post} comments={this.props.blog.filter(blog => blog.id === post.id)[0].comments}/>
                                             </Link>
                                         ))}
@@ -35,7 +35,7 @@ class blogGrid extends Component {
                                             <Link 
                                                 key={post.id} 
                                                 to={{
-                                                    pathname: `/blog/${post.title.split(" ").join("-")}`, state: {post, posts: this.props.allPosts}
+                                                    pathname: `/prexp/blog/${post.title.split(" ").join("-")}`, state: {post, posts: this.props.allPosts}
                                                     }}>
                                                 <BlogPanel post={post} comments={this.props.blog.filter(blog => blog.id === post.id)[0].comments}/>
                                             </Link>

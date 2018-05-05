@@ -13,9 +13,9 @@ export const AdminRoute = ({
             <Component {...props} />
         ) :
             isAuthenticated ? (
-                <Redirect to="/dashboard" />
+                <Redirect to="/prexp/dashboard" />
             ) : (
-                <Redirect to="/login" />
+                <Redirect to="/prexp/login" />
             )
     )} />
 );

@@ -19,7 +19,7 @@ const homeAbout = () => (
                     Checkout our curated lists based on questions asked by some of the
                     largest companies in the world.
                 </p>
-                <Link to="/login"><button className="btn">Start now</button></Link>
+                <Link to="/prexp/login"><button className="btn">Start now</button></Link>
             </div>
         </div>
     </main>

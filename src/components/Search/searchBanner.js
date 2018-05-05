@@ -16,7 +16,7 @@ class SearchBanner extends Component {
                         <button className="btn"><i className="fas fa-search"></i> Search  </button>
                     </div>
                 </div>
-                <div className="searchBanner__whiteElipse"></div>
+                <div className="searchBanner__whiteEllipse"></div>
             </div>
         )
     }

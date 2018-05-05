@@ -35,7 +35,7 @@ class DashboardGrid extends Component {
                                         <button 
                                             className="btn"
                                             onClick={this.props.openCreateModal} >Create</button>
-                                        <Link to="/search">
+                                        <Link to="/prexp/search">
                                             <button className="btn">Search</button>
                                         </Link>
                                     </div> 

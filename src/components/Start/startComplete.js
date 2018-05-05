@@ -17,7 +17,7 @@ export class StartComplete extends Component {
                             <h1>Questions complete</h1>
                             <p> Well done you have completed this list, good luck in your upcoming interviews!</p>
                             <div className="startComplete__buttons">
-                                <Link to="/dashboard">
+                                <Link to="/prexp/dashboard">
                                     <button className="btn">Dashboard</button>
                                 </Link>
                             </div>
