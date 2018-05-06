@@ -20,7 +20,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
         replace={false}
         to={
           Object {
-            "pathname": "/blog/5-Tips-to-get-things-done",
+            "pathname": "/prepxp/blog/5-Tips-to-get-things-done",
             "state": Object {
               "post": Object {
                 "byline": "yesyesyeys",
@@ -72,7 +72,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
           replace={false}
           to={
             Object {
-              "pathname": "/blog/5-Tips-to-get-things-done",
+              "pathname": "/prepxp/blog/5-Tips-to-get-things-done",
               "state": Object {
                 "post": Object {
                   "byline": "yesyesyeys",
@@ -130,7 +130,7 @@ exports[`<blogGrid /> should match snapshot 1`] = `
           replace={false}
           to={
             Object {
-              "pathname": "/blog/5-Tips-to-get-things-done",
+              "pathname": "/prepxp/blog/5-Tips-to-get-things-done",
               "state": Object {
                 "post": Object {
                   "byline": "yesyesyeys",

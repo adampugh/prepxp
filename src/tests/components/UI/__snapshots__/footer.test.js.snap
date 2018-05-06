@@ -39,7 +39,7 @@ exports[`<Footer /> should match snapshot 1`] = `
         </h2>
         <Link
           replace={false}
-          to="/dashboard"
+          to="/prepxp/dashboard"
         >
           <p
             className="footer__grid__panel__link"
@@ -49,7 +49,7 @@ exports[`<Footer /> should match snapshot 1`] = `
         </Link>
         <Link
           replace={false}
-          to="/"
+          to="/prepxp/"
         >
           <p
             className="footer__grid__panel__link"
@@ -59,7 +59,7 @@ exports[`<Footer /> should match snapshot 1`] = `
         </Link>
         <Link
           replace={false}
-          to="/blog"
+          to="/prepxp/blog"
         >
           <p
             className="footer__grid__panel__link"
@@ -79,7 +79,7 @@ exports[`<Footer /> should match snapshot 1`] = `
         >
           <Link
             replace={false}
-            to="/blog"
+            to="/prepxp/blog"
           >
             <p>
               5 Most common interview questions
@@ -91,7 +91,7 @@ exports[`<Footer /> should match snapshot 1`] = `
         >
           <Link
             replace={false}
-            to="/blog"
+            to="/prepxp/blog"
           >
             <p>
               How to pass the technical interview

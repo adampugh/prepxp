@@ -17,7 +17,7 @@ exports[`<blogPostSidebar /> should match snapshot 1`] = `
       replace={false}
       to={
         Object {
-          "pathname": "/blog/5-Tips-to-get-things-done",
+          "pathname": "/prepxp/blog/5-Tips-to-get-things-done",
           "state": Object {
             "post": Object {
               "byline": "yesyesyeys",
@@ -75,7 +75,7 @@ exports[`<blogPostSidebar /> should match snapshot 1`] = `
       replace={false}
       to={
         Object {
-          "pathname": "/blog/Pass-the-interview-with-these-answers",
+          "pathname": "/prepxp/blog/Pass-the-interview-with-these-answers",
           "state": Object {
             "post": Object {
               "byline": "yesyesyeys",
@@ -133,7 +133,7 @@ exports[`<blogPostSidebar /> should match snapshot 1`] = `
       replace={false}
       to={
         Object {
-          "pathname": "/blog/Top-10-most-common-questions",
+          "pathname": "/prepxp/blog/Top-10-most-common-questions",
           "state": Object {
             "post": Object {
               "byline": "yesyesyeys",
@@ -191,7 +191,7 @@ exports[`<blogPostSidebar /> should match snapshot 1`] = `
       replace={false}
       to={
         Object {
-          "pathname": "/blog/What-Google-and-employers-are-looking-for",
+          "pathname": "/prepxp/blog/What-Google-and-employers-are-looking-for",
           "state": Object {
             "post": Object {
               "byline": "yesyesyeys",

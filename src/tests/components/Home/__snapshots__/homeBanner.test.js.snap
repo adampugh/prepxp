@@ -13,24 +13,20 @@ exports[`<HomeBanner /> should match snapshot 1`] = `
       <div
         className="homeBanner__content__textPanel"
       >
-        <Fade
-          duration={3000}
-          top={true}
+        <div
+          className="homeBanner__content__textPanel__title"
         >
           <h1>
             Prepare for success
           </h1>
-        </Fade>
-        <Fade
-          duration={3000}
-          left={true}
-        >
+        </div>
+        <div>
           <p>
             Prepare for job interviews by answering pracitcal interview questions! Create and build your own lists of interview questions or import from curated lists.
           </p>
           <Link
             replace={false}
-            to="/login"
+            to="/prepxp/login"
           >
             <button
               className="btn"
@@ -38,21 +34,18 @@ exports[`<HomeBanner /> should match snapshot 1`] = `
               Get Started
             </button>
           </Link>
-        </Fade>
+        </div>
       </div>
       <div
         className="homeBanner__content__picturePanel"
       >
-        <Fade
-          duration={3000}
-          right={true}
-        >
+        <div>
           <img
             alt="man sitting at a desk"
             className="bannerText__image"
             src="deskimg.png"
           />
-        </Fade>
+        </div>
       </div>
     </div>
   </div>

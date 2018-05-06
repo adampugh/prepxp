@@ -29,7 +29,7 @@ exports[`<SearchBanner /> should match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="searchBanner__whiteElipse"
+    className="searchBanner__whiteEllipse"
   />
 </div>
 `;

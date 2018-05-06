@@ -38,7 +38,7 @@ exports[`<ListPageAddQuestionBanner /> should match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="listPage__addQuestion__whiteElipse"
+    className="listPage__addQuestion__whiteEllipse"
   />
 </div>
 `;

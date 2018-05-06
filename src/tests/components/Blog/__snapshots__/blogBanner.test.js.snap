@@ -27,7 +27,7 @@ exports[`<blogBanner /> should match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="blogBanner__whiteElipse"
+    className="blogBanner__whiteEllipse"
   />
 </div>
 `;

@@ -6,18 +6,38 @@ exports[`<NavbarLoggedOut /> should match snap 1`] = `
     className="slideOut"
     id="drawer"
   >
-    <h1>
-      Home
-    </h1>
-    <h1>
-      About
-    </h1>
-    <h1>
-      Blog
-    </h1>
-    <h1>
-      Login
-    </h1>
+    <Link
+      replace={false}
+      to="/prepxp/dashboard"
+    >
+      <h1>
+        Home
+      </h1>
+    </Link>
+    <Link
+      replace={false}
+      to="/prepxp/"
+    >
+      <h1>
+        About
+      </h1>
+    </Link>
+    <Link
+      replace={false}
+      to="/prepxp/blog"
+    >
+      <h1>
+        Blog
+      </h1>
+    </Link>
+    <Link
+      replace={false}
+      to="/prepxp/login"
+    >
+      <h1>
+        Login
+      </h1>
+    </Link>
     <p>
       <i
         className="fab fa-twitter"

@@ -15,7 +15,7 @@ exports[`<HomeBottomBanner /> should match snapshot 1`] = `
     </p>
     <Link
       replace={false}
-      to="/login"
+      to="/prepxp/login"
     >
       <button
         className="btn"

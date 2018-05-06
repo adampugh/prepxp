@@ -9,7 +9,7 @@ exports[`<DashboardList /> should match snapshot 1`] = `
       replace={false}
       to={
         Object {
-          "pathname": "/list/start",
+          "pathname": "/prepxp/list/start",
           "state": Object {
             "list": Object {
               "id": "234",
@@ -44,7 +44,7 @@ exports[`<DashboardList /> should match snapshot 1`] = `
       replace={false}
       to={
         Object {
-          "pathname": "/list/edit",
+          "pathname": "/prepxp/list/edit",
           "state": Object {
             "list": Object {
               "id": "234",

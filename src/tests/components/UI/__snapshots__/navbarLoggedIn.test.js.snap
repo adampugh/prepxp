@@ -8,7 +8,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
   >
     <Link
       replace={false}
-      to="/dashboard"
+      to="/prepxp/dashboard"
     >
       <h1>
         Dashboard
@@ -16,7 +16,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
     </Link>
     <Link
       replace={false}
-      to="/search"
+      to="/prepxp/search"
     >
       <h1>
         Search
@@ -24,7 +24,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
     </Link>
     <Link
       replace={false}
-      to="/blog"
+      to="/prepxp/blog"
     >
       <h1>
         Blog
@@ -76,7 +76,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
         <ul>
           <Link
             replace={false}
-            to="/dashboard"
+            to="/prepxp/dashboard"
           >
             <li>
               Dashboard
@@ -87,7 +87,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
           </span>
           <Link
             replace={false}
-            to="/search"
+            to="/prepxp/search"
           >
             <li>
               Search
@@ -98,7 +98,7 @@ exports[`<NavbarLoggedIn /> should match snapshot 1`] = `
           </span>
           <Link
             replace={false}
-            to="/blog"
+            to="/prepxp/blog"
           >
             <li>
               Blog
