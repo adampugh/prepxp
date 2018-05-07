@@ -38,9 +38,6 @@ export const startSetUsername = (name, uid) => {
     }
 }
 
-
-
-
 // START LOGIN
 export const startLogin = (email, password) => {
     return () => {
