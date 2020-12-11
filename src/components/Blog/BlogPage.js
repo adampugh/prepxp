@@ -7,6 +7,8 @@ import BlogBanner from "../Blog/blogBanner";
 import BlogGrid from "./blogGrid";
 import Footer from "../UI/footer";
 
+import blogPostData from './blogPostData'
+
 export class BlogPage extends Component {
     state = {
         posts: [],
@@ -20,19 +22,28 @@ export class BlogPage extends Component {
     }
 
     fetchBlogPosts = () => {
-        axios.get("https://prepxp-blog-api.herokuapp.com/posts")
-        .then((res) => {
-            this.setState({
-                posts: res.data,
-                loading: false,
-                error: null
-            });
-        })
-        .catch((err) => {
-            this.setState({
-                error: "Sorry, blog posts could not be retrieved"
-            })
+        // removed after mblab sunset
+
+        // axios.get("https://prepxp-blog-api.herokuapp.com/posts")
+        // .then((res) => {
+        //     this.setState({
+        //         posts: res.data,
+        //         loading: false,
+        //         error: null
+        //     });
+        // })
+        // .catch((err) => {
+        //     this.setState({
+        //         error: "Sorry, blog posts could not be retrieved"
+        //     })
+        // });
+
+        this.setState({
+            posts: blogPostData,
+            loading: false,
+            error: null
         });
+
     }
 
     render() {
